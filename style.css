@@ -161,34 +161,77 @@ footer a {
 }
 
 /* ===== SERVICE BUBBLES ===== */
-#services .service,
-#services .service-box,
-#services .box,
-.services .service,
-.services .service-box,
-.services .box {
-  background: radial-gradient(
-    circle at top left,
-    #1f2430,
-    #0b0e14
-  );
-  color: #eaeaea;
+/* ================================
+   DARK SERVICES – FINAL VERSION
+================================ */
+
+.services-dark {
+  background: #0b0e14;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.services-dark h2 {
+  color: #ffffff;
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.services-intro {
+  color: #cfd3ff;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* GRID */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* SERVICE BUBBLES */
+.service-box {
+  background: radial-gradient(circle at top left, #1e2433, #0b0e14);
   border-radius: 45px;
-  padding: 30px 35px;
-  width: 290px;
+  padding: 35px 30px;
+  width: 300px;
+  color: #e5e8ff;
   text-align: center;
   box-shadow:
-    0 15px 35px rgba(0,0,0,0.6),
-    inset 0 0 0 1px rgba(255,255,255,0.04);
+    0 18px 40px rgba(0,0,0,0.75),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
 }
 
-/* soft glow effect */
-#services .service::before,
-#services .service-box::before,
-#services .box::before {
+/* ICON */
+.service-box i {
+  font-size: 2.2rem;
+  color: #6f86ff;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.service-box h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cfd3ff;
+}
+
+/* GLOW EFFECT */
+.service-box::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -202,41 +245,21 @@ footer a {
   transition: opacity 0.4s ease;
 }
 
-/* hover animation */
-#services .service:hover,
-#services .service-box:hover,
-#services .box:hover {
-  transform: translateY(-10px) scale(1.05);
+/* HOVER */
+.service-box:hover {
+  transform: translateY(-12px) scale(1.05);
   box-shadow:
-    0 25px 55px rgba(0,0,0,0.8),
-    0 0 35px rgba(90,140,255,0.25);
+    0 28px 60px rgba(0,0,0,0.9),
+    0 0 40px rgba(90,140,255,0.35);
 }
 
-#services .service:hover::before,
-#services .service-box:hover::before,
-#services .box:hover::before {
+.service-box:hover::before {
   opacity: 1;
 }
 
-/* headings */
-#services h2,
-#services h3 {
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-/* text */
-#services p {
-  color: #cfd3ff;
-  font-size: 1rem;
-  line-height: 1.65;
-}
-
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media (max-width: 768px) {
-  #services .service,
-  #services .service-box,
-  #services .box {
+  .service-box {
     width: 100%;
     border-radius: 30px;
   }
