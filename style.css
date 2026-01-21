@@ -144,6 +144,7 @@ footer a {
     color: #ffb100;
     text-decoration: none;
 }
+
 /* ===== DARK SERVICES SECTION ===== */
 #services,
 .services {
@@ -164,7 +165,6 @@ footer a {
 /* ================================
    DARK SERVICES – FINAL VERSION
 ================================ */
-
 .services-dark {
   background: #0b0e14;
   padding: 90px 20px;
@@ -265,3 +265,50 @@ footer a {
   }
 }
 
+/* ================================
+   SOFTWARE LOGO BUBBLES
+================================ */
+
+.software-section {
+  display: flex;
+  gap: 30px;               /* space between each logo bubble */
+  justify-content: center;
+  flex-wrap: wrap;          /* responsive for mobile */
+  margin-top: 20px;
+}
+
+.software-card {
+  background: radial-gradient(circle at top left, #1e2433, #0b0e14);
+  border-radius: 45px;
+  padding: 25px 30px;
+  width: 140px;             /* fixed bubble size */
+  text-align: center;
+  color: #e5e8ff;
+  box-shadow:
+    0 12px 25px rgba(0,0,0,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.software-card img {
+  width: 60px;              /* logo size */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.software-card p {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+  color: #cfd3ff;
+}
+
+/* hover effect */
+.software-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.8),
+    0 0 20px rgba(90,140,255,0.4);
+}
