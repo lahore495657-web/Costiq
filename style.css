@@ -31,18 +31,18 @@ header .container {
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px; /* logo aur title ke beech ka gap kam kiya */
 }
 
 .site-logo {
-    height: 50px;   /* CostiQ logo size */
+    height: 70px;   /* logo size bada kiya */
     width: auto;
 }
 
 .logo-text {
     color: #ffffff;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 36px; /* title ka size bada kiya */
+    font-weight: 700; /* aur bold look */
 }
 
 .partner-logo img {
