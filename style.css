@@ -14,7 +14,7 @@ body {
 }
 
 /* ================================
-   HEADER (ONLY LOGO ADDED – FORMAT SAME)
+   HEADER (LOGO + BLUEBEAM)
 ================================ */
 header {
     background: #0d3d66;
@@ -25,6 +25,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* responsive */
 }
 
 .logo-area {
@@ -34,14 +35,47 @@ header .container {
 }
 
 .site-logo {
-    height: 36px;   /* logo size controlled here */
+    height: 50px;   /* CostiQ logo size */
     width: auto;
 }
 
 .logo-text {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
+}
+
+.partner-logo img {
+    height: 40px;   /* Bluebeam logo size */
+    width: auto;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav .btn {
+    padding: 6px 12px;
+    background-color: #ffb100;
+    color: #0d3d66;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav .btn:hover {
+    background-color: #fff;
+    color: #0d3d66;
 }
 
 /* ================================
@@ -64,12 +98,13 @@ header .container {
     margin-bottom: 25px;
 }
 
-.btn-primary {
+.hero .btn {
     background: #ffb100;
     color: #0d3d66;
     padding: 12px 30px;
     border-radius: 5px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /* ================================
@@ -82,7 +117,7 @@ header .container {
     padding: 40px 0;
 }
 
-.features .box {
+.features .feature-box {
     flex: 1 1 30%;
     background: #f8f8f8;
     padding: 20px;
@@ -91,89 +126,14 @@ header .container {
     transition: 0.3s ease;
 }
 
-.features .box:hover {
+.features .feature-box:hover {
     transform: translateY(-5px);
     background: #eef4fb;
 }
 
-.features .box img {
+.features .feature-box img {
     width: 80px;
     margin-bottom: 15px;
-}
-
-/* ================================
-   SERVICES SECTION (LIGHT)
-================================ */
-.services-section {
-    background: #f4f6f8;
-    padding: 50px 0;
-}
-
-.services-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 30px;
-    color: #0d3d66;
-}
-
-.services {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
-}
-
-.services li {
-    padding: 15px;
-    background: #fff;
-    border-left: 4px solid #ffb100;
-    font-size: 16px;
-}
-
-/* ================================
-   QUOTE / FORM
-================================ */
-.quote-container {
-    padding: 40px 0;
-    background: #fff;
-}
-
-.quote-form input,
-.quote-form textarea,
-.quote-form button {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.quote-form button {
-    background: #0d3d66;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.quote-form button:hover {
-    background: #ffb100;
-    color: #0d3d66;
-}
-
-/* ================================
-   FOOTER
-================================ */
-footer {
-    background: #0d3d66;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer a {
-    color: #ffb100;
-    text-decoration: none;
 }
 
 /* ================================
@@ -199,7 +159,7 @@ footer a {
 }
 
 .software-card img {
-    height: 40px;   /* software logo size fixed */
+    height: 40px;
     width: auto;
     margin-bottom: 10px;
 }
@@ -217,7 +177,7 @@ footer a {
 }
 
 /* ================================
-   OUR SERVICES – DARK BLUE
+   SERVICES – DARK BLUE
 ================================ */
 .services-dark {
     background: linear-gradient(rgba(13,61,102,0.8), rgba(13,61,102,0.8)), url("services-bg.jpg") center/cover no-repeat;
@@ -274,7 +234,41 @@ footer a {
     box-shadow: 0 28px 60px rgba(0,0,0,0.9), 0 0 40px rgba(90,140,255,0.35);
 }
 
+/* ================================
+   FOOTER
+================================ */
+footer {
+    background: #0d3d66;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffb100;
+    text-decoration: none;
+}
+
+/* ================================
+   MEDIA QUERIES
+================================ */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .partner-logo {
+        order: 2;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        gap: 10px;
+    }
+
     .services-dark .service-box {
         width: 100%;
         border-radius: 30px;
