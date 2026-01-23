@@ -4,17 +4,71 @@
     <meta charset="UTF-8">
     <title>CostiQ Estimation | Construction Cost Estimators</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Simple inline CSS for logos alignment, can move to style.css */
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+        .logo-area .site-logo {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .logo-text {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .partner-logo img {
+            height: 40px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav .btn {
+            padding: 6px 12px;
+            background-color: #0d3d66;
+            color: #fff;
+            border-radius: 4px;
+        }
+        /* Optional: responsive */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .partner-logo {
+                margin: 10px 0;
+            }
+            nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
     <div class="container">
+        <!-- Left: CostiQ Logo + Text -->
         <div class="logo-area">
-            <img src="costiq-logo.png" class="site-logo">
+            <img src="costiq-logo.png" class="site-logo" alt="CostiQ Logo">
             <span class="logo-text">CostiQ Estimation</span>
         </div>
 
+        <!-- Right: Bluebeam Logo -->
+        <div class="partner-logo">
+            <img src="bluebeam.png" alt="Bluebeam Logo">
+        </div>
+
+        <!-- Navigation -->
         <nav>
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -24,6 +78,7 @@
         </nav>
     </div>
 </header>
+
 <!-- HERO SECTION -->
 <section class="hero">
     <div class="container">
@@ -143,7 +198,3 @@
 
 </body>
 </html>
-
-
-
-
