@@ -31,11 +31,10 @@ header .container {
     width: auto;
 }
 
-.logo-text {
-    color: #ffffff;      /* white */
-    font-size: 26px;     /* size increase */
-    font-weight: 700;    /* bold */
-    line-height: 1;
+..logo-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
 }
 /* HERO SECTION */
 .hero {
@@ -258,5 +257,6 @@ footer a {
         border-radius: 30px;
     }
 }
+
 
 
