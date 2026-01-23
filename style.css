@@ -26,8 +26,8 @@ header .container {
     gap: 10px;
 }
 
-.site-logo {
-    height: 42px;
+..site-logo {
+    height: 36px;    
     width: auto;
 }
 
@@ -257,6 +257,7 @@ footer a {
         border-radius: 30px;
     }
 }
+
 
 
 
