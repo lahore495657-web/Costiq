@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>FAQ | CostiQ Estimation</title>
+    <meta name="description" content="Frequently Asked Questions about CostiQ Estimation services, plans submission, file formats, turnaround time, and more.">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* HEADER */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header .container, footer .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 10px 20px;
+        }
         header .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 0;
+            background-color: #0d3d66;
+            color: #fff;
         }
         .logo-area {
             display: flex;
@@ -27,57 +41,71 @@
         nav a {
             margin: 0 10px;
             text-decoration: none;
-            color: #0d3d66;
+            color: #fff;
+            font-weight: bold;
         }
         nav .btn {
             padding: 6px 12px;
-            background-color: #0d3d66;
+            background-color: #ff7f50;
             color: #fff;
             border-radius: 4px;
         }
-
-        /* FAQ Section */
-        .faq-container {
+        main.container {
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
         }
-        .faq-container h2 {
+        h2 {
             text-align: center;
             color: #0d3d66;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .faq-item {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
+            background: #fff;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             overflow: hidden;
         }
         .faq-question {
-            background-color: #f3f3f3;
             padding: 15px 20px;
             cursor: pointer;
             font-weight: bold;
-            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+        .faq-question:hover {
+            background: #f0f0f0;
+        }
+        .faq-answer {
+            padding: 0 20px 15px 20px;
+            display: none;
+            font-size: 16px;
         }
         .faq-question::after {
             content: '+';
-            position: absolute;
-            right: 20px;
-            font-size: 20px;
+            font-size: 24px;
+            color: #0d3d66;
         }
         .faq-question.active::after {
-            content: '-';
+            content: '−';
         }
-        .faq-answer {
-            display: none;
-            padding: 15px 20px;
-            background-color: #fff;
+        .cta {
+            text-align: center;
+            margin-top: 40px;
         }
-
-        /* FOOTER */
-        footer {
+        .cta .btn {
             background-color: #0d3d66;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+        }
+        footer {
+            background: #0d3d66;
             color: #fff;
             text-align: center;
             padding: 15px 0;
@@ -108,61 +136,53 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
-            <a href="faq.html" class="btn">FAQ</a>
+            <a href="faq.html">FAQ</a>
             <a href="contact.html" class="btn">Get a Quote</a>
         </nav>
     </div>
 </header>
 
-<!-- FAQ SECTION -->
-<section class="faq-container">
+<!-- MAIN FAQ CONTENT -->
+<main class="container">
     <h2>Frequently Asked Questions</h2>
 
     <div class="faq-item">
-        <div class="faq-question">How do I submit my construction plans?</div>
-        <div class="faq-answer">
-            You can upload your drawings directly through our contact or quote form. We accept most common formats.
-        </div>
+        <div class="faq-question">How do I submit plans?</div>
+        <div class="faq-answer">You can upload your drawings and project details directly through our <a href="contact.html">quote form</a> for a fast and accurate estimate.</div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">What file formats do you accept?</div>
-        <div class="faq-answer">
-            PDF, DWG, PNG, JPG. Make sure your drawings are clear and legible for accurate estimation.
-        </div>
+        <div class="faq-answer">We accept PDF, DWG, PNG, and JPG files for project plans and drawings.</div>
     </div>
 
     <div class="faq-item">
-        <div class="faq-question">What is the typical turnaround time?</div>
-        <div class="faq-answer">
-            Standard projects are delivered within 24–48 hours. Larger or complex projects may take longer, and we will notify you.
-        </div>
+        <div class="faq-question">Turnaround time?</div>
+        <div class="faq-answer">Most standard estimates are delivered within 24–48 hours. Complex projects may require additional time.</div>
     </div>
 
     <div class="faq-item">
-        <div class="faq-question">How accurate are your estimates?</div>
-        <div class="faq-answer">
-            Our estimates have a proven 98–99% accuracy rate based on previous project audits. Every estimate is quality-checked before delivery.
-        </div>
+        <div class="faq-question">Do you cover all trades?</div>
+        <div class="faq-answer">Yes, we provide cost estimation for all CSI divisions including MEP, structural, finishes, and more.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">Do you provide MEP & trade-specific estimates?</div>
-        <div class="faq-answer">
-            Yes, we provide detailed BOQs, takeoffs, and cost estimates for all CSI divisions including MEP, finishes, and structural work.
-        </div>
+    <div class="cta">
+        <p>Still have questions? Reach out to us:</p>
+        <a href="contact.html" class="btn">Contact Us</a>
     </div>
-</section>
+</main>
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
+    <div class="container">
+        <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
+    </div>
 </footer>
 
 <script>
-    // FAQ accordion functionality
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(q => {
+    // Accordion functionality
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
         q.addEventListener('click', () => {
             q.classList.toggle('active');
             const answer = q.nextElementSibling;
