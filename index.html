@@ -5,7 +5,7 @@
     <title>CostiQ Estimation | Construction Cost Estimators</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Simple inline CSS for logos alignment, can move to style.css */
+        /* HEADER AND LOGO */
         header .container {
             display: flex;
             align-items: center;
@@ -17,34 +17,37 @@
             align-items: center;
         }
         .logo-area .site-logo {
-            height: 50px;
-            margin-right: 10px;
+            height: 80px; /* Increased logo size */
+            margin-right: 8px; /* Reduced gap between logo and text */
         }
         .logo-text {
             font-weight: bold;
-            font-size: 24px;
+            font-size: 28px; /* Slightly bigger text */
         }
-        .partner-logo img {
-            height: 40px;
-        }
+
+        /* NAVIGATION */
         nav a {
             margin: 0 10px;
             text-decoration: none;
+            color: #0d3d66;
+            font-weight: 500;
         }
         nav .btn {
-            padding: 6px 12px;
+            padding: 8px 16px;
             background-color: #0d3d66;
             color: #fff;
             border-radius: 4px;
+            text-decoration: none;
         }
-        /* Optional: responsive */
+        nav .btn:hover {
+            background-color: #094060;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             header .container {
                 flex-direction: column;
                 align-items: flex-start;
-            }
-            .partner-logo {
-                margin: 10px 0;
             }
             nav {
                 margin-top: 10px;
@@ -69,18 +72,7 @@
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
             <a href="faq.html">FAQ</a>
-            <a href="contact.html" class="btn"</a>
-        </nav>
-    </div>
-</header>
-
-        <!-- Navigation -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html" class="btn">Get a Quote</a>
+            <a href="contact.html" class="btn">Contact Us</a> <!-- Replaced Get a Quote -->
         </nav>
     </div>
 </header>
@@ -98,11 +90,36 @@
 <section class="features container">
     <div class="feature-box">
         <h3>Fast Turnaround</h3>
-        <p>Most estimates delivered within 24–48 hours.</p>
+        <p>🏗️ 500+ Projects Estimated across residential & commercial construction
+
+⏱️ 24–48 Hours Average Delivery Time for standard takeoffs
+
+📊 98% Cost Accuracy Rate based on industry benchmarks
+
+📐 All CSI Trades Covered (Concrete, MEP, Finishes, Structural)
+
+🔍 100% Quality-Checked Estimates before final delivery
+
+💼 Bid-Ready Reports aligned with contractor requirements
+
+📈 Helping Contractors Win More Bids with fast & reliable data</p>
     </div>
     <div class="feature-box">
         <h3>Highly Accurate</h3>
-        <p>Detailed BOQs, material takeoffs & cost reports you can trust.</p>
+        <p>Detailed BOQs, material takeoffs & cost reports you can trust.
+            📐 99% Quantity Accuracy based on completed project audits
+
+🧮 Detailed Line-by-Line Takeoffs for complete cost clarity
+
+🔍 Multiple-Level Review Process to eliminate omissions
+
+🏗️ Trade-Specific Accuracy for all construction divisions
+
+📊 Minimized Cost Variance between estimate & actuals
+
+📄 Clear & Transparent Breakdown for confident bidding
+
+✅ Zero Guesswork Approach — data-driven estimating only.</p>
     </div>
     <div class="feature-box expert">
         <h3>Industry Experts</h3>
@@ -128,17 +145,7 @@
 
 <!-- ABOUT -->
 <section class="about container">
-    <h2>About CostiQ Estimation</h2>
-    <p>
-        CostiQ Estimation is a professional construction estimating company providing
-        reliable and accurate cost estimates for residential, commercial, and industrial projects.
-        Our team of expert estimators analyzes plans, specifications, and market pricing to deliver
-        precise estimates that help you plan budgets, control costs, and win competitive bids.
-    </p>
-    <p>
-        Whether you are preparing a bid, planning a renovation, or managing a large-scale project,
-        CostiQ Estimation ensures transparency, precision, and reliability at every step of the process.
-    </p>
+    <h2>
     <ul class="about-points">
         <li>Fast turnaround time for all projects</li>
         <li>Trade-wise detailed estimates</li>
@@ -151,60 +158,4 @@
 <section class="services-dark" id="services">
     <h2>Our Estimating Services</h2>
     <p class="services-intro">
-        We provide accurate and professional construction estimating services to help you plan, budget, and win more projects.
-    </p>
-    <div class="services-grid">
-        <div class="service-box">
-            <h3>Commercial Estimating</h3>
-            <p>Accurate cost estimates for offices, retail, warehouses, and large commercial projects.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Residential Estimating</h3>
-            <p>Detailed residential estimates for new homes, renovations, and remodeling projects.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Material Takeoffs</h3>
-            <p>Precise quantity takeoffs for concrete, steel, lumber, finishes, and MEP trades.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Bid Preparation</h3>
-            <p>Professional bid estimates and cost analysis to help you win more projects.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>MEP Estimating</h3>
-            <p>Mechanical, electrical, plumbing, and fire protection estimating services.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Value Engineering</h3>
-            <p>Cost optimization and value engineering solutions without compromising quality.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <div class="container">
-        <h2>Ready to Start Your Project?</h2>
-        <p>Get accurate construction cost estimates tailored to your project.</p>
-        <a href="contact.html" class="btn">Get Your Free Quote</a>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
-    </div>
-</footer>
-
-</body>
-</html>
-
-
-
-
+        We provide accurate and professional construction esti
