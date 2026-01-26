@@ -37,6 +37,18 @@
             color: #fff;
             border-radius: 4px;
         }
+
+        /* FEATURES SECTION FLEX */
+        .features-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .features-row .feature-box {
+            flex: 1;
+            min-width: 250px; /* ensures responsiveness */
+        }
+
         @media (max-width: 768px) {
             header .container {
                 flex-direction: column;
@@ -47,6 +59,9 @@
             }
             nav {
                 margin-top: 10px;
+            }
+            .features-row {
+                flex-direction: column;
             }
         }
     </style>
@@ -84,50 +99,54 @@
 
 <!-- FEATURES SECTION -->
 <section class="features container">
-    <div class="feature-box">
-        <h3>Fast Turnaround</h3>
-        <p>
-            🏗️ 500+ Projects Estimated across residential & commercial construction<br>
-            ⏱️ 24–48 Hours Average Delivery Time for standard takeoffs<br>
-            📊 98% Cost Accuracy Rate based on industry benchmarks<br>
-            📐 All CSI Trades Covered (Concrete, MEP, Finishes, Structural)<br>
-            🔍 100% Quality-Checked Estimates before final delivery<br>
-            💼 Bid-Ready Reports aligned with contractor requirements<br>
-            📈 Helping Contractors Win More Bids with fast & reliable data.
-        </p>
-    </div>
-</section>
-    <div class="feature-box">
-        <h3>Highly Accurate</h3>
+    <div class="features-row">
+        <!-- Feature 1 -->
         <div class="feature-box">
-    <p>
-        Detailed BOQs, material takeoffs & cost reports you can trust.<br>
-        📐 99% Quantity Accuracy based on completed project audits<br>
-        🧮 Detailed Line-by-Line Takeoffs for complete cost clarity<br>
-        🔍 Multiple-Level Review Process to eliminate omissions<br>
-        🏗️ Trade-Specific Accuracy for all construction divisions<br>
-        📊 Minimized Cost Variance between estimate & actuals<br>
-        📄 Clear & Transparent Breakdown for confident bidding<br>
-        ✅ Zero Guesswork Approach — data-driven estimating only.
-    </p>
-</div>
-    <div class="feature-box expert">
-        <h3>Industry Experts</h3>
-        <p>Experienced estimators using:</p>
+            <h3>Fast Turnaround</h3>
+            <p>
+                🏗️ 500+ Projects Estimated across residential & commercial construction<br>
+                ⏱️ 24–48 Hours Average Delivery Time for standard takeoffs<br>
+                📊 98% Cost Accuracy Rate based on industry benchmarks<br>
+                📐 All CSI Trades Covered (Concrete, MEP, Finishes, Structural)<br>
+                🔍 100% Quality-Checked Estimates before final delivery<br>
+                💼 Bid-Ready Reports aligned with contractor requirements<br>
+                📈 Helping Contractors Win More Bids with fast & reliable data.
+            </p>
+        </div>
 
-        <!-- SOFTWARE LOGO BUBBLES -->
-        <div class="software-section">
-            <div class="software-card">
-                <img src="bluebeam.jpg" alt="Bluebeam Logo">
-                <p>Bluebeam</p>
-            </div>
-            <div class="software-card">
-                <img src="planswift.png" alt="PlanSwift Logo">
-                <p>PlanSwift</p>
-            </div>
-            <div class="software-card">
-                <img src="excel.png" alt="Excel Logo">
-                <p>Excel</p>
+        <!-- Feature 2 -->
+        <div class="feature-box">
+            <h3>Highly Accurate</h3>
+            <p>
+                Detailed BOQs, material takeoffs & cost reports you can trust.<br>
+                📐 99% Quantity Accuracy based on completed project audits<br>
+                🧮 Detailed Line-by-Line Takeoffs for complete cost clarity<br>
+                🔍 Multiple-Level Review Process to eliminate omissions<br>
+                🏗️ Trade-Specific Accuracy for all construction divisions<br>
+                📊 Minimized Cost Variance between estimate & actuals<br>
+                📄 Clear & Transparent Breakdown for confident bidding<br>
+                ✅ Zero Guesswork Approach — data-driven estimating only.
+            </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-box expert">
+            <h3>Industry Experts</h3>
+            <p>Experienced estimators using:</p>
+            <!-- SOFTWARE LOGO BUBBLES -->
+            <div class="software-section">
+                <div class="software-card">
+                    <img src="bluebeam.jpg" alt="Bluebeam Logo">
+                    <p>Bluebeam</p>
+                </div>
+                <div class="software-card">
+                    <img src="planswift.png" alt="PlanSwift Logo">
+                    <p>PlanSwift</p>
+                </div>
+                <div class="software-card">
+                    <img src="excel.png" alt="Excel Logo">
+                    <p>Excel</p>
+                </div>
             </div>
         </div>
     </div>
@@ -204,5 +223,3 @@ Backed by experienced and qualified engineers and estimators, we offer cost-effe
 
 </body>
 </html>
-
-
