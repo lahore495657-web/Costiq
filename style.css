@@ -31,11 +31,11 @@ header .container {
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 5px; /* logo aur title ke beech ka gap kam kiya */
+    gap: 2px; //
 }
 
 .site-logo {
-    height: 70px;   /* logo size bada kiya */
+    height: 80px; 
     width: auto;
 }
 
@@ -274,3 +274,4 @@ footer a {
         border-radius: 30px;
     }
 }
+
