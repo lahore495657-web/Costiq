@@ -111,26 +111,41 @@ nav .btn:hover {
    ABOUT PAGE BACKGROUND
 ================================ */
 .about-section {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("about-bg.jpg") center/cover no-repeat;
-    padding: 80px 20px;
-    border-radius: 12px;
-    color: #fff;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("about-bg.jpg") center center/cover no-repeat;
+    padding: 120px 20px;
+    color: #ffb100; /* heading color */
     text-align: center;
 }
 
 .about-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-    color: #ffb100; /* Orange heading */
+    font-size: 3rem;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 
 .about-section p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.8;
     max-width: 900px;
-    margin: 15px auto;
+    margin: 0 auto;
+    color: #fff; /* paragraph white */
+}
+
+/* Optional button in about section */
+.about-section .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: #ff7f50; /* orange button */
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.about-section .btn:hover {
+    background-color: #ffa07a;
 }
 
 /* ================================
@@ -298,5 +313,13 @@ footer a {
     .services-dark .service-box {
         width: 100%;
         border-radius: 30px;
+    }
+
+    .about-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-section p {
+        font-size: 1.1rem;
     }
 }
