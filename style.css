@@ -111,9 +111,9 @@ nav .btn:hover {
    ABOUT PAGE BACKGROUND
 ================================ */
 .about-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("about-bg.jpg") center center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("about-bg.jpg") center center/cover no-repeat;
     padding: 120px 20px;
-    color: #ffb100; /* heading color */
+    color: #000; /* Text black now */
     text-align: center;
 }
 
@@ -121,6 +121,7 @@ nav .btn:hover {
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
+    color: #000; /* Heading black */
 }
 
 .about-section p {
@@ -128,7 +129,7 @@ nav .btn:hover {
     line-height: 1.8;
     max-width: 900px;
     margin: 0 auto;
-    color: #fff; /* paragraph white */
+    color: #000; /* Paragraph black */
 }
 
 /* Optional button in about section */
