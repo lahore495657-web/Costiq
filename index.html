@@ -1,187 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>CostiQ Estimation | Construction Cost Estimators</title>
-<style>
-body {margin:0; font-family: Arial, sans-serif; line-height:1.6;}
-.container {width:90%; max-width:1200px; margin:auto;}
+    <meta charset="UTF-8">
+    <title>CostiQ Estimation | Construction Cost Estimators</title>
 
-/* HEADER */
-header .container {display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
-.logo-area {display:flex; align-items:center;}
-.site-logo {height:50px; margin-right:10px;}
-.logo-text {font-weight:bold; font-size:24px;}
-nav a {margin:0 10px; text-decoration:none; color:#333;}
-nav .btn {padding:6px 12px; background-color:#0d3d66; color:#fff; border-radius:4px;}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-/* HERO */
-.hero {background:#0d3d66; color:#fff; padding:70px 0; text-align:center;}
-.hero .btn {background:#fff; color:#0d3d66; padding:10px 20px; border-radius:5px; text-decoration:none; display:inline-block; margin-top:15px;}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-/* FEATURES */
-.features-expanded {margin:70px auto; display:flex; flex-direction:column; gap:50px;}
-.feature {display:flex; align-items:center; gap:40px;}
-.feature.reverse {flex-direction:row-reverse;}
-.feature img {width:340px; border-radius:10px;}
-.feature-content h2 {color:#0d3d66; margin-top:0;}
-.feature-content p {line-height:1.7;}
+        /* HEADER */
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+        .site-logo {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .logo-text {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        nav .btn {
+            padding: 6px 12px;
+            background-color: #0d3d66;
+            color: #fff;
+            border-radius: 4px;
+        }
 
-/* SOFTWARE EXPANDABLE */
-.software-section {display:flex; gap:15px; margin-top:15px; flex-wrap:wrap;}
-.software-card {background:#f3f3f3; padding:10px; border-radius:5px; flex:1 1 120px; text-align:center;}
-.software-card img {height:40px; display:block; margin:auto;}
-.software-card p {font-size:14px; margin-top:5px;}
+        /* HERO */
+        .hero {
+            background: #0d3d66;
+            color: #fff;
+            padding: 70px 0;
+            text-align: center;
+        }
+        .hero .btn {
+            background: #fff;
+            color: #0d3d66;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
 
-/* ABOUT */
-.about {background:#f9f9f9; padding:50px 0;}
-.about-points {margin-top:10px; padding-left:20px;}
+        /* EXPANDED FEATURES */
+        .features-expanded {
+            margin: 70px auto;
+        }
+        .feature-expanded {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 90px;
+        }
+        .feature-expanded.reverse {
+            flex-direction: row-reverse;
+        }
+        .feature-img img {
+            width: 340px;
+            border-radius: 10px;
+        }
+        .feature-content h2 {
+            color: #0d3d66;
+            margin-top: 0;
+        }
+        .feature-content p {
+            line-height: 1.7;
+        }
 
-/* SERVICES */
-.services-dark {padding:60px 0; text-align:center;}
-.services-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; margin-top:25px;}
-.service-box {background:#f3f3f3; padding:15px; border-radius:5px;}
+        /* SOFTWARE */
+        .software-section {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .software-card img {
+            height: 40px;
+            display: block;
+            margin: auto;
+        }
+        .software-card p {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+        }
 
-/* CONTACT */
-.contact {padding:50px 0; background:#f9f9f9;}
-.contact form {max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15px;}
-.contact input, .contact textarea {padding:10px; font-size:16px;}
-.contact button {background:#0d3d66; color:#fff; border:none; padding:12px; cursor:pointer;}
+        /* ABOUT */
+        .about {
+            background: #f9f9f9;
+            padding: 50px 0;
+        }
+        .about-points {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
 
-/* CTA */
-.cta {background:#0d3d66; color:#fff; text-align:center; padding:40px 20px;}
-.cta .btn {background:#fff; color:#0d3d66; padding:10px 20px; border-radius:5px; text-decoration:none;}
+        /* SERVICES */
+        .services-dark {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .service-box {
+            background: #f3f3f3;
+            padding: 15px;
+            border-radius: 5px;
+        }
 
-/* FOOTER */
-footer {background:#0d3d66; color:#fff; text-align:center; padding:15px 0;}
+        /* CONTACT */
+        .contact {
+            padding: 50px 0;
+            background: #f9f9f9;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact input,
+        .contact textarea {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .contact button {
+            background: #0d3d66;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+        }
 
-/* MOBILE */
-@media (max-width:768px) {
-header .container {flex-direction:column; align-items:flex-start;}
-.feature, .feature.reverse {flex-direction:column; text-align:center;}
-.feature img {width:100%; max-width:360px;}
-.software-section {justify-content:center;}
-}
-</style>
+        /* CTA */
+        .cta {
+            background: #0d3d66;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .cta .btn {
+            background: #fff;
+            color: #0d3d66;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0d3d66;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .feature-expanded,
+            .feature-expanded.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+            .feature-img img {
+                width: 100%;
+                max-width: 360px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-<div class="container">
-<div class="logo-area">
-<img src="CostiQ -logo.png" class="site-logo">
-<span class="logo-text">CostiQ Estimation</span>
-</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="faq.html">FAQ</a>
-<a href="#contact" class="btn">Get a Quote</a>
-</nav>
-</div>
+    <div class="container">
+        <div class="logo-area">
+            <img src="CostiQ -logo.png" class="site-logo">
+            <span class="logo-text">CostiQ Estimation</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="#contact" class="btn">Get a Quote</a>
+        </nav>
+    </div>
 </header>
 
 <section class="hero">
-<div class="container">
-<h1>Accurate Construction Cost Estimation</h1>
-<p>Residential & Commercial Cost Estimating, BOQs & Material Takeoff Services</p>
-<a href="#contact" class="btn">Request a Free Quote</a>
-</div>
+    <div class="container">
+        <h1>Accurate Construction Cost Estimation</h1>
+        <p>Residential & Commercial Cost Estimating, BOQs & Material Takeoff Services</p>
+        <a href="#contact" class="btn">Request a Free Quote</a>
+    </div>
 </section>
 
 <!-- EXPANDED FEATURES -->
 <section class="features-expanded container">
 
-<div class="feature">
-<div class="feature-img">
-<img src="fast.jpg" alt="Fast Turnaround">
-</div>
-<div class="feature-content">
-<h2>Fast Turnaround</h2>
-<p>
-🏗️ 500+ Projects Estimated<br>
-⏱️ 24–48 Hours Delivery<br>
-📊 98% Accuracy Rate<br>
-📐 All CSI Trades Covered<br>
-🔍 100% Quality Checked<br>
-💼 Bid-Ready Reports
-</p>
-</div>
-</div>
+    <div class="feature-expanded">
+        <div class="feature-img">
+            <img src="fast.jpg">
+        </div>
+        <div class="feature-content">
+            <h2>Fast Turnaround</h2>
+            <p>
+                🏗️ 500+ Projects Estimated<br>
+                ⏱️ 24–48 Hours Delivery<br>
+                📊 98% Accuracy Rate<br>
+                📐 All CSI Trades Covered<br>
+                🔍 100% Quality Checked<br>
+                💼 Bid-Ready Reports
+            </p>
+        </div>
+    </div>
 
-<div class="feature reverse">
-<div class="feature-img">
-<img src="accurate.jpg" alt="Highly Accurate">
-</div>
-<div class="feature-content">
-<h2>Highly Accurate</h2>
-<p>
-📐 99% Quantity Accuracy<br>
-🧮 Line-by-Line Takeoffs<br>
-🔍 Multi-Level Review<br>
-📊 Minimal Cost Variance<br>
-✅ Data-Driven Estimating
-</p>
-</div>
-</div>
+    <div class="feature-expanded reverse">
+        <div class="feature-img">
+            <img src="accurate.jpg">
+        </div>
+        <div class="feature-content">
+            <h2>Highly Accurate</h2>
+            <p>
+                📐 99% Quantity Accuracy<br>
+                🧮 Line-by-Line Takeoffs<br>
+                🔍 Multi-Level Review<br>
+                📊 Minimal Cost Variance<br>
+                ✅ Data-Driven Estimating
+            </p>
+        </div>
+    </div>
 
-<div class="feature">
-<div class="feature-content">
-<h2>Industry Experts</h2>
-<p>Experienced estimators using:</p>
-<div class="software-section">
-<!-- Tum yahan baad me software logos add kar sakte ho -->
-</div>
-</div>
-</div>
+    <div class="feature-expanded">
+        <div class="feature-img">
+            <img src="experts.jpg">
+        </div>
+        <div class="feature-content">
+            <h2>Industry Experts</h2>
+            <div class="software-section">
+                <div class="software-card">
+                    <img src="bluebeam.jpg"><p>Bluebeam</p>
+                </div>
+                <div class="software-card">
+                    <img src="planswift.png"><p>PlanSwift</p>
+                </div>
+                <div class="software-card">
+                    <img src="excel.png"><p>Excel</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </section>
 
 <section class="about">
-<div class="container">
-<h2>About CostiQ Estimation</h2>
-<p>Professional construction estimating company delivering fast, accurate and reliable estimates across all CSI divisions.</p>
-<ul class="about-points">
-<li>Fast turnaround time</li>
-<li>Trade-wise estimates</li>
-<li>Modern estimating tools</li>
-<li>Contractor-focused support</li>
-</ul>
-</div>
+    <div class="container">
+        <h2>About CostiQ Estimation</h2>
+        <p>
+            Professional construction estimating company delivering fast, accurate
+            and reliable estimates across all CSI divisions.
+        </p>
+        <ul class="about-points">
+            <li>Fast turnaround time</li>
+            <li>Trade-wise estimates</li>
+            <li>Modern estimating tools</li>
+            <li>Contractor-focused support</li>
+        </ul>
+    </div>
 </section>
 
 <section class="services-dark" id="services">
-<div class="container">
-<h2>Our Estimating Services</h2>
-<div class="services-grid">
-<div class="service-box">Commercial Estimating</div>
-<div class="service-box">Residential Estimating</div>
-<div class="service-box">Material Takeoffs</div>
-<div class="service-box">MEP Estimating</div>
-</div>
-</div>
+    <div class="container">
+        <h2>Our Estimating Services</h2>
+        <div class="services-grid">
+            <div class="service-box">Commercial Estimating</div>
+            <div class="service-box">Residential Estimating</div>
+            <div class="service-box">Material Takeoffs</div>
+            <div class="service-box">MEP Estimating</div>
+        </div>
+    </div>
 </section>
 
 <section class="contact" id="contact">
-<div class="container">
-<h2>Contact Us</h2>
-<form>
-<input placeholder="Name" required>
-<input placeholder="Email" required>
-<textarea placeholder="Message" required></textarea>
-<button>Send Message</button>
-</form>
-</div>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form>
+            <input placeholder="Name">
+            <input placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Send Message</button>
+        </form>
+    </div>
 </section>
 
 <section class="cta">
-<h2>Ready to Start Your Project?</h2>
-<a href="#contact" class="btn">Get Your Free Quote</a>
+    <h2>Ready to Start Your Project?</h2>
+    <a href="#contact" class="btn">Get Your Free Quote</a>
 </section>
 
 <footer>
-<p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
+    <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
 </footer>
 
 </body>
