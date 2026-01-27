@@ -65,7 +65,7 @@
         }
         .about-hero p {
             font-size: 20px;
-            color: #ffd700; /* subtitle color */
+            color: #ffd700; /* Changed subtitle color */
             text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
         }
 
@@ -100,6 +100,11 @@
             padding: 25px 20px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         .feature-box h3 {
             color: #0d3d66;
@@ -113,10 +118,20 @@
 
         /* COMMITMENT LIST */
         .commitment-points {
-            list-style: disc;
-            padding-left: 20px;
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
             max-width: 600px;
-            margin: 20px auto 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .commitment-points li {
+            background: #0d3d66;
+            color: #fff;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            font-size: 16px;
         }
 
         /* CTA SECTION */
@@ -200,13 +215,15 @@
     <div class="container">
         <h2>Who We Are</h2>
         <p>
-            CostiQ Estimation is a professional construction estimating company with experience in 500+ residential projects. While a large portion of our clients belongs to the MEP sector, we provide accurate estimates across all CSI divisions, covering complete project scopes.
+            CostiQ Estimation is a professional construction estimating company dedicated to
+            providing accurate, fast, and dependable cost estimates for residential,
+            commercial, and industrial projects. We help contractors, subcontractors,
+            developers, and project owners make confident financial decisions.
         </p>
         <p>
-            Our estimates are known for high accuracy and reliability, which is why our clients remain highly satisfied and continue to return with repeat projects. We deliver fast turnaround times without compromising precision, helping contractors meet tight bid deadlines.
-        </p>
-        <p>
-            Backed by experienced and qualified engineers and estimators, we offer cost-effective estimating solutions that are often more affordable than market rates—without sacrificing quality or detail.
+            Our experienced estimators carefully analyze drawings, specifications,
+            and current market rates to deliver precise estimates that reduce risk,
+            control costs, and improve bidding success.
         </p>
     </div>
 </section>
@@ -217,60 +234,22 @@
         <h2>Why Choose CostiQ Estimation</h2>
         <div class="features-grid">
             <div class="feature-box">
-                <h3>Fast Turnaround</h3>
-                <p>
-                    🏗️ 500+ Projects Estimated across residential & commercial construction<br>
-                    ⏱️ 24–48 Hours Average Delivery Time for standard takeoffs<br>
-                    📊 98% Cost Accuracy Rate based on industry benchmarks<br>
-                    📐 All CSI Trades Covered (Concrete, MEP, Finishes, Structural)<br>
-                    🔍 100% Quality-Checked Estimates before final delivery<br>
-                    💼 Bid-Ready Reports aligned with contractor requirements<br>
-                    📈 Helping Contractors Win More Bids with fast & reliable data.
-                </p>
+                <h3>Fast & Accurate Estimates</h3>
+                <p>Quick turnaround times without compromising on accuracy, ensuring you stay ahead of deadlines.</p>
             </div>
             <div class="feature-box">
-                <h3>Highly Accurate</h3>
-                <p>
-                    Detailed BOQs, material takeoffs & cost reports you can trust.<br>
-                    📐 99% Quantity Accuracy based on completed project audits<br>
-                    🧮 Detailed Line-by-Line Takeoffs for complete cost clarity<br>
-                    🔍 Multiple-Level Review Process to eliminate omissions<br>
-                    🏗️ Trade-Specific Accuracy for all construction divisions<br>
-                    📊 Minimized Cost Variance between estimate & actuals<br>
-                    📄 Clear & Transparent Breakdown for confident bidding<br>
-                    ✅ Zero Guesswork Approach — data-driven estimating only.
-                </p>
+                <h3>Client-Focused Approach</h3>
+                <p>Personalized attention for every project to meet your unique goals and requirements.</p>
             </div>
             <div class="feature-box">
-                <h3>Industry Experts</h3>
-                <p>
-                    Experienced estimators using:<br>
-                    Bluebeam, PlanSwift, Excel, and other modern estimating tools.
-                </p>
+                <h3>Experienced Professionals</h3>
+                <p>Knowledgeable estimators with hands-on experience across multiple construction trades.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Modern Tools & Pricing</h3>
+                <p>Utilizing advanced estimating software and up-to-date market rates to provide precise and reliable cost projections.</p>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- COMMITMENT SECTION -->
-<section class="commitment">
-    <div class="container">
-        <h2>Our Commitment</h2>
-        <ul class="commitment-points">
-            <li>Fast turnaround time for all projects</li>
-            <li>Trade-wise detailed estimates</li>
-            <li>Up-to-date pricing & modern software tools</li>
-            <li>Support for contractors, subcontractors, and developers</li>
-        </ul>
-    </div>
-</section>
-
-<!-- CTA SECTION -->
-<section class="about-cta">
-    <div class="container">
-        <h2>Ready to Start Your Project?</h2>
-        <p>Get accurate construction cost estimates tailored to your project.</p>
-        <a href="contact.html" class="btn-large">Get Your Free Quote</a>
     </div>
 </section>
 
