@@ -163,28 +163,103 @@ nav .btn:hover {
 }
 
 /* ================================
-   ABOUT PAGE BACKGROUND
+   ABOUT PAGE STYLING (ONLY ADD)
 ================================ */
-.about-section {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-        url("about-bg.jpg") center/cover no-repeat;
-    padding: 120px 20px;
+.about-page {
+    background: #ffffff;
+    padding: 100px 20px;
     text-align: center;
 }
 
-.about-section h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.about-page h2 {
+    font-size: 2.6rem;
+    margin-bottom: 30px;
     font-weight: 700;
-    color: #000;
+    color: #0d3d66;
 }
 
-.about-section p {
-    font-size: 1.3rem;
-    line-height: 1.8;
+.about-page p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    max-width: 900px;
+    margin: 0 auto 25px;
+    color: #111;
+}
+
+.about-page ul {
+    max-width: 850px;
+    margin: 40px auto;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.about-page ul li {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #111;
+}
+
+/* CTA BUTTON IN ABOUT */
+.about-page .btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 40px;
+    background: #0d3d66;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.35s ease;
+}
+
+.about-page .btn:hover {
+    background: #094163;
+    transform: translateY(-3px);
+}
+
+/* OPTIONAL: ABOUT HERO STRIP */
+.about-hero {
+    background: linear-gradient(rgba(13,61,102,0.85), rgba(13,61,102,0.85)),
+                url("about-hero-bg.jpg") center/cover no-repeat;
+    padding: 140px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.about-hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.about-hero p {
+    font-size: 1.25rem;
     max-width: 900px;
     margin: 0 auto;
-    color: #000;
+    color: #ffb100;
+}
+
+/* ================================
+   RESPONSIVE – ABOUT PAGE ONLY
+================================ */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .about-hero p {
+        font-size: 1.05rem;
+    }
+
+    .about-page h2 {
+        font-size: 2rem;
+    }
+
+    .about-page p,
+    .about-page ul li {
+        font-size: 1rem;
+    }
 }
 
 /* ================================
@@ -283,3 +358,4 @@ footer {
         border-radius: 30px;
     }
 }
+
