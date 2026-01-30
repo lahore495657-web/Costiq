@@ -14,7 +14,7 @@ body {
 }
 
 /* ================================
-   HEADER (LOGO + BLUEBEAM)
+   HEADER (LOGO + NAV)
 ================================ */
 header {
     background: #0d3d66;
@@ -42,10 +42,6 @@ header .container {
     color: #ffffff;
     font-size: 50px;
     font-weight: 700;
-}
-
-.partner-logo img {
-    height: 36px;
 }
 
 /* NAVIGATION */
@@ -106,7 +102,7 @@ nav .btn:hover {
 }
 
 /* ================================
-   🔥 CONTRACTOR BIG BUBBLE SECTION
+   CONTRACTOR BIG BUBBLE SECTION
 ================================ */
 .contractor-bubble {
     min-height: 100vh;
@@ -163,7 +159,31 @@ nav .btn:hover {
 }
 
 /* ================================
-   ABOUT PAGE STYLING (ONLY ADD)
+   FAST TURNAROUND & HIGHLY ACCURATE SECTIONS
+================================ */
+.fast-turnaround {
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                url("fast.png") center/cover no-repeat;
+    padding: 100px 20px;
+}
+
+.accurate-section {
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                url("accurate.jpg") center/cover no-repeat;
+    padding: 100px 20px;
+}
+
+.fast-turnaround .bubble-card,
+.accurate-section .bubble-card {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 60px 50px;
+    border-radius: 45px;
+}
+
+/* ================================
+   ABOUT PAGE STYLING
 ================================ */
 .about-page {
     background: #ffffff;
@@ -200,7 +220,6 @@ nav .btn:hover {
     color: #111;
 }
 
-/* CTA BUTTON IN ABOUT */
 .about-page .btn {
     display: inline-block;
     margin-top: 35px;
@@ -218,7 +237,6 @@ nav .btn:hover {
     transform: translateY(-3px);
 }
 
-/* OPTIONAL: ABOUT HERO STRIP */
 .about-hero {
     background: linear-gradient(rgba(13,61,102,0.85), rgba(13,61,102,0.85)),
                 url("about-hero-bg.jpg") center/cover no-repeat;
@@ -238,28 +256,6 @@ nav .btn:hover {
     max-width: 900px;
     margin: 0 auto;
     color: #ffb100;
-}
-
-/* ================================
-   RESPONSIVE – ABOUT PAGE ONLY
-================================ */
-@media (max-width: 768px) {
-    .about-hero h1 {
-        font-size: 2.3rem;
-    }
-
-    .about-hero p {
-        font-size: 1.05rem;
-    }
-
-    .about-page h2 {
-        font-size: 2rem;
-    }
-
-    .about-page p,
-    .about-page ul li {
-        font-size: 1rem;
-    }
 }
 
 /* ================================
@@ -357,5 +353,9 @@ footer {
         width: 100%;
         border-radius: 30px;
     }
-}
 
+    .fast-turnaround .bubble-card,
+    .accurate-section .bubble-card {
+        padding: 40px 30px;
+    }
+}
