@@ -103,6 +103,7 @@
             text-align: center;
             box-shadow: 0 35px 90px rgba(0,0,0,0.35);
             margin: 20px;
+            position: relative;
         }
 
         .bubble-card h1 {
@@ -141,34 +142,35 @@
             transform: translateY(-4px);
         }
 
-        /* ===== BUBBLES WITH IMAGE ===== */
-        .bubble-with-image {
+        /* ===== FAST TURNAROUND SECTION ===== */
+        .fast-turnaround {
             display: flex;
-            flex-direction: row;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 40px;
             flex-wrap: wrap;
         }
 
-        .bubble-with-image img {
-            max-width: 300px;
+        .fast-turnaround img {
+            max-width: 400px;
             border-radius: 25px;
-            margin: 15px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            flex-shrink: 0;
         }
 
-        .bubble-with-image .text-content {
-            max-width: 500px;
+        .fast-turnaround .bubble-card {
+            flex: 1;
             text-align: left;
+            padding: 50px 40px;
         }
 
-        .bubble-with-image .text-content h1 {
+        .fast-turnaround .bubble-card h1 {
             font-size: 36px;
             color: #0d3d66;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .bubble-with-image .text-content p {
+        .fast-turnaround .bubble-card p {
             font-size: 18px;
             color: #000;
             line-height: 1.8;
@@ -287,17 +289,17 @@
         }
 
         /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .bubble-with-image {
+        @media (max-width: 992px) {
+            .fast-turnaround {
                 flex-direction: column;
                 text-align: center;
             }
 
-            .bubble-with-image .text-content {
+            .fast-turnaround .bubble-card {
                 text-align: center;
             }
 
-            .bubble-with-image img {
+            .fast-turnaround img {
                 max-width: 80%;
             }
         }
@@ -347,11 +349,11 @@
     </div>
 </section>
 
-<!-- FAST TURNAROUND WITH IMAGE -->
+<!-- FAST TURNAROUND WITH IMAGE (OUTSIDE BUBBLE) -->
 <section class="contractor-bubble">
-    <div class="bubble-card bubble-with-image">
+    <div class="container fast-turnaround">
         <img src="fast.jpg" alt="Fast Turnaround Image">
-        <div class="text-content">
+        <div class="bubble-card">
             <h1>Fast Turnaround</h1>
             <p>🏗️ 500+ Projects Estimated</p>
             <p>⏱️ 24–48 Hour Delivery</p>
