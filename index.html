@@ -90,14 +90,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #0d3d66, #092a45);
             flex-wrap: wrap;
+            padding: 80px 20px;
         }
 
         .bubble-card {
             max-width: 1000px;
-            background: rgba(255, 255, 255, 0.96);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 45px;
             padding: 70px 65px;
             text-align: center;
@@ -142,39 +141,26 @@
             transform: translateY(-4px);
         }
 
-        /* ===== FAST TURNAROUND SECTION ===== */
+        /* ===== FAST TURNAROUND & HIGHLY ACCURATE BACKGROUNDS ===== */
         .fast-turnaround {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                        url("fast.png") center/cover no-repeat;
+            padding: 100px 20px;
         }
 
-        .fast-turnaround img {
-            max-width: 400px;
-            border-radius: 25px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-            flex-shrink: 0;
+        .accurate-section {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                        url("accurate.jpg") center/cover no-repeat;
+            padding: 100px 20px;
         }
 
-        .fast-turnaround .bubble-card {
-            flex: 1;
-            text-align: left;
-            padding: 50px 40px;
-        }
-
-        .fast-turnaround .bubble-card h1 {
-            font-size: 36px;
-            color: #0d3d66;
-            margin-bottom: 20px;
-        }
-
-        .fast-turnaround .bubble-card p {
-            font-size: 18px;
-            color: #000;
-            line-height: 1.8;
-            margin-bottom: 10px;
+        .fast-turnaround .bubble-card,
+        .accurate-section .bubble-card {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 60px 50px;
+            border-radius: 45px;
         }
 
         /* ===== SOFTWARE ===== */
@@ -289,18 +275,10 @@
         }
 
         /* ===== RESPONSIVE ===== */
-        @media (max-width: 992px) {
-            .fast-turnaround {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .fast-turnaround .bubble-card {
-                text-align: center;
-            }
-
-            .fast-turnaround img {
-                max-width: 80%;
+        @media (max-width: 768px) {
+            .fast-turnaround .bubble-card,
+            .accurate-section .bubble-card {
+                padding: 40px 30px;
             }
         }
     </style>
@@ -349,32 +327,26 @@
     </div>
 </section>
 
-<!-- FAST TURNAROUND WITH IMAGE (OUTSIDE BUBBLE) -->
-<section class="contractor-bubble">
-    <div class="container fast-turnaround">
-        <img src="fast.png" alt="Fast Turnaround Image">
-        <div class="bubble-card">
-            <h1>Fast Turnaround</h1>
-            <p>🏗️ 500+ Projects Estimated</p>
-            <p>⏱️ 24–48 Hour Delivery</p>
-            <p>📊 98% Accuracy Rate</p>
-            <p>📐 All CSI Trades Covered</p>
-            <p>🔍 Quality-Checked Estimates</p>
-        </div>
+<!-- FAST TURNAROUND (BACKGROUND IMAGE) -->
+<section class="contractor-bubble fast-turnaround">
+    <div class="bubble-card">
+        <h1>Fast Turnaround</h1>
+        <p>🏗️ 500+ Projects Estimated</p>
+        <p>⏱️ 24–48 Hour Delivery</p>
+        <p>📊 98% Accuracy Rate</p>
+        <p>📐 All CSI Trades Covered</p>
+        <p>🔍 Quality-Checked Estimates</p>
     </div>
 </section>
 
-<!-- HIGHLY ACCURATE -->
-<section class="contractor-bubble">
-    <div class="bubble-card bubble-with-image">
-        <img src="accurate.jpg" alt="Highly Accurate Image">
-        <div class="text-content">
-            <h1>Highly Accurate</h1>
-            <p>📐 99% Quantity Accuracy</p>
-            <p>🧮 Line-by-Line Takeoffs</p>
-            <p>🔍 Multi-Level Review</p>
-            <p>📊 Minimized Cost Variance</p>
-        </div>
+<!-- HIGHLY ACCURATE (BACKGROUND IMAGE) -->
+<section class="contractor-bubble accurate-section">
+    <div class="bubble-card">
+        <h1>Highly Accurate</h1>
+        <p>📐 99% Quantity Accuracy</p>
+        <p>🧮 Line-by-Line Takeoffs</p>
+        <p>🔍 Multi-Level Review</p>
+        <p>📊 Minimized Cost Variance</p>
     </div>
 </section>
 
@@ -439,4 +411,3 @@
 
 </body>
 </html>
-
