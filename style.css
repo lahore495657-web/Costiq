@@ -359,3 +359,79 @@ footer {
         padding: 40px 30px;
     }
 }
+/* ================= CONTRACTOR BIG BUBBLE ================= */
+.contractor-bubble {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0d3d66, #092a45);
+}
+
+.bubble-card {
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 45px;
+    padding: 70px 65px;
+    text-align: center;
+    box-shadow: 0 35px 90px rgba(0,0,0,0.35);
+}
+
+.bubble-card h1 {
+    font-size: 42px;
+    color: #0d3d66;
+    margin-bottom: 10px;
+}
+
+.bubble-card h2 {
+    font-size: 26px;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+.bubble-card p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #000;
+    margin-bottom: 22px;
+}
+
+.bubble-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 16px 44px;
+    background: #0d3d66;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.35s ease;
+}
+
+.bubble-btn:hover {
+    background: #094163;
+    transform: translateY(-4px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .bubble-card {
+        padding: 45px 28px;
+        border-radius: 30px;
+    }
+
+    .bubble-card h1 {
+        font-size: 32px;
+    }
+
+    .bubble-card h2 {
+        font-size: 20px;
+    }
+
+    .bubble-card p {
+        font-size: 16px;
+    }
+}
+
