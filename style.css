@@ -209,23 +209,67 @@ nav .btn:hover {
     50% { box-shadow: 0 40px 80px rgba(0,0,0,0.35); }
 }
 
-/* ================================    SOFTWARE LOGO BUBBLES ================================ */
-.features .feature-box img {
-    width: 80px;               /* logo size */
-    height: 80px;
-    border-radius: 50%;        /* circular bubble */
-    object-fit: contain;       /* keep logo proportion */
-    background: #fff;          /* optional: white bubble background */
-    padding: 10px;
-    margin: 0 auto 15px;
-    display: block;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+/* ================================ SOFTWARE & TOOLS BUBBLE LOGOS ================================ */
+.software-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.software-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff; /* Optional: card background */
+    padding: 20px;
+    border-radius: 50%; /* Bubble effect */
+    width: 130px;       /* Fixed bubble width */
+    height: 130px;      /* Fixed bubble height */
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.features .feature-box img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+.software-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+.software-card img {
+    width: 60px;    /* Logo size inside the bubble */
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%; /* Make logo circular inside bubble */
+    margin-bottom: 8px;
+}
+
+/* Software name text */
+.software-card p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0d3d66;
+    margin: 0;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+    .software-card {
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+    }
+
+    .software-card img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .software-card p {
+        font-size: 0.85rem;
+    }
 }
 
 /* ================================    FEATURES / WHO WE HELP ================================ */
@@ -359,3 +403,4 @@ nav .btn:hover {
         font-size: 24px;
     }
 }
+
