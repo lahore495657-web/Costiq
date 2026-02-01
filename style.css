@@ -166,23 +166,63 @@ nav .btn {
     font-weight: bold;
 }
 
-/* ================================  BUBBLE 3 ================================ */
+/* ================================  BUBBLE 3 (DARK FIXED) ================================ */
 .services-dark {
-    background: linear-gradient(135deg, #111, #1f1f1f);
-    padding: 80px 20px;
-    border-radius: 28px;
+    background: linear-gradient(135deg, #0d3d66, #092a45);
+    padding: 90px 30px;
+    border-radius: 35px;
+    margin: 120px auto;
+    max-width: 1200px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.35);
     animation: softFadeUp 1.4s ease forwards;
 }
 
+.services-dark h2 {
+    color: #ffb100;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.services-intro {
+    color: #e6e6e6;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
 .services-dark .service-box {
-    background: #1b1b1b;
-    border-radius: 20px;
-    padding: 35px;
-    transition: 0.3s;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 22px;
+    padding: 40px 30px;
+    transition: 0.35s ease;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.services-dark .service-box h3 {
+    color: #ffb100;
+    margin-bottom: 12px;
+}
+
+.services-dark .service-box p {
+    color: #f1f1f1;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 28px;
+}
+
+.services-dark .service-box p::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #ffb100;
+    font-size: 18px;
 }
 
 .services-dark .service-box:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.4);
 }
 
 /* ================================  SOFTWARE LOGO BUBBLES ================================ */
@@ -217,6 +257,20 @@ nav .btn {
     padding: 80px 20px;
     border-radius: 25px;
 }
+
+.estimating-process p {
+    position: relative;
+    padding-left: 26px;
+}
+
+.estimating-process p::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ffb100;
+    font-weight: bold;
+}
+
 /* ================= FINAL CTA BUBBLE ================= */
 .final-cta {
     padding: 120px 20px;
@@ -335,4 +389,3 @@ nav .btn {
         font-size: 17px;
     }
 }
-
