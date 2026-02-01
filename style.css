@@ -273,6 +273,77 @@ nav .btn:hover {
     font-size: 1.4rem;
     font-weight: 600;
 }
+/* ================================
+   WHY OUTSOURCE ESTIMATION
+================================ */
+.why-outsource {
+    background: #f8f9fc;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    margin: 60px 0;
+}
+
+.why-outsource h2 {
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+    color: #0d3d66;
+}
+
+.why-outsource p {
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.why-outsource .benefits-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding: 0;
+}
+
+.why-outsource .benefits-list li {
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-left: 6px solid #ffb100;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-outsource .benefits-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.why-outsource .btn {
+    background: #0d3d66;
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.why-outsource .btn:hover {
+    background-color: #094163;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .why-outsource h2 { font-size: 2rem; }
+    .why-outsource p { font-size: 1rem; }
+    .why-outsource .benefits-list li { font-size: 0.95rem; padding: 12px 18px; }
+}
 
 /* ================================
    FEATURES / WHO WE HELP
@@ -455,3 +526,4 @@ footer a {
     .matrix-item h3 { font-size: 1.2rem; }
     .matrix-item .circle { width: 60px; height: 60px; font-size: 20px; }
 }
+
