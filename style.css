@@ -13,7 +13,6 @@ body {
     color: #333;
 }
 
-/* CONTAINER */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -39,7 +38,6 @@ header .container {
     flex-wrap: wrap;
 }
 
-/* LOGO */
 .logo-area {
     display: flex;
     align-items: center;
@@ -57,7 +55,6 @@ header .container {
     font-weight: 700;
 }
 
-/* NAVIGATION */
 nav {
     display: flex;
     align-items: center;
@@ -88,7 +85,6 @@ nav .btn:hover {
     background-color: #fff;
 }
 
-/* MOBILE MENU TOGGLE */
 .menu-toggle {
     display: none;
     font-size: 32px;
@@ -100,7 +96,7 @@ nav .btn:hover {
    HERO SECTION
 ================================ */
 .hero {
-    background: linear-gradient(rgba(13,61,102,0.8), rgba(13,61,102,0.8)),
+    background: linear-gradient(rgba(13,61,102,0.85), rgba(13,61,102,0.85)),
         url("construction-bg.jpg") center/cover no-repeat;
     color: #fff;
     text-align: center;
@@ -119,6 +115,7 @@ nav .btn:hover {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.8;
 }
 
 .hero .btn {
@@ -155,6 +152,11 @@ nav .btn:hover {
     padding: 70px 65px;
     text-align: center;
     box-shadow: 0 35px 90px rgba(0,0,0,0.35);
+    transition: transform 0.3s ease;
+}
+
+.bubble-card:hover {
+    transform: translateY(-5px);
 }
 
 .bubble-card h1 {
@@ -167,12 +169,14 @@ nav .btn:hover {
     font-size: 28px;
     margin-bottom: 25px;
     font-weight: 600;
+    color: #094163;
 }
 
 .bubble-card p {
     font-size: 18px;
     line-height: 1.9;
     margin-bottom: 30px;
+    color: #333;
 }
 
 .bubble-btn {
@@ -191,6 +195,39 @@ nav .btn:hover {
 .bubble-btn:hover {
     background: #094163;
     transform: translateY(-4px);
+}
+
+/* ================================
+   CONTRACTOR INSIGHT HIGHLIGHT
+================================ */
+.contractor-insight {
+    background: linear-gradient(120deg, #ffb100, #ffc966);
+    color: #0d3d66;
+    padding: 50px 30px;
+    border-radius: 35px;
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contractor-insight h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contractor-insight p {
+    font-size: 1.1rem;
+}
+
+.contractor-insight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
 }
 
 /* ================================
@@ -244,7 +281,7 @@ nav .btn:hover {
     background: radial-gradient(circle at top left, #1e2433, #0b0e14);
     border-radius: 35px;
     padding: 20px 18px;
-    width: 120px;
+    width: 100px; /* Adjusted for professional look */
     text-align: center;
     color: #e5e8ff;
     box-shadow: 0 10px 20px rgba(0,0,0,0.45);
@@ -252,7 +289,7 @@ nav .btn:hover {
 }
 
 .software-card img {
-    height: 26px;
+    height: 28px; /* Properly sized logos */
     width: auto;
     margin-bottom: 8px;
 }
@@ -393,5 +430,13 @@ footer a {
     .services-dark .service-box {
         width: 100%;
         border-radius: 30px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
     }
 }
