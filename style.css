@@ -273,6 +273,7 @@ nav .btn:hover {
     font-size: 1.4rem;
     font-weight: 600;
 }
+
 /* ================================
    WHY OUTSOURCE ESTIMATION
 ================================ */
@@ -336,13 +337,6 @@ nav .btn:hover {
 
 .why-outsource .btn:hover {
     background-color: #094163;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .why-outsource h2 { font-size: 2rem; }
-    .why-outsource p { font-size: 1rem; }
-    .why-outsource .benefits-list li { font-size: 0.95rem; padding: 12px 18px; }
 }
 
 /* ================================
@@ -444,6 +438,71 @@ nav .btn:hover {
 }
 
 /* ================================
+   SOFTWARE ICONS (FIXED SIZE)
+================================ */
+.software-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.software-card {
+    background: #0d3d66;
+    width: 90px;   /* Fixed card size */
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    transition: 0.35s;
+    padding: 10px;
+}
+
+.software-card img {
+    width: 36px;  /* Fixed image size */
+    height: 36px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.software-card p {
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.software-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* ================================
+   SOFTWARE CARDS RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .software-cards {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .software-card {
+        width: 80px;
+        height: 80px;
+        padding: 8px;
+    }
+    .software-card img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* ================================
    CTA SECTION
 ================================ */
 .cta {
@@ -526,4 +585,3 @@ footer a {
     .matrix-item h3 { font-size: 1.2rem; }
     .matrix-item .circle { width: 60px; height: 60px; font-size: 20px; }
 }
-
