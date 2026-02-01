@@ -203,16 +203,75 @@ nav .btn:hover {
 }
 
 /* ================================
-   HIGHLIGHTED PARAGRAPH
+   SERVICE MATRIX
 ================================ */
-.highlight-paragraph {
-    background: #fffbec;
-    border-left: 6px solid #ffb100;
-    padding: 20px;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    margin: 30px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.service-matrix {
+    padding: 100px 20px;
+    background: #f8f9fc;
+    text-align: center;
+}
+
+.service-matrix h2 {
+    font-size: 2.6rem;
+    margin-bottom: 60px;
+    color: #0d3d66;
+}
+
+.matrix-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.matrix-image img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.matrix-image img:hover {
+    transform: scale(1.05);
+}
+
+.matrix-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.matrix-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.matrix-item .circle {
+    width: 80px;
+    height: 80px;
+    border: 4px solid #0d3d66;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d3d66;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.matrix-item .circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.matrix-item h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 /* ================================
@@ -314,104 +373,6 @@ nav .btn:hover {
 }
 
 /* ================================
-   WHAT WE DO / PROCESS SECTION (UPGRADED)
-================================ */
-.what-we-do {
-    background: #f8f9fc;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.what-we-do h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #0d3d66;
-}
-
-.what-we-do p.intro {
-    max-width: 800px;
-    margin: 0 auto 50px;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-}
-
-/* Cards */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    margin-bottom: 60px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 30px 25px;
-    width: 280px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    transition: 0.35s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
-}
-
-.card h3 {
-    font-size: 20px;
-    color: #0d3d66;
-    margin-bottom: 12px;
-}
-
-.card p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Software Icons */
-.software-cards {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.software-card {
-    background: #0d3d66;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    transition: 0.35s;
-}
-
-.software-card img {
-    width: 36px;
-    height: auto;
-    margin-bottom: 8px;
-}
-
-.software-card p {
-    font-size: 0.85rem;
-    margin: 0;
-    font-weight: 600;
-}
-
-.software-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-}
-
-/* ================================
    CTA SECTION
 ================================ */
 .cta {
@@ -478,13 +439,19 @@ footer a {
     nav.show { display: flex; }
     nav a { padding: 12px 0; text-align: center; }
     header .container { flex-wrap: wrap; }
+
     .bubble-card { padding: 40px 28px; border-radius: 30px; }
     .bubble-card h1 { font-size: 32px; }
     .bubble-card h2 { font-size: 20px; }
     .bubble-card p { font-size: 16px; }
+
     .services-dark .service-box { width: 100%; border-radius: 30px; }
     .features .feature-box { flex: 1 1 100%; margin-bottom: 20px; }
-    .software-card { width: 100px; padding: 18px; }
-    .cards { flex-direction: column; gap: 20px; }
-    .software-cards { flex-direction: column; gap: 20px; }
+
+    .matrix-content { flex-direction: column; gap: 40px; }
+    .matrix-stats { flex-direction: row; justify-content: center; gap: 20px; }
+    .matrix-item { flex-direction: column; align-items: center; text-align: center; }
+
+    .matrix-item h3 { font-size: 1.2rem; }
+    .matrix-item .circle { width: 60px; height: 60px; font-size: 20px; }
 }
