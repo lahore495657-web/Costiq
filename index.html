@@ -3,350 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <title>CostiQ Estimation | Construction Cost Estimators</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Simple inline CSS for logos alignment */
-        header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 0;
-        }
-        .logo-area {
-            display: flex;
-            align-items: center;
-        }
-        .logo-area .site-logo {
-            height: 50px;
-            margin-right: 10px;
-        }
-        .logo-text {
-            font-weight: bold;
-            font-size: 24px;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        nav .btn {
-            padding: 6px 12px;
-            background-color: #0d3d66;
-            color: #fff;
-            border-radius: 4px;
-        }
-
-        /* FEATURES SECTION FLEX */
-        .features-row {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .features-row .feature-box {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        /* SOFTWARE LOGO SECTION */
-        .software-section {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .software-card img {
-            height: 40px;
-            display: block;
-        }
-        .software-card p {
-            text-align: center;
-            margin: 5px 0 0 0;
-            font-size: 14px;
-        }
-
-        /* ABOUT SECTION */
-        .about-points {
-            margin-top: 10px;
-            list-style: disc;
-            padding-left: 20px;
-        }
-
-        /* SERVICES GRID */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .service-box {
-            background-color: #f3f3f3;
-            padding: 15px;
-            border-radius: 5px;
-        }
-
-        /* CTA SECTION */
-        .cta {
-            background-color: #0d3d66;
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .cta .btn {
-            margin-top: 15px;
-            background-color: #fff;
-            color: #0d3d66;
-        }
-
-        /* CONTACT FORM */
-        .contact {
-            padding: 40px 20px;
-            background-color: #f9f9f9;
-        }
-        .contact h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .contact input, 
-        .contact textarea {
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .contact button {
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            background-color: #0d3d66;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .contact button:hover {
-            background-color: #094163;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #0d3d66;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-        }
-
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav {
-                margin-top: 10px;
-            }
-            .features-row {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header>
     <div class="container">
         <div class="logo-area">
             <img src="CostiQ -logo.png" class="site-logo" alt="CostiQ Logo">
             <span class="logo-text">CostiQ Estimation</span>
         </div>
-    
-        <nav>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="navMenu">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
             <a href="faq.html">FAQ</a>
-            <a href="#contact" class="btn">Get a Quote</a>
+            <a href="contact.html" class="btn">Get a Quote</a>
         </nav>
     </div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- ================= HERO ================= -->
 <section class="hero">
     <div class="container">
-        <h1>Accurate Construction Cost Estimation</h1>
-        <p>Residential & Commercial Cost Estimating, BOQs & Material Takeoff Services</p>
-        <a href="#contact" class="btn">Request a Free Quote</a>
+        <h1>Accurate Construction Cost Estimates That Help You Win More Bids</h1>
+        <p>
+            Professional construction estimating & material takeoff services for
+            contractors, subcontractors, and developers.
+        </p>
+        <a href="contact.html" class="btn">Request a Free Quote</a>
     </div>
 </section>
-  <!-- ================= CONTRACTOR BUBBLE ================= -->
+
+<!-- ================= CONTRACTOR PAIN BUBBLE ================= -->
 <section class="contractor-bubble">
     <div class="bubble-card">
         <h1>Are You a Contractor?</h1>
-        <h2>Want to Stay Busy & Make More Money?</h2>
+        <h2>Too Busy Working IN the Business?</h2>
 
         <p>
-            If you are a contractor, you must be too busy working <strong>IN</strong> your business.
-            Busy contractors rarely get enough time to work <strong>ON</strong> their business —
-            and that’s where growth starts to suffer.
+            Most contractors spend their entire day running job sites,
+            managing crews, handling calls, and chasing deadlines.
+            This leaves almost no time to work <strong>ON</strong> the business.
         </p>
 
         <p>
-            You may be missing out on projects worth <strong>$400,000 per month or more</strong>
-            simply because there are not enough hours in the day. Between running projects,
-            managing crews, and handling admin work, it often feels like the day ends before
-            planned tasks even begin.
+            Because of this, many contractors unknowingly miss out on
+            <strong>$300,000 to $400,000 worth of projects every month</strong>.
+            Not due to lack of skill — but due to lack of time.
         </p>
 
         <p>
-            We are a <strong>one-stop solution</strong> for construction cost estimation and
-            material takeoffs. Our expert estimators deliver
-            <strong>accurate, bid-winning estimates</strong> that help you stay competitive
-            and profitable.
+            Late bids, rushed estimates, or skipped opportunities
+            slowly stop your business from growing,
+            even when you are constantly busy.
         </p>
 
-        <a href="contact.html" class="bubble-btn">Let’s Get Started</a>
+        <a href="contact.html" class="bubble-btn">Let’s Fix This</a>
     </div>
 </section>
 
-<!-- FEATURES SECTION -->
-<section class="features container">
-    <div class="features-row">
-        <div class="feature-box">
-            <h3>Fast Turnaround</h3>
-            <p>
-                🏗️ 500+ Projects Estimated across residential & commercial construction<br>
-                ⏱️ 24–48 Hours Average Delivery Time for standard takeoffs<br>
-                📊 98% Cost Accuracy Rate based on industry benchmarks<br>
-                📐 All CSI Trades Covered (Concrete, MEP, Finishes, Structural)<br>
-                🔍 100% Quality-Checked Estimates before final delivery<br>
-                💼 Bid-Ready Reports aligned with contractor requirements<br>
-                📈 Helping Contractors Win More Bids with fast & reliable data.
-            </p>
-        </div>
-
-        <div class="feature-box">
-            <h3>Highly Accurate</h3>
-            <p>
-                Detailed BOQs, material takeoffs & cost reports you can trust.<br>
-                📐 99% Quantity Accuracy based on completed project audits<br>
-                🧮 Detailed Line-by-Line Takeoffs for complete cost clarity<br>
-                🔍 Multiple-Level Review Process to eliminate omissions<br>
-                🏗️ Trade-Specific Accuracy for all construction divisions<br>
-                📊 Minimized Cost Variance between estimate & actuals<br>
-                📄 Clear & Transparent Breakdown for confident bidding<br>
-                ✅ Zero Guesswork Approach — data-driven estimating only.
-            </p>
-        </div>
-
-        <div class="feature-box expert">
-            <h3>Industry Experts</h3>
-            <p>Experienced estimators using:</p>
-            <div class="software-section">
-                <div class="software-card">
-                    <img src="bluebeam.jpg" alt="Bluebeam Logo">
-                    <p>Bluebeam</p>
-                </div>
-                <div class="software-card">
-                    <img src="planswift.png" alt="PlanSwift Logo">
-                    <p>PlanSwift</p>
-                </div>
-                <div class="software-card">
-                    <img src="excel.png" alt="Excel Logo">
-                    <p>Excel</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
+<!-- ================= WHY CONTRACTORS STRUGGLE ================= -->
 <section class="about container">
-    <h2>About CostiQ Estimation</h2>
+    <h2>Why Most Contractors Struggle to Grow</h2>
+
     <p>
-        CostiQ Estimation is a professional construction estimating company with experience in 500+ residential projects. While a large portion of our clients belongs to the MEP sector, we provide accurate estimates across all CSI divisions, covering complete project scopes.
-
-        Our estimates are known for high accuracy and reliability, which is why our clients remain highly satisfied and continue to return with repeat projects. We deliver fast turnaround times without compromising precision, helping contractors meet tight bid deadlines.
-
-        Backed by experienced and qualified engineers and estimators, we offer cost-effective estimating solutions that are often more affordable than market rates—without sacrificing quality or detail.
+        In today’s competitive construction market, winning projects
+        is no longer just about experience.
+        It requires fast turnaround, accurate quantities,
+        and competitive pricing.
     </p>
-    
-    <ul class="about-points">
-        <li>Fast turnaround time for all projects</li>
-        <li>Trade-wise detailed estimates</li>
-        <li>Up-to-date pricing & modern software tools</li>
-        <li>Support for contractors, subcontractors, and developers</li>
-    </ul>
+
+    <p>
+        Contractors often lose bids because estimates are prepared in a hurry,
+        submitted late, or lack proper detail.
+        Many stop bidding altogether because estimating consumes
+        too much valuable time.
+    </p>
+
+    <p>
+        This creates a cycle where contractors stay busy —
+        but never truly scale their business.
+    </p>
 </section>
 
-<!-- OUR ESTIMATING SERVICES -->
-<section class="services-dark" id="services">
-    <h2>Our Estimating Services</h2>
+<!-- ================= HOW COSTIQ HELPS ================= -->
+<section class="services-dark">
+    <h2>How CostiQ Estimation Helps You Win</h2>
+
     <p class="services-intro">
-        We provide accurate and professional construction estimating services to help you plan, budget, and win more projects.
+        CostiQ Estimation works as your remote estimating department.
+        We handle the numbers, quantities, and pricing —
+        so you can focus on execution, clients, and growth.
     </p>
+
     <div class="services-grid">
         <div class="service-box">
-            <h3>Commercial Estimating</h3>
-            <p>Accurate cost estimates for offices, retail, warehouses, and large commercial projects.</p>
+            <h3>Fast Turnaround</h3>
+            <p>Most estimates delivered within 24–48 hours.</p>
         </div>
+
         <div class="service-box">
-            <h3>Residential Estimating</h3>
-            <p>Detailed residential estimates for new homes, renovations, and remodeling projects.</p>
+            <h3>Bid-Winning Accuracy</h3>
+            <p>Trade-wise BOQs with market-based pricing.</p>
         </div>
+
         <div class="service-box">
-            <h3>Material Takeoffs</h3>
-            <p>Precise quantity takeoffs for concrete, steel, lumber, finishes, and MEP trades.</p>
-        </div>
-        <div class="service-box">
-            <h3>Bid Preparation</h3>
-            <p>Professional bid estimates and cost analysis to help you win more projects.</p>
-        </div>
-        <div class="service-box">
-            <h3>MEP Estimating</h3>
-            <p>Mechanical, electrical, plumbing, and fire protection estimating services.</p>
-        </div>
-        <div class="service-box">
-            <h3>Value Engineering</h3>
-            <p>Cost optimization and value engineering solutions without compromising quality.</p>
+            <h3>Stress-Free Bidding</h3>
+            <p>No late nights, no rushed spreadsheets.</p>
         </div>
     </div>
 </section>
 
-<!-- CONTACT US -->
-<section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        <input type="text" name="location" placeholder="Your Location / City" required>
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+<!-- ================= WHAT WE DO ================= -->
+<section class="about container">
+    <h2>What We Do</h2>
+
+    <p>
+        CostiQ Estimation provides professional construction cost estimating
+        and material takeoff services for residential,
+        commercial, and industrial projects.
+    </p>
+
+    <p>
+        From reviewing drawings and specifications
+        to delivering complete bid-ready estimates,
+        our team ensures accuracy, transparency, and speed.
+    </p>
 </section>
 
-<!-- CTA -->
+<!-- ================= WHO WE HELP ================= -->
+<section class="features container">
+    <div class="feature-box">
+        <h3>General Contractors</h3>
+        <p>
+            Complete bid estimates that help you submit
+            competitive and profitable bids.
+        </p>
+    </div>
+
+    <div class="feature-box">
+        <h3>Subcontractors</h3>
+        <p>
+            Trade-specific material takeoffs
+            with precise quantities and pricing.
+        </p>
+    </div>
+
+    <div class="feature-box">
+        <h3>Developers</h3>
+        <p>
+            Budget planning and cost control support
+            from concept to completion.
+        </p>
+    </div>
+</section>
+
+<!-- ================= OUR PROCESS ================= -->
+<section class="about container">
+    <h2>Our Estimating Process</h2>
+
+    <p><strong>Step 1:</strong> You send us drawings and specifications.</p>
+    <p><strong>Step 2:</strong> We perform detailed material takeoffs.</p>
+    <p><strong>Step 3:</strong> Trade-wise pricing and cost analysis.</p>
+    <p><strong>Step 4:</strong> Final estimate delivered in Excel or PDF format.</p>
+</section>
+
+<!-- ================= SOFTWARE ================= -->
+<section class="about container">
+    <h2>Software & Tools We Use</h2>
+
+    <div class="software-section">
+        <div class="software-card">
+            <img src="bluebeam.jpg" alt="Bluebeam">
+            <p>Bluebeam</p>
+        </div>
+        <div class="software-card">
+            <img src="planswift.png" alt="PlanSwift">
+            <p>PlanSwift</p>
+        </div>
+        <div class="software-card">
+            <img src="excel.png" alt="Excel">
+            <p>Excel</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="services-dark">
+    <h2>Why Choose CostiQ Estimation?</h2>
+
+    <div class="services-grid">
+        <div class="service-box">
+            <h3>Experienced Estimators</h3>
+            <p>Industry professionals with real-world experience.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Cost-Effective</h3>
+            <p>High-quality estimates without hiring in-house staff.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Reliable & Confidential</h3>
+            <p>Your plans and bids are always secure.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
 <section class="cta">
     <div class="container">
-        <h2>Ready to Start Your Project?</h2>
-        <p>Get accurate construction cost estimates tailored to your project.</p>
-        <a href="#contact" class="btn">Get Your Free Quote</a>
+        <h2>Ready to Win More Construction Projects?</h2>
+        <p>
+            Let CostiQ Estimation handle your estimates
+            while you focus on building and growing your business.
+        </p>
+        <a href="contact.html" class="btn">Get a Free Estimate</a>
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer>
     <div class="container">
         <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
     </div>
 </footer>
 
+<!-- ================= JS ================= -->
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+</script>
+
 </body>
 </html>
-
-
