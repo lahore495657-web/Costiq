@@ -483,23 +483,78 @@ nav .btn:hover {
 }
 
 /* ================================
-   SOFTWARE CARDS RESPONSIVE
+   OUR ESTIMATING PROCESS (NEW)
 ================================ */
-@media (max-width: 768px) {
-    .software-cards {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-    .software-card {
-        width: 80px;
-        height: 80px;
-        padding: 8px;
-    }
-    .software-card img {
-        width: 30px;
-        height: 30px;
-    }
+.estimating-process {
+    background: #f8f9fc;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.estimating-process h2 {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    color: #0d3d66;
+}
+
+.estimating-process p.intro {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.process-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.process-card {
+    background: #fff;
+    border-radius: 30px;
+    padding: 30px 25px;
+    width: 260px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.step-circle {
+    width: 60px;
+    height: 60px;
+    background: #ffb100;
+    color: #0d3d66;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.process-card:hover .step-circle {
+    transform: scale(1.1);
+}
+
+.process-card h3 {
+    font-size: 1.2rem;
+    color: #0d3d66;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
 }
 
 /* ================================
@@ -584,4 +639,10 @@ footer a {
 
     .matrix-item h3 { font-size: 1.2rem; }
     .matrix-item .circle { width: 60px; height: 60px; font-size: 20px; }
+
+    .process-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .process-card { width: 100%; }
 }
