@@ -307,10 +307,9 @@ nav .btn:hover {
     color: #333;
 }
 
-/* ================================    SOFTWARE IMAGES SMALLER ================================ */
+/* ================================    SOFTWARE IMAGES FIXED SIZE ================================ */
 .features .feature-box img {
-    width: 150px;       /* Smaller fixed size */
-    max-width: 100%;
+    width: 120px;       /* Fixed small size */
     height: auto;
     margin: 0 auto 15px;
     display: block;
@@ -484,5 +483,5 @@ footer a {
     .services-dark .service-box { width: 100%; border-radius: 30px; }
     .features .feature-box { flex: 1 1 100%; margin-bottom: 20px; }
 
-    .features .feature-box img { width: 120px; } /* smaller images on mobile */
+    .features .feature-box img { width: 100px; } /* smaller images on mobile */
 }
