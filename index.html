@@ -5,6 +5,69 @@
     <title>CostiQ Estimation | Construction Cost Estimators</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ================= SOFTWARE & TOOLS BUBBLE LOGOS ================================ */
+        .software-cards {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .software-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #fff; /* Bubble background */
+            padding: 20px;
+            border-radius: 50%; /* Bubble effect */
+            width: 130px;       /* Bubble width */
+            height: 130px;      /* Bubble height */
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .software-card:hover {
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+        }
+
+        .software-card img {
+            width: 60px;    
+            height: 60px;
+            object-fit: contain;
+            border-radius: 50%; /* Make logo itself circular */
+            margin-bottom: 8px;
+        }
+
+        .software-card p {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0d3d66;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .software-card {
+                width: 100px;
+                height: 100px;
+                padding: 15px;
+            }
+
+            .software-card img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .software-card p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -12,7 +75,7 @@
 <header>
     <div class="container">
         <div class="logo-area">
-            <img src="CostiQ-logo.png" class="site-logo" alt="CostiQ Logo">
+            <img src="CostiQ -logo.png" class="site-logo" alt="CostiQ Logo">
             <span class="logo-text">CostiQ Estimation</span>
         </div>
 
@@ -32,7 +95,10 @@
 <section class="hero">
     <div class="container">
         <h1>Accurate Construction Cost Estimates That Help You Win More Bids</h1>
-        <p>Professional construction estimating & material takeoff services for contractors, subcontractors, and developers.</p>
+        <p>
+            Professional construction estimating & material takeoff services
+            for contractors, subcontractors, and developers.
+        </p>
         <a href="contact.html" class="btn">Request a Free Quote</a>
     </div>
 </section>
@@ -42,9 +108,25 @@
     <div class="bubble-card">
         <h1>Are You a Contractor?</h1>
         <h2>Too Busy Working IN the Business?</h2>
-        <p>Most contractors spend their entire day running job sites, managing crews, handling calls, and chasing deadlines. This leaves almost no time to work <strong>ON</strong> the business.</p>
-        <p>Because of this, many contractors unknowingly miss out on <strong>$300,000 to $400,000 worth of projects every month</strong>. Not due to lack of skill — but due to lack of time.</p>
-        <p>Late bids, rushed estimates, or skipped opportunities slowly stop your business from growing, even when you are constantly busy.</p>
+
+        <p>
+            Most contractors spend their entire day running job sites,
+            managing crews, handling calls, and chasing deadlines.
+            This leaves almost no time to work <strong>ON</strong> the business.
+        </p>
+
+        <p>
+            Because of this, many contractors unknowingly miss out on
+            <strong>$300,000 to $400,000 worth of projects every month</strong>.
+            Not due to lack of skill — but due to lack of time.
+        </p>
+
+        <p>
+            Late bids, rushed estimates, or skipped opportunities
+            slowly stop your business from growing,
+            even when you are constantly busy.
+        </p>
+
         <a href="contact.html" class="bubble-btn">Let’s Fix This</a>
     </div>
 </section>
@@ -59,7 +141,14 @@
 <!-- ================= WHY OUTSOURCE ESTIMATION ================= -->
 <section class="why-outsource container">
     <h2>Why You Should Outsource Construction Estimation</h2>
-    <p>Construction estimating is tedious, time-consuming, and requires expertise. It’s not something that most contractors want to spend their time on. Without a correct estimate, you can end up spending much more than you planned or cutting too many corners to make your budget work.</p>
+
+    <p>
+        Construction estimating is tedious, time-consuming, and requires expertise.
+        It’s not something that most contractors want to spend their time on.
+        Without a correct estimate, you can end up spending much more than you planned
+        or cutting too many corners to make your budget work.
+    </p>
+
     <ul class="benefits-list">
         <li>Contractors are experts in their field. They need to focus on other aspects of the construction project.</li>
         <li>It can be difficult for contractors to estimate accurately without a background in estimating.</li>
@@ -67,22 +156,31 @@
         <li>Outsourcing allows you to take on more projects and increase your profits.</li>
         <li>You will have more control over the budget, which decreases the risk of going over budget.</li>
     </ul>
+
     <a href="about.html" class="btn">About Us</a>
 </section>
 
 <!-- ================= HOW COSTIQ HELPS ================= -->
 <section class="services-dark">
     <h2>How CostiQ Estimation Helps You Win</h2>
-    <p class="services-intro">CostiQ Estimation works as your remote estimating department. We handle the numbers, quantities, and pricing — so you can focus on execution, clients, and growth.</p>
+
+    <p class="services-intro">
+        CostiQ Estimation works as your remote estimating department.
+        We handle the numbers, quantities, and pricing —
+        so you can focus on execution, clients, and growth.
+    </p>
+
     <div class="services-grid">
         <div class="service-box">
             <h3>Fast Turnaround</h3>
             <p>Most estimates delivered within 24–48 hours.</p>
         </div>
+
         <div class="service-box">
             <h3>Bid-Winning Accuracy</h3>
             <p>Trade-wise BOQs with market-based pricing.</p>
         </div>
+
         <div class="service-box">
             <h3>Stress-Free Bidding</h3>
             <p>No late nights, no rushed spreadsheets.</p>
@@ -90,46 +188,50 @@
     </div>
 </section>
 
-<!-- ================= SOFTWARE & TOOLS ================= -->
+<!-- ================= SOFTWARE & TOOLS (HORIZONTAL SCROLL) ================= -->
 <section class="about container">
     <h2>Software & Tools We Use</h2>
-    <div class="features">
-        <div class="feature-box">
+
+    <div class="software-cards">
+        <div class="software-card">
             <img src="bluebeam.jpg" alt="Bluebeam">
             <p>Bluebeam</p>
         </div>
-        <div class="feature-box">
+        <div class="software-card">
             <img src="planswift.png" alt="PlanSwift">
             <p>PlanSwift</p>
         </div>
-        <div class="feature-box">
+        <div class="software-card">
             <img src="excel.png" alt="Excel">
             <p>Excel</p>
         </div>
     </div>
 </section>
 
-<!-- ================= ESTIMATING PROCESS ================= -->
 <section class="estimating-process">
     <div class="container">
         <h2>Our Estimating Process</h2>
         <p>We follow a clear and precise process to ensure accurate construction estimates.</p>
+
         <div class="process-grid">
             <div class="process-card">
                 <div class="process-number">1</div>
                 <h3>Send Us Drawings</h3>
                 <p>You provide drawings and specifications for your project.</p>
             </div>
+
             <div class="process-card">
                 <div class="process-number">2</div>
                 <h3>Material Takeoffs</h3>
                 <p>We perform detailed material takeoffs to quantify everything needed.</p>
             </div>
+
             <div class="process-card">
                 <div class="process-number">3</div>
                 <h3>Cost Analysis</h3>
                 <p>Trade-wise pricing and cost analysis are performed for accuracy.</p>
             </div>
+
             <div class="process-card">
                 <div class="process-number">4</div>
                 <h3>Final Estimate</h3>
@@ -143,7 +245,10 @@
 <section class="cta">
     <div class="container">
         <h2>Ready to Win More Construction Projects?</h2>
-        <p>Let CostiQ Estimation handle your estimates while you focus on building and growing your business.</p>
+        <p>
+            Let CostiQ Estimation handle your estimates
+            while you focus on building and growing your business.
+        </p>
         <a href="contact.html" class="btn">Get a Free Estimate</a>
     </div>
 </section>
