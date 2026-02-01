@@ -1,6 +1,4 @@
-/* ================================
-   BASE STYLES
-================================ */
+/* ================================    BASE STYLES ================================ */
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +18,7 @@ body {
     padding: 0 20px;
 }
 
-/* ================================
-   HEADER (STICKY + NAV + MOBILE MENU)
-================================ */
+/* ================================    HEADER (STICKY + NAV + MOBILE MENU) ================================ */
 header {
     background: #0d3d66;
     padding: 15px 0;
@@ -93,9 +89,7 @@ nav .btn:hover {
     cursor: pointer;
 }
 
-/* ================================
-   HERO SECTION
-================================ */
+/* ================================    HERO SECTION ================================ */
 .hero {
     background: linear-gradient(rgba(13,61,102,0.7), rgba(13,61,102,0.7)),
         url("construction-bg.jpg") center/cover no-repeat;
@@ -137,9 +131,7 @@ nav .btn:hover {
     transform: scale(1.05);
 }
 
-/* ================================
-   CONTRACTOR BUBBLE SECTION
-================================ */
+/* ================================    CONTRACTOR BUBBLE SECTION ================================ */
 .contractor-bubble {
     min-height: 100vh;
     display: flex;
@@ -217,9 +209,7 @@ nav .btn:hover {
     50% { box-shadow: 0 40px 80px rgba(0,0,0,0.35); }
 }
 
-/* ================================
-   WHY OUTSOURCE ESTIMATION
-================================ */
+/* ================================    WHY OUTSOURCE ESTIMATION ================================ */
 .why-outsource {
     background: #f8f9fc;
     padding: 80px 20px;
@@ -283,9 +273,7 @@ nav .btn:hover {
     transform: scale(1.05);
 }
 
-/* ================================
-   FEATURES / WHO WE HELP
-================================ */
+/* ================================    FEATURES / WHO WE HELP ================================ */
 .features {
     display: flex;
     gap: 20px;
@@ -319,9 +307,21 @@ nav .btn:hover {
     color: #333;
 }
 
-/* ================================
-   SERVICES DARK SECTION
-================================ */
+/* ================================    SOFTWARE IMAGES STYLE ================================ */
+.features .feature-box img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.features .feature-box img:hover {
+    transform: scale(1.05);
+}
+
+/* ================================    SERVICES DARK SECTION ================================ */
 .services-dark {
     background: linear-gradient(rgba(13,61,102,0.85), rgba(13,61,102,0.85)),
                 url("services-bg.jpg") center/cover no-repeat;
@@ -376,35 +376,38 @@ nav .btn:hover {
     color: #cfd3ff;
 }
 
-/* ================================
-   CONTRACTOR STRUGGLE PARAGRAPH
-================================ */
+/* ================================    CONTRACTOR STRUGGLE PARAGRAPH (ATTRACTIVE STYLE) ================================ */
 .contractor-insight {
-    background: #fff5e6;
-    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffb100, #ffdd70);
+    padding: 80px 20px;
     text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
     margin: 60px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contractor-insight:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
 }
 
 .contractor-insight h3 {
-    font-size: 2.4rem;
-    margin-bottom: 25px;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
     color: #0d3d66;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .contractor-insight p {
-    font-size: 1.15rem;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 1.9;
     color: #333;
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 auto 15px;
 }
 
-/* ================================
-   CTA SECTION
-================================ */
+/* ================================    CTA SECTION ================================ */
 .cta {
     background: #ffb100;
     color: #0d3d66;
@@ -438,9 +441,7 @@ nav .btn:hover {
     transform: scale(1.05);
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* ================================    FOOTER ================================ */
 footer {
     background: #0d3d66;
     color: #fff;
@@ -453,11 +454,10 @@ footer a {
     text-decoration: none;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
+/* ================================    RESPONSIVE ================================ */
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
+
     nav {
         display: none;
         flex-direction: column;
@@ -467,7 +467,9 @@ footer a {
         padding: 20px 0;
         border-radius: 12px;
     }
+
     nav.show { display: flex; }
+
     nav a { padding: 12px 0; text-align: center; }
     header .container { flex-wrap: wrap; }
 
