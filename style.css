@@ -308,8 +308,9 @@ nav .btn:hover {
 }
 
 /* ================================    SOFTWARE IMAGES STYLE ================================ */
+/* ================================    SOFTWARE IMAGES SMALLER ================================ */
 .features .feature-box img {
-    max-width: 80%;
+    max-width: 50%;        /* Reduced size to make it smaller */
     height: auto;
     margin: 0 auto 15px;
     display: block;
@@ -318,7 +319,7 @@ nav .btn:hover {
 }
 
 .features .feature-box img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);  /* Keeps the subtle zoom effect on hover */
 }
 
 /* ================================    SERVICES DARK SECTION ================================ */
@@ -376,9 +377,9 @@ nav .btn:hover {
     color: #cfd3ff;
 }
 
-/* ================================    CONTRACTOR STRUGGLE PARAGRAPH (ATTRACTIVE STYLE) ================================ */
+/* ================================    CONTRACTOR STRUGGLE PARAGRAPH ================================ */
 .contractor-insight {
-    background: linear-gradient(135deg, #ffb100, #ffdd70);
+    background: linear-gradient(135deg, #ffb100, #ffdd70); /* Attractive gradient */
     padding: 80px 20px;
     text-align: center;
     border-radius: 30px;
@@ -393,8 +394,8 @@ nav .btn:hover {
 }
 
 .contractor-insight h3 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem; /* Big, prominent heading */
+    margin-bottom: 25px;
     color: #0d3d66;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
@@ -404,7 +405,9 @@ nav .btn:hover {
     line-height: 1.9;
     color: #333;
     max-width: 850px;
-    margin: 0 auto 15px;
+    margin: 0 auto 20px;
+}
+
 }
 
 /* ================================    CTA SECTION ================================ */
@@ -483,3 +486,4 @@ footer a {
     .services-dark .service-box { width: 100%; border-radius: 30px; }
     .features .feature-box { flex: 1 1 100%; margin-bottom: 20px; }
 }
+
