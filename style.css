@@ -438,19 +438,21 @@ nav .btn:hover {
 }
 
 /* ================================
-   SOFTWARE ICONS (FIXED SIZE)
+   SOFTWARE ICONS (FIXED SIZE, HORIZONTAL)
 ================================ */
 .software-cards {
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* horizontal scrolling */
+    overflow-x: auto;
+    padding-bottom: 10px;
     margin-top: 20px;
 }
 
 .software-card {
     background: #0d3d66;
-    width: 90px;   /* Fixed card size */
+    width: 90px;
     height: 90px;
     border-radius: 50%;
     display: flex;
@@ -462,10 +464,11 @@ nav .btn:hover {
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
     transition: 0.35s;
     padding: 10px;
+    flex-shrink: 0;
 }
 
 .software-card img {
-    width: 36px;  /* Fixed image size */
+    width: 36px;
     height: 36px;
     object-fit: contain;
     margin-bottom: 8px;
@@ -483,7 +486,7 @@ nav .btn:hover {
 }
 
 /* ================================
-   OUR ESTIMATING PROCESS (NEW)
+   OUR ESTIMATING PROCESS
 ================================ */
 .estimating-process {
     background: #f8f9fc;
@@ -555,6 +558,32 @@ nav .btn:hover {
     font-size: 1rem;
     color: #555;
     line-height: 1.6;
+}
+
+/* ================================
+   CONTRACTOR STRUGGLE PARAGRAPH
+================================ */
+.contractor-struggle {
+    background: #fff5e6;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    margin: 60px 0;
+}
+
+.contractor-struggle h2 {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    color: #0d3d66;
+}
+
+.contractor-struggle p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto 15px;
 }
 
 /* ================================
@@ -631,18 +660,4 @@ footer a {
     .bubble-card p { font-size: 16px; }
 
     .services-dark .service-box { width: 100%; border-radius: 30px; }
-    .features .feature-box { flex: 1 1 100%; margin-bottom: 20px; }
-
-    .matrix-content { flex-direction: column; gap: 40px; }
-    .matrix-stats { flex-direction: row; justify-content: center; gap: 20px; }
-    .matrix-item { flex-direction: column; align-items: center; text-align: center; }
-
-    .matrix-item h3 { font-size: 1.2rem; }
-    .matrix-item .circle { width: 60px; height: 60px; font-size: 20px; }
-
-    .process-cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .process-card { width: 100%; }
-}
+    .features .feature-box { flex: 1 1 100%; margin-bottom
