@@ -307,10 +307,11 @@ nav .btn:hover {
     color: #333;
 }
 
-/* ================================    SOFTWARE IMAGES FIXED SIZE ================================ */
+/* ================================    SOFTWARE IMAGES SMALLER ================================ */
 .features .feature-box img {
-    width: 80px;       /* Fixed small size */
-    height: auto;
+    width: 120px;      /* Fixed size for all software images */
+    max-width: 100%;   /* Prevent overflow on small screens */
+    height: auto;      /* Keep aspect ratio */
     margin: 0 auto 15px;
     display: block;
     border-radius: 12px;
@@ -319,6 +320,13 @@ nav .btn:hover {
 
 .features .feature-box img:hover {
     transform: scale(1.05);
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+    .features .feature-box img {
+        width: 90px;   /* Smaller images on mobile */
+    }
 }
 /* ================================    ESTIMATING PROCESS ================================ */
 .estimating-process {
@@ -584,4 +592,5 @@ footer a {
 
     .features .feature-box img { width: 100px; } /* smaller images on mobile */
 }
+
 
