@@ -257,45 +257,7 @@ nav .btn:hover {
 }
 
 /* ================================
-   SOFTWARE / TOOLS SECTION
-================================ */
-.software-section {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 35px;
-}
-
-.software-card {
-    background: radial-gradient(circle at top left, #1e2433, #0b0e14);
-    border-radius: 35px;
-    padding: 20px 18px;
-    width: 130px;
-    text-align: center;
-    color: #e5e8ff;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.45);
-    transition: 0.3s ease;
-}
-
-.software-card img {
-    height: 36px;
-    margin-bottom: 8px;
-}
-
-.software-card p {
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-.software-card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.6);
-}
-
-/* ================================
-   SERVICES SECTION
+   SERVICES DARK SECTION
 ================================ */
 .services-dark {
     background: linear-gradient(rgba(13,61,102,0.85), rgba(13,61,102,0.85)),
@@ -349,6 +311,104 @@ nav .btn:hover {
 .services-dark .service-box p {
     font-size: 1rem;
     color: #cfd3ff;
+}
+
+/* ================================
+   WHAT WE DO / PROCESS SECTION (UPGRADED)
+================================ */
+.what-we-do {
+    background: #f8f9fc;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.what-we-do h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #0d3d66;
+}
+
+.what-we-do p.intro {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 25px;
+    width: 280px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #0d3d66;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Software Icons */
+.software-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.software-card {
+    background: #0d3d66;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    transition: 0.35s;
+}
+
+.software-card img {
+    width: 36px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.software-card p {
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.software-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
 /* ================================
@@ -425,4 +485,6 @@ footer a {
     .services-dark .service-box { width: 100%; border-radius: 30px; }
     .features .feature-box { flex: 1 1 100%; margin-bottom: 20px; }
     .software-card { width: 100px; padding: 18px; }
+    .cards { flex-direction: column; gap: 20px; }
+    .software-cards { flex-direction: column; gap: 20px; }
 }
