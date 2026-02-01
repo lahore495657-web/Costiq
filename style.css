@@ -13,7 +13,7 @@ body {
     color: #333;
 }
 
-/* CONTAINER (MISSING THA – VERY IMPORTANT) */
+/* CONTAINER */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,7 +21,7 @@ body {
 }
 
 /* ================================
-   HEADER (STICKY + NAV + HAMBURGER)
+   HEADER (STICKY + NAV + MOBILE MENU)
 ================================ */
 header {
     background: #0d3d66;
@@ -52,7 +52,7 @@ header .container {
 }
 
 .logo-text {
-    color: #ffffff;
+    color: #fff;
     font-size: 32px;
     font-weight: 700;
 }
@@ -68,6 +68,11 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffb100;
 }
 
 nav .btn {
@@ -83,7 +88,7 @@ nav .btn:hover {
     background-color: #fff;
 }
 
-/* HAMBURGER */
+/* MOBILE MENU TOGGLE */
 .menu-toggle {
     display: none;
     font-size: 32px;
@@ -99,43 +104,53 @@ nav .btn:hover {
         url("construction-bg.jpg") center/cover no-repeat;
     color: #fff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 140px 20px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
+    font-size: 52px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 25px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero .btn {
     background: #ffb100;
     color: #0d3d66;
-    padding: 12px 30px;
-    border-radius: 5px;
+    padding: 14px 36px;
+    border-radius: 6px;
     font-weight: bold;
+    font-size: 18px;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #fff;
 }
 
 /* ================================
-   CONTRACTOR BIG BUBBLE (NEW)
+   CONTRACTOR BUBBLE SECTION
 ================================ */
 .contractor-bubble {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: linear-gradient(135deg, #0d3d66, #092a45);
 }
 
 .bubble-card {
     max-width: 1000px;
-    background: rgba(255,255,255,0.97);
+    background: rgba(255,255,255,0.98);
     border-radius: 45px;
     padding: 70px 65px;
     text-align: center;
@@ -145,24 +160,25 @@ nav .btn:hover {
 .bubble-card h1 {
     font-size: 42px;
     color: #0d3d66;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .bubble-card h2 {
-    font-size: 26px;
-    margin-bottom: 30px;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 
 .bubble-card p {
     font-size: 18px;
     line-height: 1.9;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
 }
 
 .bubble-btn {
     display: inline-block;
-    margin-top: 35px;
-    padding: 16px 44px;
+    margin-top: 25px;
+    padding: 16px 42px;
     background: #0d3d66;
     color: #fff;
     text-decoration: none;
@@ -178,22 +194,23 @@ nav .btn:hover {
 }
 
 /* ================================
-   FEATURES
+   FEATURES SECTION
 ================================ */
 .features {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .features .feature-box {
     flex: 1 1 30%;
     background: #f8f8f8;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: 0.3s ease;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .features .feature-box:hover {
@@ -201,60 +218,112 @@ nav .btn:hover {
     background: #eef4fb;
 }
 
+.features .feature-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #0d3d66;
+}
+
+.features .feature-box p {
+    font-size: 1rem;
+    color: #333;
+}
+
 /* ================================
    SOFTWARE LOGO BUBBLES
 ================================ */
 .software-section {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 35px;
 }
 
 .software-card {
     background: radial-gradient(circle at top left, #1e2433, #0b0e14);
-    border-radius: 45px;
-    padding: 25px 30px;
-    width: 140px;
+    border-radius: 35px;
+    padding: 20px 18px;
+    width: 120px;
     text-align: center;
     color: #e5e8ff;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.45);
     transition: 0.3s;
 }
 
+.software-card img {
+    height: 26px;
+    width: auto;
+    margin-bottom: 8px;
+}
+
+.software-card p {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
 .software-card:hover {
-    transform: translateY(-6px) scale(1.05);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.6);
 }
 
 /* ================================
-   SERVICES
+   SERVICES SECTION
 ================================ */
 .services-dark {
-    background: linear-gradient(rgba(13,61,102,0.8), rgba(13,61,102,0.8)),
+    background: linear-gradient(rgba(13,61,102,0.85), rgba(13,61,102,0.85)),
         url("services-bg.jpg") center/cover no-repeat;
-    padding: 90px 20px;
+    padding: 100px 20px;
     text-align: center;
     color: #fff;
 }
 
+.services-dark h2 {
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+}
+
+.services-dark .services-intro {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #cfd3ff;
+}
+
 .services-dark .services-grid {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
 }
 
 .services-dark .service-box {
     background: radial-gradient(circle at top left, #0a2a66, #0d3d66);
-    border-radius: 45px;
-    padding: 35px;
+    border-radius: 40px;
+    padding: 35px 25px;
     width: 300px;
-    transition: 0.35s;
+    color: #e5e8ff;
+    text-align: center;
+    transition: 0.35s ease;
+}
+
+.services-dark .service-box h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.services-dark .service-box p {
+    font-size: 1rem;
+    color: #cfd3ff;
+    line-height: 1.6;
 }
 
 .services-dark .service-box:hover {
-    transform: translateY(-12px) scale(1.05);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 28px 50px rgba(0,0,0,0.9);
 }
 
 /* ================================
@@ -264,7 +333,12 @@ footer {
     background: #0d3d66;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 20px;
+}
+
+footer a {
+    color: #ffb100;
+    text-decoration: none;
 }
 
 /* ================================
@@ -300,7 +374,7 @@ footer {
     }
 
     .bubble-card {
-        padding: 45px 28px;
+        padding: 40px 28px;
         border-radius: 30px;
     }
 
