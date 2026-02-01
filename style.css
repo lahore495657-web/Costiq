@@ -309,7 +309,7 @@ nav .btn:hover {
 
 /* ================================    SOFTWARE IMAGES FIXED SIZE ================================ */
 .features .feature-box img {
-    width: 120px;       /* Fixed small size */
+    width: 80px;       /* Fixed small size */
     height: auto;
     margin: 0 auto 15px;
     display: block;
@@ -319,6 +319,105 @@ nav .btn:hover {
 
 .features .feature-box img:hover {
     transform: scale(1.05);
+}
+/* ================================    ESTIMATING PROCESS ================================ */
+.estimating-process {
+    background: linear-gradient(135deg, #0d3d66, #092a45);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 25px;
+    margin: 60px 0;
+}
+
+.estimating-process h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #ffb100;
+}
+
+.estimating-process p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #e0e0e0;
+}
+
+/* GRID */
+.process-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* CARD */
+.process-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 50px 25px 40px 25px;
+    text-align: center;
+    width: 260px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 35px 60px rgba(0,0,0,0.35);
+}
+
+/* NUMBER CIRCLE */
+.process-number {
+    background: #ffb100;
+    color: #0d3d66;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* CARD HEADINGS */
+.process-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* CARD PARAGRAPH */
+.process-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .process-grid {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .process-card {
+        width: 100%;
+        max-width: 320px;
+        padding: 40px 20px;
+    }
+
+    .process-number {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+    }
 }
 
 /* ================================    SERVICES DARK SECTION ================================ */
@@ -485,3 +584,4 @@ footer a {
 
     .features .feature-box img { width: 100px; } /* smaller images on mobile */
 }
+
