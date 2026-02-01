@@ -209,68 +209,23 @@ nav .btn:hover {
     50% { box-shadow: 0 40px 80px rgba(0,0,0,0.35); }
 }
 
-/* ================================    WHY OUTSOURCE ESTIMATION ================================ */
-.why-outsource {
-    background: #f8f9fc;
-    padding: 80px 20px;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    margin: 60px 0;
-}
-
-.why-outsource h2 {
-    font-size: 2.6rem;
-    margin-bottom: 40px;
-    color: #0d3d66;
-}
-
-.why-outsource p {
-    font-size: 1.15rem;
-    max-width: 900px;
-    margin: 0 auto 40px;
-    line-height: 1.8;
-    color: #333;
-}
-
-.why-outsource .benefits-list {
-    list-style: none;
-    max-width: 800px;
-    margin: 0 auto 50px;
-    padding: 0;
-}
-
-.why-outsource .benefits-list li {
-    background: #fff;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    border-left: 6px solid #ffb100;
-    border-radius: 12px;
-    font-size: 1rem;
-    text-align: left;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+/* ================================    SOFTWARE LOGO BUBBLES ================================ */
+.features .feature-box img {
+    width: 80px;               /* logo size */
+    height: 80px;
+    border-radius: 50%;        /* circular bubble */
+    object-fit: contain;       /* keep logo proportion */
+    background: #fff;          /* optional: white bubble background */
+    padding: 10px;
+    margin: 0 auto 15px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.why-outsource .benefits-list li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-
-.why-outsource .btn {
-    background: #0d3d66;
-    color: #fff;
-    padding: 14px 40px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.why-outsource .btn:hover {
-    background-color: #094163;
-    transform: scale(1.05);
+.features .feature-box img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 /* ================================    FEATURES / WHO WE HELP ================================ */
@@ -307,27 +262,6 @@ nav .btn:hover {
     color: #333;
 }
 
-/* ================================    SOFTWARE IMAGES SMALLER ================================ */
-.features .feature-box img {
-    width: 120px;      /* Fixed size for all software images */
-    max-width: 100%;   /* Prevent overflow on small screens */
-    height: auto;      /* Keep aspect ratio */
-    margin: 0 auto 15px;
-    display: block;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.features .feature-box img:hover {
-    transform: scale(1.05);
-}
-
-/* Responsive tweak */
-@media (max-width: 768px) {
-    .features .feature-box img {
-        width: 90px;   /* Smaller images on mobile */
-    }
-}
 /* ================================    ESTIMATING PROCESS ================================ */
 .estimating-process {
     background: linear-gradient(135deg, #0d3d66, #092a45);
@@ -353,7 +287,6 @@ nav .btn:hover {
     color: #e0e0e0;
 }
 
-/* GRID */
 .process-grid {
     display: flex;
     gap: 25px;
@@ -361,7 +294,6 @@ nav .btn:hover {
     justify-content: center;
 }
 
-/* CARD */
 .process-card {
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
@@ -379,7 +311,6 @@ nav .btn:hover {
     box-shadow: 0 35px 60px rgba(0,0,0,0.35);
 }
 
-/* NUMBER CIRCLE */
 .process-number {
     background: #ffb100;
     color: #0d3d66;
@@ -393,33 +324,34 @@ nav .btn:hover {
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-/* CARD HEADINGS */
 .process-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
-/* CARD PARAGRAPH */
 .process-card p {
     font-size: 1rem;
     line-height: 1.8;
     color: #f0f0f0;
 }
 
-/* RESPONSIVE */
+/* ================================    RESPONSIVE ================================ */
 @media (max-width: 768px) {
+    .features .feature-box img {
+        width: 60px;
+        height: 60px;
+        padding: 8px;
+    }
     .process-grid {
         flex-direction: column;
         gap: 30px;
         align-items: center;
     }
-
     .process-card {
         width: 100%;
         max-width: 320px;
         padding: 40px 20px;
     }
-
     .process-number {
         width: 50px;
         height: 50px;
@@ -427,170 +359,3 @@ nav .btn:hover {
         font-size: 24px;
     }
 }
-
-/* ================================    SERVICES DARK SECTION ================================ */
-.services-dark {
-    background: linear-gradient(rgba(13,61,102,0.85), rgba(13,61,102,0.85)),
-                url("services-bg.jpg") center/cover no-repeat;
-    padding: 100px 20px;
-    text-align: center;
-    color: #fff;
-}
-
-.services-dark h2 {
-    font-size: 2.6rem;
-    margin-bottom: 25px;
-}
-
-.services-dark .services-intro {
-    max-width: 900px;
-    margin: 0 auto 60px;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #cfd3ff;
-}
-
-.services-dark .services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
-
-.services-dark .service-box {
-    background: radial-gradient(circle at top left, #0a2a66, #0d3d66);
-    border-radius: 40px;
-    padding: 35px 25px;
-    width: 300px;
-    color: #e5e8ff;
-    text-align: center;
-    transition: 0.35s ease;
-}
-
-.services-dark .service-box:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 28px 50px rgba(0,0,0,0.9);
-}
-
-.services-dark .service-box h3 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-    color: #fff;
-}
-
-.services-dark .service-box p {
-    font-size: 1rem;
-    color: #cfd3ff;
-}
-
-/* ================================    CONTRACTOR STRUGGLE PARAGRAPH ================================ */
-.contractor-insight {
-    background: linear-gradient(135deg, #ffb100, #ffdd70);
-    padding: 80px 20px;
-    text-align: center;
-    border-radius: 30px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-    margin: 60px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contractor-insight:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-}
-
-.contractor-insight h3 {
-    font-size: 2.8rem;
-    margin-bottom: 25px;
-    color: #0d3d66;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-.contractor-insight p {
-    font-size: 1.2rem;
-    line-height: 1.9;
-    color: #333;
-    max-width: 850px;
-    margin: 0 auto 20px;
-}
-
-/* ================================    CTA SECTION ================================ */
-.cta {
-    background: #ffb100;
-    color: #0d3d66;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.cta h2 {
-    font-size: 2.4rem;
-    margin-bottom: 20px;
-}
-
-.cta p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.cta .btn {
-    background: #0d3d66;
-    color: #fff;
-    padding: 14px 40px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.cta .btn:hover {
-    background-color: #094163;
-    transform: scale(1.05);
-}
-
-/* ================================    FOOTER ================================ */
-footer {
-    background: #0d3d66;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer a {
-    color: #ffb100;
-    text-decoration: none;
-}
-
-/* ================================    RESPONSIVE ================================ */
-@media (max-width: 768px) {
-    .menu-toggle { display: block; }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #0d3d66;
-        margin-top: 15px;
-        padding: 20px 0;
-        border-radius: 12px;
-    }
-
-    nav.show { display: flex; }
-
-    nav a { padding: 12px 0; text-align: center; }
-    header .container { flex-wrap: wrap; }
-
-    .bubble-card { padding: 40px 28px; border-radius: 30px; }
-    .bubble-card h1 { font-size: 32px; }
-    .bubble-card h2 { font-size: 20px; }
-    .bubble-card p { font-size: 16px; }
-
-    .hero { background-attachment: scroll; }
-
-    .services-dark .service-box { width: 100%; border-radius: 30px; }
-    .features .feature-box { flex: 1 1 100%; margin-bottom: 20px; }
-
-    .features .feature-box img { width: 100px; } /* smaller images on mobile */
-}
-
-
