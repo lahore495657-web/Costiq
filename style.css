@@ -77,21 +77,21 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    position: relative;
+    text-align: center;
 }
 
+/* HERO MAIN TEXT */
 .hero h1 {
     font-size: 52px;
     font-weight: 700;
-    text-align: center;
 }
 
 .hero p {
     font-size: 20px;
     max-width: 650px;
-    text-align: center;
 }
 
+/* HERO BUTTON */
 .hero .btn {
     margin-top: 30px;
     display: inline-block;
@@ -101,19 +101,14 @@ nav a:hover {
     border-radius: 50px;
     font-size: 20px;
     font-weight: 700;
-    text-align: center;
-    box-shadow: 0 12px 35px rgba(255,177,0,0.45),
-                0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 35px rgba(255,177,0,0.45), 0 4px 10px rgba(0,0,0,0.15);
     transition: all 0.35s ease;
-    position: relative;
-    overflow: hidden;
     animation: floatHeroBtn 6s ease-in-out infinite;
 }
 
 .hero .btn:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 18px 50px rgba(255,177,0,0.55),
-                0 6px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 18px 50px rgba(255,177,0,0.55), 0 6px 15px rgba(0,0,0,0.2);
 }
 
 @keyframes floatHeroBtn {
@@ -122,9 +117,56 @@ nav a:hover {
     100% { transform: translateY(0px); }
 }
 
-/* ================================ BUTTONS ================================ */
-.btn-fix, .btn-about-premium {
-    display: inline-block;
+/* MOBILE HERO */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 18px; max-width: 90%; }
+    .hero .btn { padding: 14px 36px; font-size: 18px; }
+}
+
+/* ================================ CONTRACTOR BUBBLE ================================ */
+.contractor-bubble-large {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #fff4cc, #ffffff);
+    border-radius: 40px;
+    padding: 80px;
+    max-width: 1200px;
+    margin: 100px auto;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.25);
+    animation: float 6s ease-in-out infinite;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contractor-bubble-large .text-content {
+    flex: 1;
+}
+
+.contractor-bubble-large h2 { font-size: 42px; color: #0d3d66; margin-bottom: 25px; }
+.contractor-bubble-large p { font-size: 19px; line-height: 1.8; margin-bottom: 20px; }
+.contractor-bubble-large p span.highlight { font-weight: 700; color: #ffb100; }
+
+.contractor-bubble-large ul { margin: 20px 0; padding-left: 25px; }
+.contractor-bubble-large ul li {
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #0d3d66;
+    position: relative;
+}
+.contractor-bubble-large ul li::before {
+    content: "✔";
+    position: absolute;
+    left: -20px;
+    color: #ffb100;
+    font-size: 18px;
+}
+
+/* Let's Fix This Button */
+.btn-fix {
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    color: #0d3d66;
     padding: 16px 48px;
     font-size: 20px;
     font-weight: 700;
@@ -132,14 +174,14 @@ nav a:hover {
     border: none;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 12px 35px rgba(255,177,0,0.45),
-                0 4px 10px rgba(0,0,0,0.15);
+    display: inline-block;
+    box-shadow: 0 12px 35px rgba(255,177,0,0.45), 0 4px 10px rgba(0,0,0,0.15);
     transition: all 0.35s ease;
     position: relative;
     overflow: hidden;
 }
 
-.btn-fix::after, .btn-about-premium::before {
+.btn-fix::after {
     content: "";
     position: absolute;
     top: 0;
@@ -151,188 +193,92 @@ nav a:hover {
     transition: all 0.7s ease;
 }
 
-.btn-fix:hover::after, .btn-about-premium:hover::before {
-    left: 150%;
-}
+.btn-fix:hover::after { left: 150%; }
+.btn-fix:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 18px 50px rgba(255,177,0,0.55),0 6px 15px rgba(0,0,0,0.2); }
 
-.btn-fix:hover, .btn-about-premium:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 18px 50px rgba(255,177,0,0.55),
-                0 6px 15px rgba(0,0,0,0.2);
-}
-
-/* ================================ SOFTWARE & TOOLS ================================ */
-.about.container {
-    margin-top: 120px;
-    text-align: center;
-}
-
-.about.container h2 {
-    font-size: 38px;
-    color: #0d3d66;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.about.container h2::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(135deg, #ffb100, #ff7a00);
-    display: block;
-    margin: 18px auto 0;
-    border-radius: 10px;
-}
-
-.software-cards {
+/* Contractor Image */
+.contractor-bubble-large .image-placeholder {
+    flex: 0 0 300px;
+    height: 300px;
+    border-radius: 20px;
     display: flex;
-    gap: 35px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.software-card {
-    width: 160px;
-    height: 160px;
-    border-radius: 26px;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(12px);
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-    transition: all 0.4s ease;
-    position: relative;
     overflow: hidden;
 }
+.contractor-bubble-large .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
 
+/* ================================ CONTRACTOR INSIGHT ================================ */
+.contractor-insight {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 55px;
+    background: linear-gradient(135deg, #fff4cc, #ffffff);
+    border-radius: 30px;
+    border-left: 8px solid #ffb100;
+    box-shadow: 0 25px 55px rgba(0,0,0,0.15);
+    animation: softFadeUp 1s ease forwards;
+}
+
+.contractor-insight-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.insight-text { flex: 1; }
+.insight-image { flex: 1; text-align: right; }
+.insight-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+    .contractor-insight-inner { flex-direction: column; text-align: center; }
+    .insight-image { text-align: center; margin-top: 20px; }
+}
+
+/* ================================ SOFTWARE CARDS ================================ */
+.software-cards { display: flex; gap: 35px; justify-content: center; flex-wrap: wrap; }
+.software-card {
+    width: 160px; height: 160px;
+    border-radius: 26px; background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(12px); display: flex; flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.18); transition: all 0.4s ease; position: relative; overflow: hidden;
+}
 .software-card::before {
     content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 26px;
-    padding: 2px;
-    background: linear-gradient(135deg, #ffb100, #ff7a00);
+    position: absolute; inset: 0; border-radius: 26px;
+    padding: 2px; background: linear-gradient(135deg, #ffb100, #ff7a00);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: 0.4s ease;
+    -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: 0.4s ease;
 }
+.software-card:hover::before { opacity: 1; }
+.software-card:hover { transform: translateY(-14px) scale(1.08); box-shadow: 0 30px 70px rgba(0,0,0,0.35); }
+.software-card img { width: 70px; height: 70px; object-fit: contain; margin-bottom: 12px; transition: transform 0.4s ease; }
+.software-card:hover img { transform: scale(1.15); }
+.software-card p { font-size: 16px; font-weight: 700; color: #0d3d66; }
 
-.software-card:hover::before {
-    opacity: 1;
+/* ================================ ESTIMATING PROCESS ================================ */
+.estimating-process { background: linear-gradient(135deg, #0d3d66, #092a45); color: #fff; padding: 80px 20px; border-radius: 25px; }
+.process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-top: 40px; }
+.process-card {
+    background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding: 30px 20px;
+    border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    transition: 0.35s ease;
 }
+.process-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 20px 45px rgba(0,0,0,0.3); }
+.process-card h3 { color: #ffb100; margin-bottom: 10px; }
+.process-card p { color: #fff; line-height: 1.7; }
 
-.software-card:hover {
-    transform: translateY(-14px) scale(1.08);
-    box-shadow: 0 30px 70px rgba(0,0,0,0.35);
-}
-
-.software-card img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-    margin-bottom: 12px;
-    transition: transform 0.4s ease;
-}
-
-.software-card:hover img {
-    transform: scale(1.15);
-}
-
-.software-card p {
-    font-size: 16px;
-    font-weight: 700;
-    color: #0d3d66;
-    margin: 0;
-}
-
-/* ================================ FOOTER ================================ */
-footer {
-    background: linear-gradient(135deg, #0d3d66, #092a45);
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.footer-logo img {
-    height: 50px;
-}
-
-.footer-logo span {
-    font-size: 24px;
-    font-weight: 700;
-    color: #ffb100;
-}
-
-.footer-contact-cards {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contact-card {
-    background: #ffb100;
-    color: #0d3d66;
-    padding: 25px 20px;
-    border-radius: 20px;
-    min-width: 180px;
-    text-align: center;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 18px 50px rgba(0,0,0,0.25);
-}
-
-.contact-icon {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.contact-card h4 {
-    font-size: 18px;
-    margin-bottom: 6px;
-    font-weight: 700;
-}
-
-.contact-card p {
-    font-size: 14px;
-    margin: 0;
-}
-
-.footer-copy {
-    font-size: 14px;
-    color: #dcdcdc;
-    margin-top: 20px;
-}
-
-/* ================================ RESPONSIVE ================================ */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 36px; }
-    .hero p { font-size: 18px; max-width: 90%; }
-    .hero .btn { padding: 14px 36px; font-size: 18px; }
-    .software-card { width: 140px; height: 140px; }
-    .footer-logo span { font-size: 20px; }
-    .footer-contact-cards { flex-direction: column; gap: 15px; }
-}
+/* ================================ FINAL CTA ================================ */
+.final-cta { padding: 120px 20px; background: linear-gradient(135deg, #0d3d66, #081f33); display: flex; justify-content: center; align-items: center; }
+.cta-bubble { max-width: 900px; width: 100%; background: rgba(255,255,255,0.98); border-radius: 60px; padding: 80px 70px; text-align: center; box-shadow: 0 35px 80px rgba(0,0,0,0.35); animation: floatCTA 7s ease-in-out infinite; }
