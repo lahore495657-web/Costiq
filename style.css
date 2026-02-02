@@ -79,6 +79,23 @@ nav a:hover {
     align-items: center;
     gap: 20px; /* spacing between heading, paragraph, and button */
 }
+.hero-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.hero-logo img {
+    height: 70px;  /* slightly bigger than footer */
+}
+
+.hero-logo .logo-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffb100;
+}
 
 .hero h1 {
     font-size: 52px;
@@ -935,6 +952,7 @@ footer {
 
 
 /* ================================ END OF FILE ================================ */
+
 
 
 
