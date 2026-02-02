@@ -570,6 +570,66 @@ nav a:hover {
     background: #000;
     transform: translateY(-5px);
 }
+/* ================= FLOATING WHATSAPP BUTTON ================= */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 100px;          /* back-to-home button se clash na ho */
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366, #1ebe5d);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+    transition: all 0.35s ease;
+    z-index: 9999;
+}
+
+/* Hover effect */
+.whatsapp-float:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 0 20px 45px rgba(37, 211, 102, 0.6);
+}
+
+/* Pulse animation */
+.whatsapp-float::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.4);
+    animation: whatsappPulse 2s infinite;
+    z-index: -1;
+}
+
+@keyframes whatsappPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+        bottom: 90px;
+    }
+}
+
 /* ================= PREMIUM CONTACT SECTION (COMPACT & SEXY) ================= */
 
 .contact-section {
@@ -700,6 +760,7 @@ nav a:hover {
 }
 
 /* ================================ END OF FILE ================================ */
+
 
 
 
