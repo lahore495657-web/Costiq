@@ -6,14 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* ================= SOFTWARE BUBBLES STYLE ================= */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f9;
+            color: #333;
+        }
+        a { text-decoration: none; }
+
+        /* ================= HEADER ================= */
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background-color: #0d3d66;
+            color: #fff;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-area img {
+            height: 50px;
+        }
+        .logo-text {
+            color: #ffb100;
+            font-weight: 700;
+            font-size: 22px;
+        }
+        nav a {
+            margin-left: 20px;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #ffb100; }
+
+        /* ================= HERO ================= */
+        .hero {
+            background: linear-gradient(rgba(13,61,102,0.7), rgba(13,61,102,0.7)),
+                        url("construction-bg.jpg") center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 140px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .hero h1 {
+            font-size: 52px;
+            margin: 0;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .hero .btn {
+            margin-top: 30px;
+            display: inline-block;
+            background: linear-gradient(45deg, #ffb100, #ffc83d);
+            color: #0d3d66;
+            padding: 16px 48px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 12px 35px rgba(255,177,0,0.45), 0 4px 10px rgba(0,0,0,0.15);
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            animation: floatHeroBtn 6s ease-in-out infinite;
+        }
+        .hero .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 18px 50px rgba(255,177,0,0.55), 0 6px 15px rgba(0,0,0,0.2);
+        }
+        @keyframes floatHeroBtn {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* ================= SOFTWARE & TOOLS ================= */
         .software-cards {
             display: flex;
             gap: 20px;
             overflow-x: auto;
             padding: 10px 0;
         }
-
         .software-card {
             flex: 0 0 auto;
             width: 120px;
@@ -28,22 +115,71 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
-
         .software-card img {
             width: 50px;
             height: 50px;
             object-fit: contain;
             margin-bottom: 8px;
         }
-
         .software-card p {
             font-weight: bold;
             font-size: 14px;
             margin: 0;
         }
-
         .software-card:hover {
             transform: scale(1.1);
+        }
+
+        /* ================= CONTACT & FOOTER ================= */
+        footer {
+            background: #0d3d66;
+            color: #fff;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            text-align: center;
+        }
+        .footer-logo img {
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .footer-contact-cards {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .footer-contact-card {
+            background: #ffb100;
+            color: #0d3d66;
+            padding: 15px 25px;
+            border-radius: 20px;
+            min-width: 180px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .footer-contact-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+        .contact-icon { font-size: 22px; }
+        footer p { margin: 0; font-size: 14px; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .footer-contact-cards { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
@@ -53,13 +189,10 @@
 <header>
     <div class="container">
         <div class="logo-area">
-            <img src="CostiQ -logo.png" class="site-logo" alt="CostiQ Logo">
+            <img src="CostiQ -logo.png" alt="CostiQ Logo">
             <span class="logo-text">CostiQ Estimation</span>
         </div>
-
-        <div class="menu-toggle" id="menuToggle">☰</div>
-
-        <nav id="navMenu">
+        <nav>
             <a href="index.html" class="active">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
@@ -71,250 +204,35 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-    <div class="container">
-        <h1>Accurate Construction Cost Estimates That Help You Win More Bids</h1>
-        <p>
-            Professional construction estimating & material takeoff services
-            for contractors, subcontractors, and developers.
-        </p>
-
-<div class="contractor-bubble-large">
-    <div class="text-content">
-        <h2>Are You a Contractor?</h2>
-        <p>Too Busy Working <span class="highlight">IN the Business</span>? Most contractors spend their entire day running job sites, managing crews, handling calls, and chasing deadlines. This leaves almost no time to work <span class="highlight">ON the business</span>.</p>
-        <ul>
-            <li>Late bids cost thousands</li>
-            <li>Rushed estimates lose projects</li>
-            <li>Skipped opportunities slow growth</li>
-        </ul>
-        <a href="#contact" class="btn-fix">Let’s Fix This</a>
-    </div>
-    <div class="image-placeholder">
-        <img src="LADY.jpg" alt="Contractor Lady" class="contractor-image">
-    </div>
-</div>
-
-<section class="contractor-insight">
-    <div class="contractor-insight-inner">
-
-        <div class="insight-text">
-            <h3>Why Most Contractors Struggle to Grow</h3>
-            <p>In today’s competitive construction market, winning projects is no longer just about experience. It requires fast turnaround, accurate quantities, and competitive pricing.</p>
-            <p>Contractors often lose bids because estimates are prepared in a hurry, submitted late, or lack proper detail. Many stop bidding altogether because estimating consumes too much valuable time.</p>
-            <p>This creates a cycle where contractors stay busy — but never truly scale their business.</p>
-        </div>
-
-        <div class="insight-image">
-            <img src="CONFUSED.png" alt="Contractor Confused With Growth">
-        </div>
-
-    </div>
+    <h1>Accurate Construction Cost Estimates That Help You Win More Bids</h1>
+    <p>Professional construction estimating & material takeoff services for contractors, subcontractors, and developers.</p>
+    <a href="contact.html" class="btn">Request a Free Quote</a>
 </section>
 
-<!-- ================= WHY OUTSOURCE ESTIMATION ================= -->
-<section class="why-outsource container">
-    <h2>Why You Should Outsource Construction Estimation?</h2>
-
-    <p>
-        Construction estimating is tedious, time-consuming, and requires expertise.
-        It’s not something that most contractors want to spend their time on.
-        Without a correct estimate, you can end up spending much more than you planned
-        or cutting too many corners to make your budget work.
-    </p>
-
-    <ul class="benefits-list">
-        <li>Contractors are experts in their field. They need to focus on other aspects of the construction project.</li>
-        <li>It can be difficult for contractors to estimate accurately without a background in estimating.</li>
-        <li>Hiring an expert saves time and increases the accuracy of estimates.</li>
-        <li>Outsourcing allows you to take on more projects and increase your profits.</li>
-        <li>You will have more control over the budget, which decreases the risk of going over budget.</li>
-    </ul>
-
-  <a href="about.html" class="btn-about-premium">About Us</a>
-</section>
-
-<!-- ================= HOW COSTIQ HELPS ================= -->
-<section class="services-dark">
-    <h2>How CostiQ Estimation Helps You Win</h2>
-
-    <p class="services-intro">
-        CostiQ Estimation works as your remote estimating department.
-        We handle the numbers, quantities, and pricing —
-        so you can focus on execution, clients, and growth.
-    </p>
-
-    <div class="services-grid">
-        <div class="service-box">
-            <h3>Fast Turnaround</h3>
-            <p>Most estimates delivered within 24–48 hours.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Bid-Winning Accuracy</h3>
-            <p>Trade-wise BOQs with market-based pricing.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Stress-Free Bidding</h3>
-            <p>No late nights, no rushed spreadsheets.</p>
-        </div>
-    </div>
-</section>
-<link rel="stylesheet" href="software-premium.css">
-
-<!-- ================= SOFTWARE & TOOLS (CIRCULAR BUBBLES) ================= -->
+<!-- ================= SOFTWARE & TOOLS ================= -->
 <section class="about container">
     <h2>Software & Tools We Use</h2>
-
     <div class="software-cards">
-        <div class="software-card">
-            <img src="bluebeam.jpg" alt="Bluebeam">
-            <p>Bluebeam</p>
-        </div>
-        <div class="software-card">
-            <img src="planswift.png" alt="PlanSwift">
-            <p>PlanSwift</p>
-        </div>
-        <div class="software-card">
-            <img src="excel.png" alt="Excel">
-            <p>Excel</p>
-        </div>
+        <div class="software-card"><img src="bluebeam.jpg" alt="Bluebeam"><p>Bluebeam</p></div>
+        <div class="software-card"><img src="planswift.png" alt="PlanSwift"><p>PlanSwift</p></div>
+        <div class="software-card"><img src="excel.png" alt="Excel"><p>Excel</p></div>
     </div>
 </section>
-
-<section class="estimating-process">
-    <div class="container">
-        <h2>Our Estimating Process</h2>
-        <p>We follow a clear and precise process to ensure accurate construction estimates.</p>
-        <div class="process-grid">
-            <div class="process-card">
-                <div class</div>
-                <h3>Send Us Drawings</h3>
-                <p>You provide drawings and specifications for your project.</p>
-            </div>
-
-            <div class="process-card">
-                <div class/div>
-                <h3>Material Takeoffs</h3>
-                <p>We perform detailed material takeoffs to quantify everything needed.</p>
-            </div>
-
-            <div class="process-card">
-                <div class</div>
-                <h3>Cost Analysis</h3>
-                <p>Trade-wise pricing and cost analysis are performed for accuracy.</p>
-            </div>
-
-            <div class="process-card">
-                <div class </div>
-                <h3>Final Estimate</h3>
-                <p>The final estimate is delivered in Excel or PDF format for your convenience.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= FINAL CTA (PREMIUM BUBBLE) ================= -->
-<section class="final-cta">
-    <div class="cta-bubble">
-
-        <h2>
-            Ready to Win More <span>Construction Projects</span><br>
-            Without Hiring More Staff?
-        </h2>
-
-        <p class="cta-subtext">
-            Let <strong>CostiQ Estimation</strong> handle your estimates while you focus on
-            building, clients, and business growth.
-        </p>
-
-        <div class="cta-trust">
-            <span>✔ 24–48 Hour Turnaround</span>
-            <span>✔ Trade-Wise Accurate BOQs</span>
-            <span>✔ Stress-Free Bidding</span>
-        </div>
-
-        <div class="cta-buttons">
-            <a href="contact.html" class="cta-btn primary">Get a Free Estimate</a>
-            <a href="services.html" class="cta-btn secondary">View Sample Estimate</a>
-        </div>
-
-    </div>
-</section>
-
 
 <!-- ================= FOOTER ================= -->
 <footer>
-    <div class="container footer-container">
+    <div class="footer-container">
         <div class="footer-logo">
             <img src="CostiQ -logo.png" alt="CostiQ Logo">
+        </div>
+        <div class="footer-contact-cards">
+            <div class="footer-contact-card"><div class="contact-icon">📞</div><p>+1 (234) 567-890</p></div>
+            <div class="footer-contact-card"><div class="contact-icon">📍</div><p>123 Main Street, Your City, Country</p></div>
+            <div class="footer-contact-card"><div class="contact-icon">✉️</div><p>info@costiq.com</p></div>
         </div>
         <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
     </div>
 </footer>
-        <!-- CONTACT INFO -->
-        <div class="footer-contact-cards">
-            <div class="contact-card">
-                <span class="contact-icon">📞</span>
-                <h4>Phone</h4>
-                <p>+1 (234) 567-890</p>
-            </div>
-            <div class="contact-card">
-                <span class="contact-icon">📍</span>
-                <h4>Location</h4>
-                <p>123 Main Street, Your City, Country</p>
-            </div>
-            <div class="contact-card">
-                <span class="contact-icon">✉️</span>
-                <h4>Email</h4>
-                <p>info@costiq.com</p>
-            </div>
-        </div>
-
-        <!-- COPYRIGHT -->
-        <p class="footer-copy">© 2026 CostiQ Estimation. All Rights Reserved.</p>
-    </div>
-</footer>
-
-
-<!-- ================= JS ================= -->
-<script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
-
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
-    });
-</script>
-<a href="index.html" class="back-to-home">
-    ↑
-</a>
-</section>
-                <a href="https://wa.me/1234567890" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-    💬
-</a>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
