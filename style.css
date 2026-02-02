@@ -752,95 +752,7 @@ nav a:hover {
     }
 }
 
-/* ================= PREMIUM CONTACT SECTION (COMPACT & SEXY) ================= */
 
-.contact-section {
-    background: linear-gradient(135deg, #ffffff, #fff7d6);
-    padding: 60px 40px;
-    border-radius: 30px;
-    max-width: 1000px;
-    margin: 100px auto;
-    text-align: center;
-    box-shadow: 0 22px 55px rgba(0,0,0,0.15);
-}
-
-.contact-section h2 {
-    font-size: 34px;
-    color: #0d3d66;
-    margin-bottom: 12px;
-}
-
-.contact-section p {
-    font-size: 17px;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-/* Cards layout refined */
-.contact-cards {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Individual card – premium glass look */
-.contact-card {
-    background: #0d3d66;
-    color: #ffffff;
-    flex: 0 0 250px;
-    padding: 30px 25px;
-    border-radius: 22px;
-    transition: all 0.35s ease;
-    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
-}
-
-.contact-card:hover {
-    transform: translateY(-10px) scale(1.06);
-    box-shadow: 0 24px 55px rgba(0,0,0,0.35);
-}
-
-/* Icon circle – theme color */
-.contact-icon {
-    font-size: 34px;
-    background: #ffb100;
-    color: #0d3d66;
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-/* Headings */
-.contact-card h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-/* Text */
-.contact-card p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0;
-    color: #f1f1f1;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .contact-section {
-        padding: 50px 25px;
-    }
-
-    .contact-card {
-        width: 100%;
-        max-width: 320px;
-    }
-}
 
 /* ================= PREMIUM ABOUT US BUTTON ONLY ================= */
 
@@ -973,6 +885,7 @@ footer {
 
 
 /* ================================ END OF FILE ================================ */
+
 
 
 
