@@ -661,8 +661,47 @@ nav a:hover {
         width: 80%;
     }
 }
+/* ================= PREMIUM ABOUT US BUTTON ONLY ================= */
+
+.btn-about-premium {
+    display: inline-block;
+    padding: 16px 46px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ffb100, #ff7a00);
+    box-shadow: 0 12px 30px rgba(255, 177, 0, 0.45);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* light sweep shine */
+.btn-about-premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+}
+
+.btn-about-premium:hover::before {
+    left: 140%;
+}
+
+.btn-about-premium:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(255, 177, 0, 0.6);
+}
 
 /* ================================ END OF FILE ================================ */
+
 
 
 
