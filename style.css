@@ -402,30 +402,111 @@ nav a:hover {
 }
 
 
-/* ================================ SOFTWARE LOGO BUBBLES ================================ */
-.software-cards {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
+/* ================= SOFTWARE & TOOLS – PREMIUM UPGRADE ================= */
+
+.about.container {
+    margin-top: 120px;
+    text-align: center;
 }
 
+.about.container h2 {
+    font-size: 38px;
+    color: #0d3d66;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.about.container h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #ffb100, #ff7a00);
+    display: block;
+    margin: 18px auto 0;
+    border-radius: 10px;
+}
+
+/* Layout */
+.software-cards {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Premium Glass Card */
 .software-card {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background: #fff;
+    width: 160px;
+    height: 160px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.software-card img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+/* Glow border */
+.software-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 26px;
+    padding: 2px;
+    background: linear-gradient(135deg, #ffb100, #ff7a00);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: 0.4s ease;
 }
+
+/* Hover magic */
+.software-card:hover::before {
+    opacity: 1;
+}
+
+.software-card:hover {
+    transform: translateY(-14px) scale(1.08);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+}
+
+/* Logo */
+.software-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    transition: transform 0.4s ease;
+}
+
+.software-card:hover img {
+    transform: scale(1.15);
+}
+
+/* Text */
+.software-card p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0d3d66;
+    margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .software-card {
+        width: 140px;
+        height: 140px;
+    }
+}
+
 
 /* ================================ ESTIMATING PROCESS ================================ */
 .estimating-process {
@@ -761,6 +842,7 @@ nav a:hover {
 }
 
 /* ================================ END OF FILE ================================ */
+
 
 
 
