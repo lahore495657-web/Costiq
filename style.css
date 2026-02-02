@@ -75,36 +75,24 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Left align everything */
+    align-items: center; /* CENTER everything */
     gap: 20px;
     position: relative;
-}
-
-/* HERO LOGO LEFT SIDE */
-.hero-logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* left */
-    gap: 0;
-    margin-bottom: 40px;
-}
-
-.hero-logo img {
-    height: 100px;  /* thoda bada */
 }
 
 /* HERO MAIN TEXT */
 .hero h1 {
     font-size: 52px;
+    font-weight: 700; /* bold */
     margin: 0;
-    text-align: left; /* left align */
+    text-align: center; /* CENTER text */
 }
 
 .hero p {
     font-size: 20px;
     max-width: 650px;
-    margin: 0;
-    text-align: left;
+    margin: 0 auto;
+    text-align: center; /* CENTER text */
 }
 
 /* HERO BUTTON (Orange sexy box) */
@@ -141,16 +129,13 @@ nav a:hover {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-    .hero {
-        align-items: center;
-        text-align: center;
-    }
-    .hero-logo {
-        justify-content: center;
-        margin-bottom: 20px;
-    }
     .hero h1, .hero p {
+        font-size: 36px;
         text-align: center;
+    }
+    .hero .btn {
+        padding: 14px 36px;
+        font-size: 18px;
     }
 }
 
@@ -885,6 +870,7 @@ footer {
 
 
 /* ================================ END OF FILE ================================ */
+
 
 
 
