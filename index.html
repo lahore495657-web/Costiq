@@ -5,34 +5,6 @@
     <title>CostiQ Estimation | Construction Cost Estimators</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
-    <!-- ===== TRANSITION STYLES (SAFE) ===== -->
-    <style>
-        .fade-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.9s ease;
-        }
-        .fade-left {
-            opacity: 0;
-            transform: translateX(-60px);
-            transition: all 1s ease;
-        }
-        .fade-right {
-            opacity: 0;
-            transform: translateX(60px);
-            transition: all 1s ease;
-        }
-        .zoom-in {
-            opacity: 0;
-            transform: scale(0.85);
-            transition: all 0.8s ease;
-        }
-        .show {
-            opacity: 1;
-            transform: none;
-        }
-    </style>
 </head>
 <body>
 
@@ -47,7 +19,7 @@
         <div class="menu-toggle" id="menuToggle">☰</div>
 
         <nav id="navMenu">
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
             <a href="faq.html">FAQ</a>
@@ -57,131 +29,115 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero fade-up">
-    <div class="container">
-        <h1>Accurate Construction Cost Estimates That Help You Win More Bids</h1>
-        <p>
-            Professional construction estimating & material takeoff services
-            for contractors, subcontractors, and developers who demand accuracy,
-            speed, and confidence in every bid submission.
-        </p>
-        <a href="contact.html" class="btn">Request a Free Quote</a>
-    </div>
+<section class="hero">
+    <h1>Accurate Construction Cost Estimates That Help You Win More Bids</h1>
+    <p>
+        Professional construction estimating & material takeoff services
+        for contractors, subcontractors, and developers.
+    </p>
+    <a href="contact.html" class="btn">Request a Free Quote</a>
 </section>
 
 <!-- ================= CONTRACTOR BUBBLE ================= -->
-<div class="contractor-bubble-large">
-    <div class="text-content fade-left">
+<section class="contractor-bubble-large">
+    <div class="text-content">
         <h2>Are You a Contractor?</h2>
         <p>
-            Too busy working <span class="highlight">IN the business</span>?  
-            Most contractors spend their entire day running job sites, managing crews,
-            handling calls, and chasing deadlines. This leaves little time to work
-            <span class="highlight">ON the business</span> — improving systems,
-            bidding more projects, and scaling profitably.
+            Too Busy Working <span class="highlight">IN the Business</span>?  
+            Most contractors spend their day managing sites, crews, calls, and deadlines —
+            leaving no time to work <span class="highlight">ON the business</span>.
         </p>
-
         <ul>
-            <li class="fade-up">Late bids cost thousands</li>
-            <li class="fade-up">Rushed estimates lose projects</li>
-            <li class="fade-up">Skipped opportunities slow long-term growth</li>
+            <li>Late bids cost thousands</li>
+            <li>Rushed estimates lose projects</li>
+            <li>Skipped opportunities slow growth</li>
         </ul>
-
-        <a href="#contact" class="btn-fix">Let’s Fix This</a>
+        <a href="contact.html" class="btn-fix">Let’s Fix This</a>
     </div>
 
-    <div class="image-placeholder fade-right">
-        <img src="LADY.jpg" alt="Contractor Lady" class="contractor-image">
+    <div class="image-placeholder">
+        <img src="LADY.jpg" alt="Contractor">
     </div>
-</div>
+</section>
 
-<!-- ================= INSIGHT ================= -->
-<section class="contractor-insight fade-up">
+<!-- ================= INSIGHT BUBBLE ================= -->
+<section class="contractor-insight">
     <h3>Why Most Contractors Struggle to Grow</h3>
-
     <p>
-        In today’s competitive construction market, winning projects is no longer
-        just about experience. Contractors must deliver fast turnaround times,
-        accurate quantities, and competitive pricing to stay ahead.
+        In today’s competitive construction market, winning projects is no longer just about experience.
+        It requires speed, accuracy, and confidence in pricing.
     </p>
-
     <p>
-        Many contractors lose bids because estimates are prepared in a rush,
-        submitted late, or lack proper detail. Over time, estimating becomes a
-        bottleneck that limits growth and scalability.
+        Many contractors lose bids due to rushed or late estimates, while others stop bidding altogether
+        because estimating consumes too much time.
     </p>
-
     <p>
-        This creates a cycle where contractors stay busy — but never truly build
-        a scalable and profitable business.
+        This creates a cycle where contractors stay busy — but never truly scale.
     </p>
 </section>
 
-<!-- ================= WHY OUTSOURCE ================= -->
-<section class="why-outsource container fade-up">
+<!-- ================= WHY OUTSOURCE BUBBLE ================= -->
+<section class="why-outsource container">
     <h2>Why You Should Outsource Construction Estimation</h2>
-
     <p>
-        Construction estimating is time-consuming, detail-oriented, and requires
-        specialized expertise. Without accurate estimates, contractors risk
-        underpricing projects or exceeding budgets — both of which impact profits.
+        Construction estimating is time-consuming, detail-oriented, and requires specialized expertise.
+        Without accurate estimates, contractors risk underpricing projects or exceeding budgets —
+        both of which impact profits.
     </p>
 
     <ul class="benefits-list">
-        <li class="fade-up">Contractors should focus on execution, not spreadsheets</li>
-        <li class="fade-up">Accurate estimating requires dedicated expertise</li>
-        <li class="fade-up">Outsourcing saves time and improves bid accuracy</li>
-        <li class="fade-up">More bids submitted equals higher win potential</li>
-        <li class="fade-up">Better budget control reduces financial risk</li>
+        <li>Contractors should focus on execution, not spreadsheets</li>
+        <li>Accurate estimating requires dedicated expertise</li>
+        <li>Outsourcing saves time and improves bid accuracy</li>
+        <li>More bids submitted equals higher win potential</li>
+        <li>Better budget control reduces financial risk</li>
     </ul>
 
     <a href="about.html" class="btn">About Us</a>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section class="services-dark fade-up">
+<!-- ================= HOW COSTIQ HELPS ================= -->
+<section class="services-dark">
     <h2>How CostiQ Estimation Helps You Win</h2>
 
     <p class="services-intro">
         CostiQ Estimation acts as your remote estimating department.
-        We handle quantities, pricing, and BOQs — so you can focus on
-        execution, client relationships, and business growth.
+        We handle quantities, pricing, and BOQs —
+        so you can focus on execution, client relationships, and business growth.
     </p>
 
     <div class="services-grid">
-        <div class="service-box zoom-in">
+        <div class="service-box">
             <h3>Fast Turnaround</h3>
-            <p>Most estimates delivered within 24–48 hours.</p>
+            <p>Most estimates are delivered within 24–48 hours without compromising accuracy.</p>
         </div>
 
-        <div class="service-box zoom-in">
+        <div class="service-box">
             <h3>Bid-Winning Accuracy</h3>
-            <p>Trade-wise BOQs with market-based pricing.</p>
+            <p>Trade-wise BOQs prepared using market-based pricing to help you win more bids.</p>
         </div>
 
-        <div class="service-box zoom-in">
+        <div class="service-box">
             <h3>Stress-Free Bidding</h3>
-            <p>No late nights, no rushed spreadsheets.</p>
+            <p>No late nights, no rushed spreadsheets — we take care of the numbers.</p>
         </div>
     </div>
 </section>
 
 <!-- ================= SOFTWARE BUBBLES ================= -->
-<section class="about container fade-up">
+<section class="about container">
     <h2>Software & Tools We Use</h2>
 
     <div class="software-cards">
-        <div class="software-card zoom-in">
+        <div class="software-card">
             <img src="bluebeam.jpg" alt="Bluebeam">
             <p>Bluebeam</p>
         </div>
-
-        <div class="software-card zoom-in">
+        <div class="software-card">
             <img src="planswift.png" alt="PlanSwift">
             <p>PlanSwift</p>
         </div>
-
-        <div class="software-card zoom-in">
+        <div class="software-card">
             <img src="excel.png" alt="Excel">
             <p>Excel</p>
         </div>
@@ -189,25 +145,34 @@
 </section>
 
 <!-- ================= ESTIMATING PROCESS ================= -->
-<section class="estimating-process fade-up">
+<section class="estimating-process">
     <div class="container">
         <h2>Our Estimating Process</h2>
-        <p>We follow a structured and transparent process to ensure accuracy.</p>
+        <p class="process-intro">
+            We follow a structured and transparent process to ensure accurate construction estimates.
+        </p>
 
         <div class="process-grid">
-            <div class="process-card zoom-in">
+            <div class="process-card">
+                <span class="process-number">1</span>
                 <h3>Send Us Drawings</h3>
                 <p>You provide drawings and specifications for your project.</p>
             </div>
-            <div class="process-card zoom-in">
+
+            <div class="process-card">
+                <span class="process-number">2</span>
                 <h3>Material Takeoffs</h3>
                 <p>Detailed takeoffs are prepared for every trade.</p>
             </div>
-            <div class="process-card zoom-in">
+
+            <div class="process-card">
+                <span class="process-number">3</span>
                 <h3>Cost Analysis</h3>
                 <p>Market-based pricing ensures realistic project costs.</p>
             </div>
-            <div class="process-card zoom-in">
+
+            <div class="process-card">
+                <span class="process-number">4</span>
                 <h3>Final Estimate</h3>
                 <p>Delivered in Excel or PDF format.</p>
             </div>
@@ -216,17 +181,23 @@
 </section>
 
 <!-- ================= FINAL CTA ================= -->
-<section class="final-cta fade-up">
+<section class="final-cta">
     <div class="cta-bubble">
         <h2>
-            Ready to Win More Construction Projects<br>
+            Ready to Win More <span>Construction Projects</span><br>
             Without Hiring More Staff?
         </h2>
 
         <p class="cta-subtext">
-            Let <strong>CostiQ Estimation</strong> handle your estimates
-            while you focus on building and growing your business.
+            Let <strong>CostiQ Estimation</strong> handle your estimates while you focus on
+            building, clients, and business growth.
         </p>
+
+        <div class="cta-trust">
+            <span>✔ 24–48 Hour Turnaround</span>
+            <span>✔ Trade-Wise Accurate BOQs</span>
+            <span>✔ Stress-Free Bidding</span>
+        </div>
 
         <div class="cta-buttons">
             <a href="contact.html" class="cta-btn primary">Get a Free Estimate</a>
@@ -235,27 +206,19 @@
     </div>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
     <div class="container">
         <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
     </div>
 </footer>
 
-<!-- ================= ANIMATION JS ================= -->
 <script>
-    const animatedItems = document.querySelectorAll(
-        ".fade-up, .fade-left, .fade-right, .zoom-in"
-    );
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    }, { threshold: 0.2 });
-
-    animatedItems.forEach(item => observer.observe(item));
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
 </script>
 
 </body>
