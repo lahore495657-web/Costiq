@@ -363,6 +363,28 @@ nav a:hover {
     background: #0d3d66;
     color: #fff;
 }
+/* ================= WHY OUTSOURCE CTA FIX ================= */
+.why-outsource .btn-outline {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 42px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #0d3d66;
+    background: transparent;
+    border: 2px solid #ffb100;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 25px rgba(255,177,0,0.25);
+}
+
+.why-outsource .btn-outline:hover {
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    color: #0d3d66;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 18px 45px rgba(255,177,0,0.45);
+}
 
 /* ================================ FOOTER ================================ */
 footer {
@@ -389,3 +411,4 @@ footer {
         font-size: 36px;
     }
 }
+
