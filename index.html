@@ -4,318 +4,234 @@
     <meta charset="UTF-8">
     <title>CostiQ Estimation | Construction Cost Estimators</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
+    <!-- ===== TRANSITION STYLES (SAFE) ===== -->
     <style>
-        /* ================= GENERAL STYLES ================= */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background: #ffffff;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        h1, h2, h3 {
-            margin: 0 0 15px 0;
-        }
-
-        /* ================= HEADER ================= */
-        header {
-            background: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .site-logo {
-            width: 100px;
-        }
-
-        nav a {
-            margin-right: 20px;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .btn {
-            background: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-
-        /* ================= HERO ================= */
-        .hero {
-            background: #f0f8ff;
-            padding: 80px 0;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        /* ================= CONTRACTOR ================= */
-        .contractor-bubble-large {
-            display: flex;
-            gap: 20px;
-            padding: 60px 0;
-            align-items: center;
-        }
-
-        .contractor-image {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        .highlight {
-            color: #007BFF;
-            font-weight: bold;
-        }
-
-        .btn-fix {
-            background: #28a745;
-            color: #fff;
-            padding: 10px 25px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 15px;
-        }
-
-        /* ================= INSIGHT ================= */
-        .contractor-insight-inner {
-            display: flex;
-            gap: 20px;
-            padding: 60px 0;
-        }
-
-        .insight-image img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        /* ================= SOFTWARE BUBBLES ================= */
-        .software-cards {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 30px 0;
-        }
-
-        .software-card {
-            width: 120px;
-            height: 120px;
-            background: #f5f5f5;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.4s ease;
-        }
-
-        .software-card img {
-            width: 50px;
-            margin-bottom: 8px;
-        }
-
-        .software-card:hover {
-            transform: scale(1.15);
-        }
-
-        /* ================= SERVICES ================= */
-        .services-grid {
-            display: flex;
-            gap: 20px;
-            padding: 40px 0;
-        }
-
-        .service-box {
-            background: #f0f0f0;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        /* ================= CTA ================= */
-        .final-cta {
-            background: #007BFF;
-            color: #fff;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .cta-bubble {
-            background: #0056b3;
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        /* ================= CONTACT ================= */
-        .contact-section {
-            padding: 60px 0;
-        }
-
-        .contact-cards {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .contact-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            flex: 1;
-        }
-
-        /* ================= ANIMATIONS ================= */
         .fade-up {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+            transform: translateY(40px);
+            transition: all 0.9s ease;
         }
-
-        .slide-left {
+        .fade-left {
             opacity: 0;
             transform: translateX(-60px);
-            transition: all 0.9s ease;
+            transition: all 1s ease;
         }
-
-        .slide-right {
+        .fade-right {
             opacity: 0;
             transform: translateX(60px);
-            transition: all 0.9s ease;
+            transition: all 1s ease;
         }
-
         .zoom-in {
             opacity: 0;
             transform: scale(0.85);
-            transition: all 0.7s ease;
+            transition: all 0.8s ease;
         }
-
         .show {
             opacity: 1;
             transform: none;
-        }
-
-        /* ================= RESPONSIVE ================= */
-        @media(max-width:768px) {
-            .contractor-bubble-large,
-            .contractor-insight-inner,
-            .services-grid {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-    <div class="container logo-area">
-        <img src="CostiQ -logo.png" class="site-logo">
-        <strong>CostiQ Estimation</strong>
+    <div class="container">
+        <div class="logo-area">
+            <img src="CostiQ -logo.png" class="site-logo" alt="CostiQ Logo">
+            <span class="logo-text">CostiQ Estimation</span>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="navMenu">
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html" class="btn">Get a Quote</a>
+        </nav>
     </div>
 </header>
 
+<!-- ================= HERO ================= -->
 <section class="hero fade-up">
     <div class="container">
         <h1>Accurate Construction Cost Estimates That Help You Win More Bids</h1>
         <p>
             Professional construction estimating & material takeoff services
-            for contractors, subcontractors, and developers who want accuracy,
-            speed, and confidence in every bid they submit.
+            for contractors, subcontractors, and developers who demand accuracy,
+            speed, and confidence in every bid submission.
         </p>
         <a href="contact.html" class="btn">Request a Free Quote</a>
     </div>
 </section>
 
-<div class="container contractor-bubble-large">
-    <div class="slide-left">
+<!-- ================= CONTRACTOR BUBBLE ================= -->
+<div class="contractor-bubble-large">
+    <div class="text-content fade-left">
         <h2>Are You a Contractor?</h2>
         <p>
-            Most contractors stay busy working <span class="highlight">IN the business</span>
-            — managing crews, handling calls, and meeting deadlines. This leaves
-            very little time to work <span class="highlight">ON the business</span>,
-            improving systems, bidding more jobs, and scaling operations.
+            Too busy working <span class="highlight">IN the business</span>?  
+            Most contractors spend their entire day running job sites, managing crews,
+            handling calls, and chasing deadlines. This leaves little time to work
+            <span class="highlight">ON the business</span> — improving systems,
+            bidding more projects, and scaling profitably.
         </p>
+
         <ul>
-            <li>Late bids cost thousands</li>
-            <li>Rushed estimates lose projects</li>
-            <li>Skipped opportunities slow growth</li>
+            <li class="fade-up">Late bids cost thousands</li>
+            <li class="fade-up">Rushed estimates lose projects</li>
+            <li class="fade-up">Skipped opportunities slow long-term growth</li>
         </ul>
+
         <a href="#contact" class="btn-fix">Let’s Fix This</a>
     </div>
 
-    <div class="slide-right">
-        <img src="LADY.jpg" class="contractor-image">
+    <div class="image-placeholder fade-right">
+        <img src="LADY.jpg" alt="Contractor Lady" class="contractor-image">
     </div>
 </div>
 
-<section class="container fade-up">
-    <div class="contractor-insight-inner">
-        <div>
-            <h3>Why Most Contractors Struggle to Grow</h3>
-            <p>
-                In today’s competitive construction market, winning projects
-                requires more than experience. Accurate quantities, proper
-                takeoffs, and competitive pricing are critical.
-            </p>
-            <p>
-                Many contractors lose bids simply because estimates are rushed,
-                submitted late, or lack detail. Over time, estimating becomes a
-                bottleneck that limits growth.
-            </p>
+<!-- ================= INSIGHT ================= -->
+<section class="contractor-insight fade-up">
+    <h3>Why Most Contractors Struggle to Grow</h3>
+
+    <p>
+        In today’s competitive construction market, winning projects is no longer
+        just about experience. Contractors must deliver fast turnaround times,
+        accurate quantities, and competitive pricing to stay ahead.
+    </p>
+
+    <p>
+        Many contractors lose bids because estimates are prepared in a rush,
+        submitted late, or lack proper detail. Over time, estimating becomes a
+        bottleneck that limits growth and scalability.
+    </p>
+
+    <p>
+        This creates a cycle where contractors stay busy — but never truly build
+        a scalable and profitable business.
+    </p>
+</section>
+
+<!-- ================= WHY OUTSOURCE ================= -->
+<section class="why-outsource container fade-up">
+    <h2>Why You Should Outsource Construction Estimation</h2>
+
+    <p>
+        Construction estimating is time-consuming, detail-oriented, and requires
+        specialized expertise. Without accurate estimates, contractors risk
+        underpricing projects or exceeding budgets — both of which impact profits.
+    </p>
+
+    <ul class="benefits-list">
+        <li class="fade-up">Contractors should focus on execution, not spreadsheets</li>
+        <li class="fade-up">Accurate estimating requires dedicated expertise</li>
+        <li class="fade-up">Outsourcing saves time and improves bid accuracy</li>
+        <li class="fade-up">More bids submitted equals higher win potential</li>
+        <li class="fade-up">Better budget control reduces financial risk</li>
+    </ul>
+
+    <a href="about.html" class="btn">About Us</a>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services-dark fade-up">
+    <h2>How CostiQ Estimation Helps You Win</h2>
+
+    <p class="services-intro">
+        CostiQ Estimation acts as your remote estimating department.
+        We handle quantities, pricing, and BOQs — so you can focus on
+        execution, client relationships, and business growth.
+    </p>
+
+    <div class="services-grid">
+        <div class="service-box zoom-in">
+            <h3>Fast Turnaround</h3>
+            <p>Most estimates delivered within 24–48 hours.</p>
         </div>
-        <div class="insight-image">
-            <img src="CONFUSED.png">
+
+        <div class="service-box zoom-in">
+            <h3>Bid-Winning Accuracy</h3>
+            <p>Trade-wise BOQs with market-based pricing.</p>
+        </div>
+
+        <div class="service-box zoom-in">
+            <h3>Stress-Free Bidding</h3>
+            <p>No late nights, no rushed spreadsheets.</p>
         </div>
     </div>
 </section>
 
-<section class="container">
+<!-- ================= SOFTWARE BUBBLES ================= -->
+<section class="about container fade-up">
     <h2>Software & Tools We Use</h2>
+
     <div class="software-cards">
         <div class="software-card zoom-in">
-            <img src="bluebeam.jpg"><p>Bluebeam</p>
+            <img src="bluebeam.jpg" alt="Bluebeam">
+            <p>Bluebeam</p>
         </div>
+
         <div class="software-card zoom-in">
-            <img src="planswift.png"><p>PlanSwift</p>
+            <img src="planswift.png" alt="PlanSwift">
+            <p>PlanSwift</p>
         </div>
+
         <div class="software-card zoom-in">
-            <img src="excel.png"><p>Excel</p>
+            <img src="excel.png" alt="Excel">
+            <p>Excel</p>
         </div>
     </div>
 </section>
 
-<section class="final-cta zoom-in">
+<!-- ================= ESTIMATING PROCESS ================= -->
+<section class="estimating-process fade-up">
+    <div class="container">
+        <h2>Our Estimating Process</h2>
+        <p>We follow a structured and transparent process to ensure accuracy.</p>
+
+        <div class="process-grid">
+            <div class="process-card zoom-in">
+                <h3>Send Us Drawings</h3>
+                <p>You provide drawings and specifications for your project.</p>
+            </div>
+            <div class="process-card zoom-in">
+                <h3>Material Takeoffs</h3>
+                <p>Detailed takeoffs are prepared for every trade.</p>
+            </div>
+            <div class="process-card zoom-in">
+                <h3>Cost Analysis</h3>
+                <p>Market-based pricing ensures realistic project costs.</p>
+            </div>
+            <div class="process-card zoom-in">
+                <h3>Final Estimate</h3>
+                <p>Delivered in Excel or PDF format.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta fade-up">
     <div class="cta-bubble">
-        <h2>Ready to Win More Construction Projects?</h2>
-        <p>
-            Let <strong>CostiQ Estimation</strong> handle your estimates while you
-            focus on building, clients, and business growth.
+        <h2>
+            Ready to Win More Construction Projects<br>
+            Without Hiring More Staff?
+        </h2>
+
+        <p class="cta-subtext">
+            Let <strong>CostiQ Estimation</strong> handle your estimates
+            while you focus on building and growing your business.
         </p>
-        <a href="contact.html" class="btn-fix">Get a Free Estimate</a>
+
+        <div class="cta-buttons">
+            <a href="contact.html" class="cta-btn primary">Get a Free Estimate</a>
+            <a href="services.html" class="cta-btn secondary">View Sample Estimate</a>
+        </div>
     </div>
 </section>
 
@@ -325,16 +241,21 @@
     </div>
 </footer>
 
+<!-- ================= ANIMATION JS ================= -->
 <script>
-    const items = document.querySelectorAll('.fade-up,.slide-left,.slide-right,.zoom-in');
-    const observer = new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                entry.target.classList.add('show');
+    const animatedItems = document.querySelectorAll(
+        ".fade-up, .fade-left, .fade-right, .zoom-in"
+    );
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
             }
         });
-    },{threshold:0.2});
-    items.forEach(item=>observer.observe(item));
+    }, { threshold: 0.2 });
+
+    animatedItems.forEach(item => observer.observe(item));
 </script>
 
 </body>
