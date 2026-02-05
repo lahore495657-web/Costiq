@@ -1,10 +1,11 @@
-/* ================================ BASE STYLES ================================ */
+/* ================================ RESET ================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ================================ BASE ================================ */
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: #f4f6f9;
@@ -14,26 +15,8 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 20px;
-}
-
-/* ================================ GLOBAL TRANSITIONS ================================ */
-section,
-.contractor-bubble-large,
-.contractor-insight,
-.why-outsource,
-.services-dark,
-.estimating-process,
-.final-cta {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* ================================ HEADER ================================ */
@@ -42,7 +25,7 @@ header {
     padding: 15px 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
@@ -50,13 +33,12 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .site-logo {
@@ -65,19 +47,20 @@ header .container {
 
 .logo-text {
     color: #fff;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
 }
 
 nav {
     display: flex;
-    gap: 15px;
+    gap: 18px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -86,16 +69,27 @@ nav a:hover {
 
 /* ================================ HERO ================================ */
 .hero {
-    background: linear-gradient(rgba(13,61,102,0.7), rgba(13,61,102,0.7)),
-                url("construction-bg.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(13,61,102,0.75), rgba(13,61,102,0.75)),
+        url("construction-bg.jpg") center/cover no-repeat;
     color: #fff;
-    text-align: center;
     padding: 140px 20px;
+    text-align: center;
 }
 
-/* ================= HERO BUTTON ================= */
+.hero h1 {
+    font-size: 52px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 25px auto 40px;
+}
+
 .hero .btn {
-    background: linear-gradient(45deg, #ffb100, #ffc83d);
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
     color: #0d3d66;
     padding: 16px 48px;
     border-radius: 50px;
@@ -103,81 +97,295 @@ nav a:hover {
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 12px 35px rgba(255,177,0,0.45);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: 0.35s ease;
 }
 
 .hero .btn:hover {
-    transform: translateY(-4px) scale(1.04);
+    transform: translateY(-5px) scale(1.05);
 }
 
 /* ================================ CONTRACTOR BUBBLE ================================ */
 .contractor-bubble-large {
     display: flex;
     gap: 40px;
+    align-items: center;
     background: linear-gradient(135deg, #fff4cc, #ffffff);
-    border-radius: 40px;
+    border-radius: 45px;
     padding: 80px;
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 120px auto;
     box-shadow: 0 35px 80px rgba(0,0,0,0.25);
 }
 
-.contractor-bubble-large:hover {
-    transform: translateY(-8px);
+.contractor-bubble-large h2 {
+    font-size: 42px;
+    color: #0d3d66;
+    margin-bottom: 25px;
 }
 
-.contractor-bubble-large ul li {
-    transition: transform 0.3s ease;
+.contractor-bubble-large p {
+    font-size: 19px;
+    margin-bottom: 20px;
 }
 
-.contractor-bubble-large ul li:hover {
-    transform: translateX(6px);
+.highlight {
+    color: #ffb100;
+    font-weight: 700;
 }
 
-/* ================================ BUBBLES ================================ */
-.contractor-insight,
+.contractor-bubble-large ul {
+    margin: 20px 0;
+    padding-left: 22px;
+}
+
+.contractor-bubble-large li {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.btn-fix {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    padding: 16px 48px;
+    border-radius: 50px;
+    color: #0d3d66;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.35s ease;
+}
+
+.btn-fix:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================================ INSIGHT BUBBLE ================================ */
+.contractor-insight {
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 60px;
+    background: linear-gradient(135deg, #fff7d6, #ffffff);
+    border-radius: 35px;
+    box-shadow: 0 28px 65px rgba(0,0,0,0.16);
+}
+
+/* ================================ WHY OUTSOURCE ================================ */
 .why-outsource {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.contractor-insight:hover,
-.why-outsource:hover {
-    transform: translateY(-10px);
+    margin: 120px auto;
+    padding: 70px;
+    background: linear-gradient(135deg, #ffffff, #fff4cc);
+    border-radius: 40px;
     box-shadow: 0 30px 70px rgba(0,0,0,0.18);
 }
 
-/* ================================ SERVICES ================================ */
-.services-dark .service-box {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+.benefits-list li {
+    list-style: none;
+    background: rgba(255,177,0,0.12);
+    margin-bottom: 15px;
+    padding: 15px 20px 15px 40px;
+    border-radius: 15px;
+    position: relative;
 }
 
-.services-dark .service-box:hover {
-    transform: translateY(-10px) scale(1.04);
+.benefits-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 15px;
+    color: #ffb100;
 }
 
-/* ================================ SOFTWARE BUBBLES ================================ */
+/* ================================ SERVICES DARK ================================ */
+.services-dark {
+    background: linear-gradient(135deg, #0d3d66, #081f33);
+    padding: 100px 40px;
+    border-radius: 45px;
+    max-width: 1200px;
+    margin: 140px auto;
+    text-align: center;
+}
+
+.services-dark h2 {
+    color: #ffb100;
+    font-size: 42px;
+}
+
+.services-intro {
+    color: #eee;
+    max-width: 850px;
+    margin: 25px auto 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.service-box {
+    background: rgba(255,255,255,0.1);
+    border-radius: 28px;
+    padding: 45px 30px;
+    transition: 0.35s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-12px) scale(1.05);
+}
+
+.service-box h3 {
+    color: #ffb100;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    color: #fff;
+}
+
+/* ================================ SOFTWARE ================================ */
+.software-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
 .software-card {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.35s ease;
 }
 
 .software-card:hover {
-    transform: scale(1.12);
-    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+    transform: translateY(-10px) scale(1.08);
 }
 
-/* ================================ CTA ================================ */
+.software-card img {
+    width: 60px;
+    height: 60px;
+}
+
+/* ================================ PROCESS ================================ */
+.estimating-process {
+    background: linear-gradient(135deg, #fff, #fff4cc);
+    margin: 140px auto;
+    padding: 100px 20px;
+    border-radius: 45px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.process-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 45px 30px;
+    text-align: center;
+    transition: 0.35s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.process-number {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    line-height: 55px;
+    font-weight: 800;
+    margin: 0 auto 20px;
+}
+
+/* ================================ FINAL CTA ================================ */
+.final-cta {
+    background: linear-gradient(135deg, #0d3d66, #081f33);
+    padding: 120px 20px;
+}
+
 .cta-bubble {
-    transition: transform 0.6s ease;
+    max-width: 900px;
+    background: #fff;
+    margin: auto;
+    padding: 80px;
+    border-radius: 60px;
+    text-align: center;
 }
 
-.cta-bubble:hover {
-    transform: translateY(-10px);
+.cta-bubble h2 span {
+    color: #ffb100;
+}
+
+.cta-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.cta-btn {
+    padding: 16px 42px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cta-btn.primary {
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    color: #0d3d66;
+}
+
+.cta-btn.secondary {
+    background: #0d3d66;
+    color: #fff;
+}
+
+/* ================================ FOOTER ================================ */
+footer {
+    background: #081f33;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
 }
 
 /* ================================ RESPONSIVE ================================ */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .contractor-bubble-large {
         flex-direction: column;
         text-align: center;
+        padding: 50px 20px;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 260px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
     }
 }
