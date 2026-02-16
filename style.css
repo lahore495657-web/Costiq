@@ -1,91 +1,424 @@
-/* ================= RESET ================= */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter', sans-serif; background:#f4f6f9; color:#1a1a1a; line-height:1.7; scroll-behavior:smooth; }
-.container { max-width:1200px; margin:auto; padding:0 20px; }
+/* ================================ RESET ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* ================= HEADER ================= */
-.header { background:#0d3d66; padding:15px 0; position:sticky; top:0; z-index:999; box-shadow:0 6px 20px rgba(0,0,0,0.25);}
-.header-container { display:flex; justify-content:space-between; align-items:center; }
-.logo-area { display:flex; align-items:center; gap:12px; }
-.site-logo { height:60px; }
-.logo-text { color:#fff; font-size:26px; font-weight:700; }
-.nav { display:flex; gap:22px; }
-.nav a { color:#fff; text-decoration:none; font-weight:600; transition:0.3s; }
-.nav a:hover { color:#ffb100; }
+/* ================================ BASE ================================ */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+}
 
-/* ================= HERO ================= */
-.hero { padding:120px 0; background: linear-gradient(rgba(13,61,102,0.75), rgba(13,61,102,0.75)), url('construction-bg.jpg') center/cover no-repeat; color:#fff; }
-.hero-container { display:flex; align-items:center; gap:60px; }
-.hero-text h1 { font-size:48px; margin-bottom:25px; }
-.hero-text p { font-size:18px; margin-bottom:35px; color:#ddd; }
-.hero-image img { width:100%; border-radius:25px; box-shadow:0 25px 60px rgba(0,0,0,0.4); }
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
 
-/* ================= BUTTONS ================= */
-.btn-primary { display:inline-block; background:linear-gradient(135deg,#ffb100,#ffc83d); color:#0d3d66; padding:14px 40px; border-radius:50px; font-weight:700; text-decoration:none; transition:0.35s ease; box-shadow:0 10px 25px rgba(255,177,0,0.4);}
-.btn-primary:hover { transform:translateY(-5px); box-shadow:0 15px 35px rgba(255,177,0,0.5);}
-.btn-secondary { display:inline-block; background:#0d3d66; color:#fff; padding:14px 40px; border-radius:50px; font-weight:600; text-decoration:none; transition:0.35s ease; }
-.btn-secondary:hover { transform:translateY(-5px); background:#081f33; }
+/* ================================ HEADER ================================ */
+header {
+    background: #0d3d66;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
 
-/* ================= BUBBLE SECTIONS ================= */
-.contractor-bubble-large { display:flex; gap:40px; align-items:center; background:linear-gradient(135deg,#fff4cc,#fff); border-radius:45px; padding:80px; margin:120px auto; box-shadow:0 35px 80px rgba(0,0,0,0.25);}
-.contractor-bubble-large h2 { font-size:42px; color:#0d3d66; margin-bottom:25px; }
-.contractor-bubble-large p { font-size:19px; margin-bottom:20px; }
-.highlight { color:#ffb100; font-weight:700; }
-.contractor-bubble-large ul { margin:20px 0; padding-left:22px; }
-.contractor-bubble-large li { margin-bottom:12px; font-weight:600; }
-.image-placeholder { width:300px; height:300px; border-radius:25px; overflow:hidden; }
-.image-placeholder img { width:100%; height:100%; object-fit:cover; }
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/* ================= INSIGHT ================= */
-.contractor-insight { max-width:1000px; margin:120px auto; padding:60px; background:linear-gradient(135deg,#fff7d6,#ffffff); border-radius:35px; box-shadow:0 28px 65px rgba(0,0,0,0.16); }
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-/* ================= WHY OUTSOURCE ================= */
-.why-outsource { margin:120px auto; padding:70px; background:linear-gradient(135deg,#ffffff,#fff4cc); border-radius:40px; box-shadow:0 30px 70px rgba(0,0,0,0.18); }
-.benefits-list li { list-style:none; background:rgba(255,177,0,0.12); margin-bottom:15px; padding:15px 20px 15px 40px; border-radius:15px; position:relative;}
-.benefits-list li::before { content:"✔"; position:absolute; left:15px; color:#ffb100; }
+.site-logo {
+    height: 65px;
+}
 
-/* ================= SERVICES ================= */
-.services-dark { background: linear-gradient(135deg,#0d3d66,#081f33); padding:100px 40px; border-radius:45px; margin:140px auto; text-align:center; color:#fff;}
-.services-intro { max-width:850px; margin:25px auto 60px; color:#eee; }
-.services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:35px;}
-.service-box { background: rgba(255,255,255,0.1); border-radius:28px; padding:45px 30px; transition:0.35s; text-align:center; }
-.service-box:hover { transform:translateY(-12px) scale(1.03);}
-.service-box h3 { color:#ffb100; margin-bottom:15px;}
-.service-box p { color:#fff; }
-.service-box i { font-size:42px; margin-bottom:15px; color:#ffb100; }
+.logo-text {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
 
-/* ================= SOFTWARE ================= */
-.software-cards { display:flex; gap:25px; justify-content:center; margin-top:50px;}
-.software-card { width:130px; height:130px; border-radius:50%; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:0.35s ease; }
-.software-card:hover { transform:translateY(-10px) scale(1.08);}
-.software-card img { width:60px; height:60px; margin-bottom:10px; }
+nav {
+    display: flex;
+    gap: 18px;
+}
 
-/* ================= ESTIMATING PROCESS ================= */
-.estimating-process { background:linear-gradient(135deg,#fff,#fff4cc); margin:140px auto; padding:100px 20px; border-radius:45px; }
-.process-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:35px; margin-top:60px;}
-.process-card { background:#fff; border-radius:28px; padding:45px 30px; text-align:center; transition:0.35s ease;}
-.process-card span { display:inline-block; width:55px; height:55px; background:linear-gradient(135deg,#ffb100,#ffc83d); border-radius:50%; line-height:55px; font-weight:700; margin-bottom:20px;}
-.process-card:hover { transform:translateY(-10px); }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-/* ================= FINAL CTA ================= */
-.final-cta { background:linear-gradient(135deg,#0d3d66,#081f33); padding:120px 20px; color:#fff;}
-.cta-bubble { max-width:900px; background:#fff; margin:auto; padding:80px; border-radius:60px; text-align:center; }
-.cta-bubble h2 span { color:#ffb100; }
-.cta-buttons { margin-top:40px; display:flex; gap:25px; justify-content:center; }
+nav a:hover {
+    color: #ffb100;
+}
 
-/* ================= FOOTER ================= */
-.footer { background:#081f33; color:#fff; text-align:center; padding:30px 0; }
+/* ================================ HERO ================================ */
+.hero {
+    background: linear-gradient(rgba(13,61,102,0.75), rgba(13,61,102,0.75)),
+        url("construction-bg.jpg") center/cover no-repeat;
+    color: #fff;
+    padding: 140px 20px;
+    text-align: center;
+}
 
-/* ================= FLOATING BUTTONS ================= */
-.whatsapp-float { position:fixed; bottom:25px; right:25px; background:#25D366; color:#fff; width:60px; height:60px; border-radius:50%; text-align:center; line-height:60px; font-size:28px; box-shadow:0 10px 25px rgba(0,0,0,0.3); z-index:9999; transition:0.3s ease;}
-.whatsapp-float:hover { transform:scale(1.1);}
-.chat-float { position:fixed; bottom:100px; right:25px; background:#0d3d66; color:#fff; width:60px; height:60px; border-radius:50%; text-align:center; line-height:60px; font-size:24px; box-shadow:0 10px 25px rgba(0,0,0,0.3); z-index:9999; transition:0.3s ease;}
-.chat-float:hover { transform:scale(1.1); }
+.hero h1 {
+    font-size: 52px;
+    max-width: 900px;
+    margin: auto;
+}
 
-/* ================= RESPONSIVE ================= */
-@media (max-width:992px){
-.hero-container, .contractor-bubble-large { flex-direction:column; text-align:center;}
-.hero-text h1 { font-size:34px; }
-.cta-buttons { flex-direction:column;}
-.image-placeholder { width:100%; height:260px; margin-top:20px;}
+.hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 25px auto 40px;
+}
+
+.hero .btn {
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    color: #0d3d66;
+    padding: 16px 48px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 12px 35px rgba(255,177,0,0.45);
+    transition: 0.35s ease;
+}
+
+.hero .btn:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* ================================ CONTRACTOR BUBBLE ================================ */
+.contractor-bubble-large {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #fff4cc, #ffffff);
+    border-radius: 60px 15px 60px 15px; /* stylish shape */
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 120px auto;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.2);
+}
+
+.contractor-bubble-large h2 {
+    font-size: 42px;
+    color: #0d3d66;
+    margin-bottom: 25px;
+}
+
+.contractor-bubble-large p {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ffb100;
+    font-weight: 700;
+}
+
+.contractor-bubble-large ul {
+    margin: 20px 0;
+    padding-left: 22px;
+}
+
+.contractor-bubble-large li {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.btn-fix {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    padding: 16px 48px;
+    border-radius: 50px;
+    color: #0d3d66;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.35s ease;
+}
+
+.btn-fix:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255,177,0,0.45);
+}
+
+.image-placeholder {
+    flex: 1 1 300px;
+    height: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================================ INSIGHT BUBBLE ================================ */
+.contractor-insight {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #fff7d6, #ffffff);
+    border-radius: 45px;
+    box-shadow: 0 28px 65px rgba(0,0,0,0.18);
+    text-align: center;
+}
+
+/* ================================ WHY OUTSOURCE ================================ */
+.why-outsource {
+    margin: 100px auto;
+    padding: 70px 40px;
+    background: linear-gradient(135deg, #ffffff, #fff4cc);
+    border-radius: 45px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.benefits-list li {
+    flex: 1 1 250px;
+    list-style: none;
+    background: rgba(255,177,0,0.12);
+    margin-bottom: 15px;
+    padding: 20px 25px;
+    border-radius: 20px;
+    position: relative;
+    font-weight: 600;
+    transition: transform 0.35s;
+}
+
+.benefits-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    color: #ffb100;
+}
+
+.benefits-list li:hover {
+    transform: translateY(-6px);
+}
+
+/* ================================ SERVICES DARK ================================ */
+.services-dark {
+    background: linear-gradient(135deg, #0d3d66, #081f33);
+    padding: 100px 40px;
+    border-radius: 45px;
+    max-width: 1200px;
+    margin: 140px auto;
+    text-align: center;
+    color: #fff;
+}
+
+.services-dark h2 {
+    color: #ffb100;
+    font-size: 42px;
+}
+
+.services-intro {
+    color: #eee;
+    max-width: 850px;
+    margin: 25px auto 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.service-box {
+    background: rgba(255,255,255,0.1);
+    border-radius: 28px;
+    padding: 45px 30px;
+    transition: 0.35s ease;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: translateY(-12px) scale(1.05);
+}
+
+.service-box h3 {
+    color: #ffb100;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    color: #fff;
+}
+
+.service-box i {
+    font-size: 42px;
+    color: #ffb100;
+    margin-bottom: 15px;
+}
+
+/* ================================ SOFTWARE ================================ */
+.software-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.software-card {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.35s ease;
+}
+
+.software-card:hover {
+    transform: translateY(-10px) scale(1.08);
+}
+
+.software-card img {
+    width: 60px;
+    height: 60px;
+}
+
+/* ================================ PROCESS ================================ */
+.estimating-process {
+    background: linear-gradient(135deg, #fff, #fff4cc);
+    margin: 140px auto;
+    padding: 100px 20px;
+    border-radius: 45px;
+    text-align: center;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.process-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 45px 30px;
+    text-align: center;
+    transition: 0.35s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.process-number {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    line-height: 55px;
+    font-weight: 800;
+    margin: 0 auto 20px;
+}
+
+/* ================================ FINAL CTA ================================ */
+.final-cta {
+    background: linear-gradient(135deg, #0d3d66, #081f33);
+    padding: 120px 20px;
+}
+
+.cta-bubble {
+    max-width: 900px;
+    background: #fff;
+    margin: auto;
+    padding: 80px;
+    border-radius: 60px;
+    text-align: center;
+}
+
+.cta-bubble h2 span {
+    color: #ffb100;
+}
+
+.cta-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.cta-btn {
+    padding: 16px 42px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cta-btn.primary {
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    color: #0d3d66;
+}
+
+.cta-btn.secondary {
+    background: #0d3d66;
+    color: #fff;
+}
+
+/* ================================ FOOTER ================================ */
+footer {
+    background: #081f33;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* ================================ RESPONSIVE ================================ */
+@media (max-width: 768px) {
+    .contractor-bubble-large {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+        border-radius: 40px 40px 20px 20px;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 260px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
 }
