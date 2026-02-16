@@ -1,15 +1,14 @@
-/* ================================ RESET ================================ */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ================================ BASE ================================ */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     background: #f4f6f9;
-    color: #333;
+    color: #1a1a1a;
     line-height: 1.7;
 }
 
@@ -19,8 +18,40 @@ body {
     padding: 0 20px;
 }
 
-/* ================================ HEADER ================================ */
-header {
+/* ================= GLOBAL BUTTONS ================= */
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    color: #0d3d66;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.35s ease;
+    box-shadow: 0 10px 25px rgba(255,177,0,0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: #0d3d66;
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.35s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+}
+
+/* ================= HEADER ================= */
+.header {
     background: #0d3d66;
     padding: 15px 0;
     position: sticky;
@@ -29,7 +60,7 @@ header {
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-header .container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,90 +73,113 @@ header .container {
 }
 
 .site-logo {
-    height: 65px;
+    height: 60px;
 }
 
 .logo-text {
     color: #fff;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
 }
 
-nav {
+.nav {
     display: flex;
-    gap: 18px;
+    gap: 22px;
 }
 
-nav a {
+.nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
 }
 
-nav a:hover {
+.nav a:hover {
     color: #ffb100;
 }
 
-/* ================================ HERO ================================ */
+/* ================= HERO ================= */
 .hero {
-    background: linear-gradient(rgba(13,61,102,0.75), rgba(13,61,102,0.75)),
-        url("construction-bg.jpg") center/cover no-repeat;
+    padding: 120px 0;
+    background: linear-gradient(135deg,#0d3d66,#081f33);
     color: #fff;
-    padding: 140px 20px;
-    text-align: center;
 }
 
-.hero h1 {
-    font-size: 52px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.hero p {
-    font-size: 20px;
-    max-width: 800px;
-    margin: 25px auto 40px;
-}
-
-.hero .btn {
-    background: linear-gradient(135deg, #ffb100, #ffc83d);
-    color: #0d3d66;
-    padding: 16px 48px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 12px 35px rgba(255,177,0,0.45);
-    transition: 0.35s ease;
-}
-
-.hero .btn:hover {
-    transform: translateY(-5px) scale(1.05);
-}
-
-/* ================================ CONTRACTOR BUBBLE ================================ */
-.contractor-bubble-large {
+.hero-container {
     display: flex;
-    gap: 40px;
     align-items: center;
-    background: linear-gradient(135deg, #fff4cc, #ffffff);
-    border-radius: 45px;
-    padding: 80px;
-    max-width: 1200px;
-    margin: 120px auto;
-    box-shadow: 0 35px 80px rgba(0,0,0,0.25);
+    gap: 60px;
 }
 
-.contractor-bubble-large h2 {
-    font-size: 42px;
-    color: #0d3d66;
+.hero-text h1 {
+    font-size: 48px;
     margin-bottom: 25px;
 }
 
-.contractor-bubble-large p {
-    font-size: 19px;
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: #ddd;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    padding: 120px 0;
+}
+
+.light-bg {
+    background: #fff8e6;
+}
+
+.dark-section {
+    background: linear-gradient(135deg,#0d3d66,#081f33);
+    color: #fff;
+    border-radius: 50px;
+    margin: 120px auto;
+    max-width: 1200px;
+    padding: 100px 60px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.section-subtext {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: #ccc;
+}
+
+/* ================= TWO COLUMN ================= */
+.two-column {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.text-block p {
     margin-bottom: 20px;
+}
+
+.styled-list {
+    margin: 25px 0;
+    padding-left: 20px;
+}
+
+.styled-list li {
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .highlight {
@@ -133,282 +187,161 @@ nav a:hover {
     font-weight: 700;
 }
 
-.contractor-bubble-large ul {
-    margin: 20px 0;
-    padding-left: 22px;
-}
-
-.contractor-bubble-large li {
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-
-.btn-fix {
-    display: inline-block;
-    margin-top: 20px;
-    background: linear-gradient(135deg, #ffb100, #ffc83d);
-    padding: 16px 48px;
-    border-radius: 50px;
-    color: #0d3d66;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.35s ease;
-}
-
-.btn-fix:hover {
-    transform: translateY(-5px) scale(1.05);
-}
-
-.image-placeholder {
-    width: 300px;
-    height: 300px;
-    border-radius: 25px;
-    overflow: hidden;
-}
-
-.image-placeholder img {
+.image-block img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 }
 
-/* ================================ INSIGHT BUBBLE ================================ */
-.contractor-insight {
-    max-width: 1000px;
-    margin: 120px auto;
-    padding: 60px;
-    background: linear-gradient(135deg, #fff7d6, #ffffff);
-    border-radius: 35px;
-    box-shadow: 0 28px 65px rgba(0,0,0,0.16);
-}
-
-/* ================================ WHY OUTSOURCE ================================ */
-.why-outsource {
-    margin: 120px auto;
-    padding: 70px;
-    background: linear-gradient(135deg, #ffffff, #fff4cc);
-    border-radius: 40px;
-    box-shadow: 0 30px 70px rgba(0,0,0,0.18);
-}
-
-.benefits-list li {
-    list-style: none;
-    background: rgba(255,177,0,0.12);
-    margin-bottom: 15px;
-    padding: 15px 20px 15px 40px;
-    border-radius: 15px;
-    position: relative;
-}
-
-.benefits-list li::before {
-    content: "✔";
-    position: absolute;
-    left: 15px;
-    color: #ffb100;
-}
-
-/* ================================ SERVICES DARK ================================ */
-.services-dark {
-    background: linear-gradient(135deg, #0d3d66, #081f33);
-    padding: 100px 40px;
-    border-radius: 45px;
-    max-width: 1200px;
-    margin: 140px auto;
-    text-align: center;
-}
-
-.services-dark h2 {
-    color: #ffb100;
-    font-size: 42px;
-}
-
-.services-intro {
-    color: #eee;
-    max-width: 850px;
-    margin: 25px auto 60px;
-}
-
-.services-grid {
+/* ================= BUBBLE GRID ================= */
+.bubble-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.bubble-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.bubble-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ================= CARDS ================= */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
     gap: 35px;
 }
 
-.service-box {
+.card {
     background: rgba(255,255,255,0.1);
-    border-radius: 28px;
     padding: 45px 30px;
-    transition: 0.35s ease;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
 }
 
-.service-box:hover {
-    transform: translateY(-12px) scale(1.05);
+.card:hover {
+    transform: translateY(-8px);
 }
 
-.service-box h3 {
+.card h3 {
     color: #ffb100;
     margin-bottom: 15px;
 }
 
-.service-box p {
-    color: #fff;
-}
-
-/* ================================ SOFTWARE ================================ */
-.software-cards {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-}
-
-.software-card {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: 0.35s ease;
-}
-
-.software-card:hover {
-    transform: translateY(-10px) scale(1.08);
-}
-
-.software-card img {
-    width: 60px;
-    height: 60px;
-}
-
-/* ================================ PROCESS ================================ */
-.estimating-process {
-    background: linear-gradient(135deg, #fff, #fff4cc);
-    margin: 140px auto;
-    padding: 100px 20px;
-    border-radius: 45px;
-}
-
+/* ================= PROCESS ================= */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 35px;
-    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
 }
 
 .process-card {
     background: #fff;
-    border-radius: 28px;
-    padding: 45px 30px;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: 0.3s;
     text-align: center;
-    transition: 0.35s ease;
+}
+
+.process-card span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg,#ffb100,#ffc83d);
+    border-radius: 50%;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .process-card:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-8px);
 }
 
-.process-number {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ffb100, #ffc83d);
-    line-height: 55px;
-    font-weight: 800;
-    margin: 0 auto 20px;
-}
-
-/* ================================ FINAL CTA ================================ */
+/* ================= CTA ================= */
 .final-cta {
-    background: linear-gradient(135deg, #0d3d66, #081f33);
-    padding: 120px 20px;
-}
-
-.cta-bubble {
-    max-width: 900px;
-    background: #fff;
-    margin: auto;
-    padding: 80px;
-    border-radius: 60px;
-    text-align: center;
-}
-
-.cta-bubble h2 span {
-    color: #ffb100;
+    background: linear-gradient(135deg,#0d3d66,#081f33);
+    padding: 120px 0;
+    color: #fff;
 }
 
 .cta-buttons {
     margin-top: 40px;
     display: flex;
-    gap: 25px;
+    gap: 20px;
     justify-content: center;
 }
 
-.cta-btn {
-    padding: 16px 42px;
-    border-radius: 50px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.cta-btn.primary {
-    background: linear-gradient(135deg, #ffb100, #ffc83d);
-    color: #0d3d66;
-}
-
-.cta-btn.secondary {
-    background: #0d3d66;
-    color: #fff;
-}
-/* ================= WHY OUTSOURCE CTA FIX ================= */
-.why-outsource .btn-outline {
-    display: inline-block;
-    margin-top: 35px;
-    padding: 15px 42px;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none;
-    color: #0d3d66;
-    background: transparent;
-    border: 2px solid #ffb100;
-    transition: all 0.35s ease;
-    box-shadow: 0 10px 25px rgba(255,177,0,0.25);
-}
-
-.why-outsource .btn-outline:hover {
-    background: linear-gradient(135deg, #ffb100, #ffc83d);
-    color: #0d3d66;
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 18px 45px rgba(255,177,0,0.45);
-}
-
-/* ================================ FOOTER ================================ */
-footer {
+/* ================= FOOTER ================= */
+.footer {
     background: #081f33;
     color: #fff;
     text-align: center;
     padding: 30px 0;
 }
+<!-- WhatsApp Button -->
+<a href="https://wa.me/923000000000" target="_blank" class="whatsapp-float">💬</a>
 
-/* ================================ RESPONSIVE ================================ */
-@media (max-width: 768px) {
-    .contractor-bubble-large {
+<!-- Live Chat Button -->
+<a href="#" class="chat-float">💻</a>
+
+/* ================= FLOATING BUTTONS ================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+.chat-float {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    background: #0d3d66;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .hero-container,
+    .two-column {
         flex-direction: column;
         text-align: center;
-        padding: 50px 20px;
     }
 
-    .image-placeholder {
-        width: 100%;
-        height: 260px;
+    .dark-section {
+        padding: 80px 30px;
     }
 
-    .hero h1 {
+    .hero-text h1 {
         font-size: 36px;
     }
 }
-
