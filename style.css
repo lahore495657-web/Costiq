@@ -10,6 +10,7 @@ body {
     background: #f4f6f9;
     color: #1a1a1a;
     line-height: 1.7;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -27,12 +28,13 @@ body {
     border-radius: 50px;
     font-weight: 700;
     text-decoration: none;
-    transition: 0.35s ease;
+    transition: 0.3s ease;
     box-shadow: 0 10px 25px rgba(255,177,0,0.4);
 }
 
 .btn-primary:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255,177,0,0.5);
 }
 
 .btn-secondary {
@@ -43,11 +45,12 @@ body {
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
-    transition: 0.35s ease;
+    transition: 0.3s ease;
 }
 
 .btn-secondary:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+    background: #081f33;
 }
 
 /* ================= HEADER ================= */
@@ -78,7 +81,7 @@ body {
 
 .logo-text {
     color: #fff;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -105,6 +108,10 @@ body {
     color: #fff;
 }
 
+.small-hero {
+    padding: 100px 0;
+}
+
 .hero-container {
     display: flex;
     align-items: center;
@@ -122,28 +129,13 @@ body {
     color: #ddd;
 }
 
-.hero-image img {
-    width: 100%;
-    border-radius: 25px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
-}
-
-/* ================= SECTIONS ================= */
+/* ================= SECTION ================= */
 .section {
     padding: 120px 0;
 }
 
 .light-bg {
     background: #fff8e6;
-}
-
-.dark-section {
-    background: linear-gradient(135deg,#0d3d66,#081f33);
-    color: #fff;
-    border-radius: 50px;
-    margin: 120px auto;
-    max-width: 1200px;
-    padding: 100px 60px;
 }
 
 .center-text {
@@ -155,58 +147,58 @@ body {
     margin-bottom: 25px;
 }
 
-.section-subtext {
-    max-width: 800px;
-    margin: 0 auto 60px;
-    color: #ccc;
+/* ================= SERVICES ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 35px;
+    margin-top: 50px;
 }
 
-/* ================= TWO COLUMN ================= */
-.two-column {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-.text-block p {
-    margin-bottom: 20px;
-}
-
-.styled-list {
-    margin: 25px 0;
-    padding-left: 20px;
-}
-
-.styled-list li {
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.highlight {
-    color: #ffb100;
-    font-weight: 700;
-}
-
-.image-block img {
-    width: 100%;
+.service-box {
+    background: #fff;
+    padding: 45px 30px;
     border-radius: 30px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+    text-align: center;
+}
+
+.service-box i {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #ffb100;
+}
+
+.service-box h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+.service-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
 
 /* ================= BUBBLE GRID ================= */
 .bubble-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
     gap: 25px;
-    margin: 50px 0;
+    margin-top: 50px;
 }
 
 .bubble-card {
     background: #fff;
-    padding: 30px;
+    padding: 25px;
     border-radius: 30px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     font-weight: 600;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     transition: 0.3s ease;
 }
 
@@ -214,59 +206,36 @@ body {
     transform: translateY(-8px);
 }
 
-/* ================= CARDS ================= */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap: 35px;
-}
-
-.card {
-    background: rgba(255,255,255,0.1);
-    padding: 45px 30px;
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card h3 {
-    color: #ffb100;
-    margin-bottom: 15px;
-}
-
 /* ================= PROCESS ================= */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
     gap: 30px;
+    margin-top: 50px;
 }
 
 .process-card {
     background: #fff;
     padding: 40px;
     border-radius: 30px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    transition: 0.3s;
     text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
 }
 
 .process-card span {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background: linear-gradient(135deg,#ffb100,#ffc83d);
     border-radius: 50%;
-    line-height: 50px;
+    line-height: 55px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .process-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
 }
 
 /* ================= CTA ================= */
@@ -290,11 +259,6 @@ body {
     text-align: center;
     padding: 30px 0;
 }
-<!-- WhatsApp Button -->
-<a href="https://wa.me/923000000000" target="_blank" class="whatsapp-float">💬</a>
-
-<!-- Live Chat Button -->
-<a href="#" class="chat-float">💻</a>
 
 /* ================= FLOATING BUTTONS ================= */
 .whatsapp-float {
@@ -311,6 +275,11 @@ body {
     font-size: 28px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     z-index: 9999;
+    transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
 }
 
 .chat-float {
@@ -327,21 +296,33 @@ body {
     font-size: 24px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     z-index: 9999;
+    transition: 0.3s ease;
+}
+
+.chat-float:hover {
+    transform: scale(1.1);
+}
+
+/* ================= ANIMATION ================= */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
-    .hero-container,
-    .two-column {
+
+    .hero-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .dark-section {
-        padding: 80px 30px;
+    .hero-text h1 {
+        font-size: 34px;
     }
 
-    .hero-text h1 {
-        font-size: 36px;
+    .cta-buttons {
+        flex-direction: column;
     }
 }
