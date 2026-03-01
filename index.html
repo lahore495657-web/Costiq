@@ -2,10 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>CostiQ Estimation | Construction Cost Estimators</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CostiQ Estimation - Professional Construction Estimating Services</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ================= SOFTWARE BUBBLES STYLE ================= */
+        .software-cards {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+
+        .software-card {
+            flex: 0 0 auto;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .software-card img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .software-card p {
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .software-card:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
 
@@ -16,8 +56,11 @@
             <img src="CostiQ -logo.png" class="site-logo" alt="CostiQ Logo">
             <span class="logo-text">CostiQ Estimation</span>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="navMenu">
+            <a href="index.html" class="active">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
             <a href="faq.html">FAQ</a>
@@ -28,159 +71,197 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-    <h1>Accurate & Reliable Construction Estimating Services</h1>
-    <p>CostiQ Estimation helps contractors, builders, and developers plan budgets, manage costs, and win competitive bids with professional cost estimating services.</p>
-    <a href="contact.html" class="btn">Request a Quote</a>
+    <div class="container">
+        <h1>Accurate Construction Cost Estimates That Help You Win More Bids</h1>
+        <p>
+            Professional construction estimating & material takeoff services
+            for contractors, subcontractors, and developers.
+        </p>
+
+        
+        <a href="contact.html" class="btn">Request a Free Quote</a>
+    </div>
+
+    
 </section>
 
-<!-- ================= CONTRACTOR BUBBLE ================= -->
-<section class="contractor-bubble-large container">
-    <div class="text-block">
-        <h2>Why Choose <span class="highlight">CostiQ Estimation</span>?</h2>
-        <p>We provide precise, detailed, and fully customized construction cost estimates that empower you to manage your projects efficiently and maximize profits.</p>
+<div class="contractor-bubble-large">
+    <div class="text-content">
+        <h2>Are You a Contractor?</h2>
+        <p>Too Busy Working <span class="highlight">IN the Business</span>? Most contractors spend their entire day running job sites, managing crews, handling calls, and chasing deadlines. This leaves almost no time to work <span class="highlight">ON the business</span>.</p>
         <ul>
-            <li>Detailed Project Cost Breakdown</li>
-            <li>Accurate Material Takeoffs</li>
-            <li>Bid & Tender Estimates</li>
-            <li>Trade-Specific Analysis</li>
-            <li>Budget Planning & Forecasting</li>
+            <li>Late bids cost thousands</li>
+            <li>Rushed estimates lose projects</li>
+            <li>Skipped opportunities slow growth</li>
         </ul>
-        <a href="contact.html" class="btn-fix">Get Started</a>
+        <a href="#contact" class="btn-fix">Let’s Fix This</a>
     </div>
     <div class="image-placeholder">
-        <img src="contractor-team.jpg" alt="Contractor Team">
+        <img src="LADY.jpg" alt="Contractor Lady" class="contractor-image">
     </div>
-</section>
+</div>
 
-<!-- ================= INSIGHT BUBBLE ================= -->
 <section class="contractor-insight">
-    <h2>Our Expertise in Construction Estimating</h2>
-    <p>With years of experience and a team of skilled professionals, we deliver estimates that give you confidence in project planning, bidding, and execution.</p>
+    <h3>Why Most Contractors Struggle to Grow</h3>
+    <p>In today’s competitive construction market, winning projects is no longer just about experience. It requires fast turnaround, accurate quantities, and competitive pricing.</p>
+    <p>Contractors often lose bids because estimates are prepared in a hurry, submitted late, or lack proper detail. Many stop bidding altogether because estimating consumes too much valuable time.</p>
+    <p>This creates a cycle where contractors stay busy — but never truly scale their business.</p>
 </section>
 
-<!-- ================= WHY OUTSOURCE ================= -->
-<section class="why-outsource">
-    <h2>Why Outsource Your Estimating?</h2>
-    <p>Outsourcing your construction estimates to CostiQ provides accuracy, efficiency, and cost savings while freeing up your time to focus on core business tasks.</p>
+<!-- ================= WHY OUTSOURCE ESTIMATION ================= -->
+<section class="why-outsource container">
+    <h2>Why You Should Outsource Construction Estimation</h2>
+
+    <p>
+        Construction estimating is tedious, time-consuming, and requires expertise.
+        It’s not something that most contractors want to spend their time on.
+        Without a correct estimate, you can end up spending much more than you planned
+        or cutting too many corners to make your budget work.
+    </p>
+
     <ul class="benefits-list">
-        <li>Save Time & Resources</li>
-        <li>Access Expert Knowledge</li>
-        <li>Reduce Cost Overruns</li>
-        <li>Improve Bid Success Rate</li>
-        <li>Quick Turnaround</li>
+        <li>Contractors are experts in their field. They need to focus on other aspects of the construction project.</li>
+        <li>It can be difficult for contractors to estimate accurately without a background in estimating.</li>
+        <li>Hiring an expert saves time and increases the accuracy of estimates.</li>
+        <li>Outsourcing allows you to take on more projects and increase your profits.</li>
+        <li>You will have more control over the budget, which decreases the risk of going over budget.</li>
     </ul>
-    <a href="contact.html" class="btn-outline">Learn More</a>
+
+    <a href="about.html" class="btn">About Us</a>
 </section>
 
-<!-- ================= SERVICES DARK ================= -->
+<!-- ================= HOW COSTIQ HELPS ================= -->
 <section class="services-dark">
-    <h2>Our Professional Services</h2>
-    <p class="services-intro">We provide a wide range of estimating services for all construction types – residential, commercial, and industrial projects.</p>
+    <h2>How CostiQ Estimation Helps You Win</h2>
+
+    <p class="services-intro">
+        CostiQ Estimation works as your remote estimating department.
+        We handle the numbers, quantities, and pricing —
+        so you can focus on execution, clients, and growth.
+    </p>
+
     <div class="services-grid">
         <div class="service-box">
-            <i class="fa-solid fa-calculator"></i>
-            <h3>Construction Cost Estimation</h3>
-            <p>Comprehensive estimates for residential, commercial, and industrial projects.</p>
+            <h3>Fast Turnaround</h3>
+            <p>Most estimates delivered within 24–48 hours.</p>
         </div>
+
         <div class="service-box">
-            <i class="fa-solid fa-ruler-combined"></i>
-            <h3>Material Takeoffs & BOQs</h3>
-            <p>Precise quantity takeoffs and bills of quantities from your drawings.</p>
+            <h3>Bid-Winning Accuracy</h3>
+            <p>Trade-wise BOQs with market-based pricing.</p>
         </div>
+
         <div class="service-box">
-            <i class="fa-solid fa-file-invoice-dollar"></i>
-            <h3>Bidding & Tender Estimates</h3>
-            <p>Accurate bid pricing to improve your project win rate.</p>
-        </div>
-        <div class="service-box">
-            <i class="fa-solid fa-building"></i>
-            <h3>Residential & Commercial</h3>
-            <p>Estimates for houses, apartments, offices, and retail buildings.</p>
-        </div>
-        <div class="service-box">
-            <i class="fa-solid fa-industry"></i>
-            <h3>Trade-Wise Estimates</h3>
-            <p>Concrete, Masonry, Structural Steel, MEP & Finishes.</p>
-        </div>
-        <div class="service-box">
-            <i class="fa-solid fa-chart-line"></i>
-            <h3>Budget Planning</h3>
-            <p>Early-stage budgeting and feasibility cost analysis for your projects.</p>
+            <h3>Stress-Free Bidding</h3>
+            <p>No late nights, no rushed spreadsheets.</p>
         </div>
     </div>
 </section>
 
-<!-- ================= SOFTWARE CARDS ================= -->
-<section class="software-cards">
-    <div class="software-card">
-        <img src="autocad.png" alt="AutoCAD">
-        <p>AutoCAD</p>
-    </div>
-    <div class="software-card">
-        <img src="revit.png" alt="Revit">
-        <p>Revit</p>
-    </div>
-    <div class="software-card">
-        <img src="bluebeam.png" alt="Bluebeam">
-        <p>Bluebeam</p>
-    </div>
-    <div class="software-card">
-        <img src="sketchup.png" alt="SketchUp">
-        <p>SketchUp</p>
+<!-- ================= SOFTWARE & TOOLS (CIRCULAR BUBBLES) ================= -->
+<section class="about container">
+    <h2>Software & Tools We Use</h2>
+
+    <div class="software-cards">
+        <div class="software-card">
+            <img src="bluebeam.jpg" alt="Bluebeam">
+            <p>Bluebeam</p>
+        </div>
+        <div class="software-card">
+            <img src="planswift.png" alt="PlanSwift">
+            <p>PlanSwift</p>
+        </div>
+        <div class="software-card">
+            <img src="excel.png" alt="Excel">
+            <p>Excel</p>
+        </div>
     </div>
 </section>
 
-<!-- ================= ESTIMATING PROCESS ================= -->
 <section class="estimating-process">
-    <h2>Our 5-Step Estimating Process</h2>
-    <div class="process-grid">
-        <div class="process-card">
-            <span class="process-number">1</span>
-            <h3>Project Analysis</h3>
-            <p>Understand your project requirements, scope, and specifications thoroughly.</p>
-        </div>
-        <div class="process-card">
-            <span class="process-number">2</span>
-            <h3>Drawing Review</h3>
-            <p>Analyze architectural and engineering drawings for quantity takeoffs.</p>
-        </div>
-        <div class="process-card">
-            <span class="process-number">3</span>
-            <h3>Cost Estimation</h3>
-            <p>Prepare detailed cost estimates covering materials, labor, and equipment.</p>
-        </div>
-        <div class="process-card">
-            <span class="process-number">4</span>
-            <h3>Review & Verification</h3>
-            <p>Cross-check all estimates to ensure accuracy and compliance with standards.</p>
-        </div>
-        <div class="process-card">
-            <span class="process-number">5</span>
-            <h3>Delivery & Support</h3>
-            <p>Provide final estimates and ongoing support for your project planning needs.</p>
+    <div class="container">
+        <h2>Our Estimating Process</h2>
+        <p>We follow a clear and precise process to ensure accurate construction estimates.</p>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-number">1</div>
+                <h3>Send Us Drawings</h3>
+                <p>You provide drawings and specifications for your project.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">2</div>
+                <h3>Material Takeoffs</h3>
+                <p>We perform detailed material takeoffs to quantify everything needed.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">3</div>
+                <h3>Cost Analysis</h3>
+                <p>Trade-wise pricing and cost analysis are performed for accuracy.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">4</div>
+                <h3>Final Estimate</h3>
+                <p>The final estimate is delivered in Excel or PDF format for your convenience.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ================= FINAL CTA ================= -->
+<!-- ================= FINAL CTA (PREMIUM BUBBLE) ================= -->
 <section class="final-cta">
     <div class="cta-bubble">
-        <h2>Ready to Boost Your Project Success with <span>CostiQ Estimation</span>?</h2>
-        <div class="cta-buttons">
-            <a href="contact.html" class="cta-btn primary">Get a Quote</a>
-            <a href="services.html" class="cta-btn secondary">View Services</a>
+
+        <h2>
+            Ready to Win More <span>Construction Projects</span><br>
+            Without Hiring More Staff?
+        </h2>
+
+        <p class="cta-subtext">
+            Let <strong>CostiQ Estimation</strong> handle your estimates while you focus on
+            building, clients, and business growth.
+        </p>
+
+        <div class="cta-trust">
+            <span>✔ 24–48 Hour Turnaround</span>
+            <span>✔ Trade-Wise Accurate BOQs</span>
+            <span>✔ Stress-Free Bidding</span>
         </div>
+
+        <div class="cta-buttons">
+            <a href="contact.html" class="cta-btn primary">Get a Free Estimate</a>
+            <a href="services.html" class="cta-btn secondary">View Sample Estimate</a>
+        </div>
+
     </div>
 </section>
+
 
 <!-- ================= FOOTER ================= -->
 <footer>
-    <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
+    <div class="container">
+        <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
+    </div>
 </footer>
 
-<!-- ================= FLOATING BUTTONS ================= -->
-<a href="https://wa.me/923000000000" target="_blank" class="whatsapp-float">💬</a>
-<a href="#" class="chat-float">💻</a>
+<!-- ================= JS ================= -->
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
