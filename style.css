@@ -295,6 +295,75 @@ footer {
     color: #666;
 }
 
+/* ================= PRICING BUBBLES ================= */
+.pricing {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.pricing h2 {
+    margin-bottom: 15px;
+}
+
+.pricing-sub {
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background: #0d3d66;
+    color: #fff;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.price-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.price-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.price-card h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.price-card ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.price-card ul li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* Featured bubble */
+.price-card.featured {
+    background: #ffb100;
+    color: #0d3d66;
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
     .hero h1 {
@@ -311,5 +380,10 @@ footer {
 
     nav {
         display: none;
+    }
+
+    .pricing-grid {
+        flex-direction: column;
+        gap: 20px;
     }
 }
