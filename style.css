@@ -212,6 +212,52 @@ nav a:hover {
         </div>
     </div>
 </section>
+<section class="pricing">
+    <div class="container">
+        <h2>Simple & Flexible Pricing</h2>
+        <p class="pricing-sub">
+            Choose a plan that fits your project needs. Custom quotes available.
+        </p>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <h3>Small Projects</h3>
+                <p>Starting from</p>
+                <h2>$50</h2>
+                <ul>
+                    <li>Material Takeoff</li>
+                    <li>Basic Estimate</li>
+                    <li>1–2 Day Delivery</li>
+                </ul>
+            </div>
+
+            <div class="price-card featured">
+                <h3>Standard Projects</h3>
+                <p>Starting from</p>
+                <h2>$120</h2>
+                <ul>
+                    <li>Detailed BOQ</li>
+                    <li>Accurate Pricing</li>
+                    <li>24–48 Hour Delivery</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <h3>Large Projects</h3>
+                <p>Custom Quote</p>
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>Full Project Estimate</li>
+                    <li>Multi-Trade Breakdown</li>
+                    <li>Priority Support</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 /* ================= PROCESS ================= */
 .process {
     background: #f1f5f9;
