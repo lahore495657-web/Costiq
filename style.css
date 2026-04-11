@@ -55,11 +55,12 @@ h1, h2, h3 {
 nav {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 nav a {
     color: #fff;
-    margin-left: 20px;
+    margin-left: 15px;
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s;
@@ -68,6 +69,47 @@ nav a {
 
 nav a:hover {
     color: #ffb100;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #fff;
+    min-width: 230px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 15px;
+    color: #1f2937;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:hover {
+    background: #f3f4f6;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 /* ================= BUTTONS ================= */
@@ -236,11 +278,6 @@ section {
     transform: translateY(-6px);
 }
 
-/* ================= PROCESS ================= */
-.process {
-    background: #f1f5f9;
-}
-
 /* ================= CONTACT ================= */
 .contact-form input,
 .contact-form textarea {
@@ -273,15 +310,15 @@ footer {
         font-size: 32px;
     }
 
-    .hero-buttons {
-        flex-direction: column;
+    nav {
+        display: none;
     }
 
     .problem-grid {
         flex-direction: column;
     }
 
-    nav {
-        display: none;
+    .hero-buttons {
+        flex-direction: column;
     }
 }
