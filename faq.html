@@ -1,198 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>FAQ | CostiQ Estimation</title>
-    <meta name="description" content="Frequently Asked Questions about CostiQ Estimation services, plans submission, file formats, turnaround time, and more.">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background: #f9f9f9;
-            color: #333;
-        }
-        header .container, footer .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 10px 20px;
-        }
-        header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #0d3d66;
-            color: #fff;
-        }
-        .logo-area {
-            display: flex;
-            align-items: center;
-        }
-        .logo-area .site-logo {
-            height: 50px;
-            margin-right: 10px;
-        }
-        .logo-text {
-            font-weight: bold;
-            font-size: 24px;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-        nav .btn {
-            padding: 6px 12px;
-            background-color: #ff7f50;
-            color: #fff;
-            border-radius: 4px;
-        }
-        main.container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            text-align: center;
-            color: #0d3d66;
-            margin-bottom: 20px;
-        }
-        .faq-item {
-            background: #fff;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .faq-question {
-            padding: 15px 20px;
-            cursor: pointer;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 18px;
-        }
-        .faq-question:hover {
-            background: #f0f0f0;
-        }
-        .faq-answer {
-            padding: 0 20px 15px 20px;
-            display: none;
-            font-size: 16px;
-        }
-        .faq-question::after {
-            content: '+';
-            font-size: 24px;
-            color: #0d3d66;
-        }
-        .faq-question.active::after {
-            content: '−';
-        }
-        .cta {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .cta .btn {
-            background-color: #0d3d66;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            color: #fff;
-            text-decoration: none;
-        }
-        footer {
-            background: #0d3d66;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 40px;
-        }
+<meta charset="UTF-8">
+<title>FAQ | CostiQ Estimation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav {
-                margin-top: 10px;
-            }
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+html { scroll-behavior: smooth; }
+
+/* FAQ EXTRA CLEAN STYLE */
+.faq-section{
+    padding: 80px 0;
+}
+
+.faq-container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.faq-item{
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-question{
+    padding: 18px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover{
+    background: #f3f4f6;
+}
+
+.faq-answer{
+    padding: 0 20px 18px 20px;
+    display: none;
+    color: #444;
+    line-height: 1.7;
+}
+
+.faq-question::after{
+    content: '+';
+    font-size: 22px;
+    color: #0d3d66;
+}
+
+.faq-question.active::after{
+    content: '−';
+}
+
+.cta-box{
+    text-align: center;
+    margin-top: 40px;
+}
+</style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="container">
-        <div class="logo-area">
-            <img src="CostiQ -logo.png" class="site-logo" alt="CostiQ Logo">
-            <span class="logo-text">CostiQ Estimation</span>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html" class="btn">Get a Quote</a>
-        </nav>
-    </div>
+<!-- ================= HEADER (SAME STYLE) ================= -->
+<header class="header">
+<div class="container nav">
+
+<div class="logo-area">
+<img src="CostiQ -logo.png" class="site-logo">
+<span>CostiQ Estimation</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html" class="btn">Get a Quote</a>
+</nav>
+
+</div>
 </header>
 
-<!-- MAIN FAQ CONTENT -->
-<main class="container">
-    <h2>Frequently Asked Questions</h2>
+<!-- ================= HERO ================= -->
+<section class="hero">
+<div class="overlay"></div>
+<div class="container">
+<h1>Frequently Asked Questions</h1>
+<p>
+Everything you need to know about our construction estimating services, delivery process,
+file formats, pricing structure, and CSI division coverage.
+</p>
+</div>
+</section>
 
-    <div class="faq-item">
-        <div class="faq-question">How do I submit plans?</div>
-        <div class="faq-answer">You can upload your drawings and project details directly through our <a href="contact.html">quote form</a> for a fast and accurate estimate.</div>
-    </div>
+<!-- ================= FAQ SECTION ================= -->
+<section class="faq-section">
+<div class="container faq-container">
 
-    <div class="faq-item">
-        <div class="faq-question">What file formats do you accept?</div>
-        <div class="faq-answer">We accept PDF, DWG, PNG, and JPG files for project plans and drawings.</div>
-    </div>
+<div class="faq-item">
+<div class="faq-question">How do I submit my project drawings?</div>
+<div class="faq-answer">
+You can easily submit your project drawings through our contact form or email. We accept PDF, DWG, JPG, and PNG formats. Once you upload files, our estimating team reviews them carefully and starts preparing a detailed quantity takeoff and cost estimate. We ensure every submission is handled securely and professionally.
+</div>
+</div>
 
-    <div class="faq-item">
-        <div class="faq-question">Turnaround time?</div>
-        <div class="faq-answer">Most standard estimates are delivered within 24–48 hours. Complex projects may require additional time.</div>
-    </div>
+<div class="faq-item">
+<div class="faq-question">What type of projects do you handle?</div>
+<div class="faq-answer">
+We handle residential, commercial, and industrial construction projects across all CSI divisions. This includes architectural, structural, MEP (mechanical, electrical, plumbing), site work, renovations, and even solar projects. No matter the size of the project, we provide scalable estimating solutions.
+</div>
+</div>
 
-    <div class="faq-item">
-        <div class="faq-question">Do you cover all trades?</div>
-        <div class="faq-answer">Yes, we provide cost estimation for all CSI divisions including MEP, structural, finishes, and more.</div>
-    </div>
+<div class="faq-item">
+<div class="faq-question">How fast is your turnaround time?</div>
+<div class="faq-answer">
+Our standard turnaround time is 24–48 hours depending on project complexity. Smaller residential jobs are usually delivered faster, while large commercial or multi-trade projects may take slightly longer to ensure accuracy and completeness.
+</div>
+</div>
 
-    <div class="cta">
-        <p>Still have questions? Reach out to us:</p>
-        <a href="contact.html" class="btn">Contact Us</a>
-    </div>
-</main>
+<div class="faq-item">
+<div class="faq-question">Do you follow CSI divisions in estimates?</div>
+<div class="faq-answer">
+Yes, all our estimates are strictly organized according to CSI divisions. This ensures clarity, consistency, and professional reporting standards that contractors and developers in the USA market expect for bidding and project execution.
+</div>
+</div>
 
-<!-- FOOTER -->
+<div class="faq-item">
+<div class="faq-question">Why should I outsource estimation work?</div>
+<div class="faq-answer">
+Outsourcing estimation saves you valuable time and reduces workload pressure. Instead of spending hours on calculations, you can focus on winning projects and managing execution. Our expert estimators ensure higher accuracy, better bid competitiveness, and improved profit margins.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Do you provide revisions if needed?</div>
+<div class="faq-answer">
+Yes, we offer revisions based on client feedback. If any clarification or adjustment is required, we refine the estimate to ensure complete satisfaction and alignment with project requirements.
+</div>
+</div>
+
+<div class="cta-box">
+<p>Still have questions? We’re here to help you win more bids with confidence.</p>
+<a href="contact.html" class="btn">Contact Us</a>
+</div>
+
+</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
-    <div class="container">
-        <p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
-    </div>
+<div class="container">
+<p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
+</div>
 </footer>
 
 <script>
-    // Accordion functionality
-    const questions = document.querySelectorAll('.faq-question');
-    questions.forEach(q => {
-        q.addEventListener('click', () => {
-            q.classList.toggle('active');
-            const answer = q.nextElementSibling;
-            if(answer.style.display === 'block') {
-                answer.style.display = 'none';
-            } else {
-                answer.style.display = 'block';
-            }
-        });
+// FAQ toggle
+const items = document.querySelectorAll(".faq-question");
+
+items.forEach(item => {
+    item.addEventListener("click", () => {
+        item.classList.toggle("active");
+        let answer = item.nextElementSibling;
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
     });
+});
 </script>
 
 </body>
