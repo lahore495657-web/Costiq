@@ -20,6 +20,7 @@ body {
 h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 0.5px;
+    color: #0d3d66;
 }
 
 p {
@@ -33,15 +34,15 @@ p {
     padding: 0 20px;
 }
 
-/* ================= HEADER (PREMIUM GLASS EFFECT) ================= */
+/* ================= HEADER (PREMIUM) ================= */
 .header {
-    background: rgba(13, 61, 102, 0.92);
-    backdrop-filter: blur(10px);
+    background: rgba(13, 61, 102, 0.95);
+    backdrop-filter: blur(12px);
     padding: 14px 0;
     position: sticky;
     top: 0;
     z-index: 999;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .nav {
@@ -66,7 +67,7 @@ p {
 nav {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
 }
 
 nav a {
@@ -75,10 +76,27 @@ nav a {
     font-weight: 500;
     font-size: 15px;
     transition: 0.3s;
+    position: relative;
 }
 
 nav a:hover {
     color: #ffb100;
+}
+
+/* underline hover premium effect */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #ffb100;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* ================= BUTTON ================= */
@@ -95,8 +113,8 @@ nav a:hover {
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 177, 0, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 177, 0, 0.25);
 }
 
 .btn-outline {
@@ -105,6 +123,12 @@ nav a:hover {
     padding: 11px 22px;
     border-radius: 10px;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #0d3d66;
 }
 
 /* ================= WHATSAPP ================= */
@@ -147,15 +171,25 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 50px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
     font-size: 18px;
     color: #e5e7eb;
+}
+
+/* hero buttons spacing */
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* ================= TRUST BAR ================= */
@@ -179,14 +213,15 @@ section {
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.06);
     transition: 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
-/* ================= GRID ================= */
+/* ================= GRIDS ================= */
 .services-grid,
 .portfolio-grid {
     display: grid;
@@ -194,12 +229,17 @@ section {
     gap: 22px;
 }
 
-/* ================= TOOLS ================= */
+/* ================= TOOLS (SLIDER EFFECT FIX) ================= */
 .tools-slider {
     display: flex;
     gap: 14px;
-    overflow: hidden;
-    margin-top: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.tools-slider::-webkit-scrollbar {
+    display: none;
 }
 
 .tool {
@@ -210,6 +250,12 @@ section {
     border-radius: 12px;
     font-weight: 600;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    scroll-snap-align: start;
+    transition: 0.3s;
+}
+
+.tool:hover {
+    transform: scale(1.05);
 }
 
 /* ================= FORM ================= */
@@ -227,6 +273,7 @@ section {
 .contact-form textarea:focus {
     border-color: #ffb100;
     outline: none;
+    box-shadow: 0 0 0 3px rgba(255,177,0,0.15);
 }
 
 /* ================= DROPDOWN ================= */
@@ -277,7 +324,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .hero p {
@@ -286,5 +333,9 @@ footer {
 
     section {
         padding: 70px 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
     }
 }
