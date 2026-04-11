@@ -1,61 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>CostiQ Estimation | Construction Cost Estimators</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Font Awesome (icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-<!-- AOS Animation -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-html { scroll-behavior: smooth; }
-</style>
-</head>
-
-<body>
-
-<!-- ================= WHATSAPP BUTTON ================= -->
-<a href="https://wa.me/923XXXXXXXXX" class="whatsapp-btn" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
 <!-- ================= HEADER ================= -->
 <header class="header">
 <div class="container nav">
+
 <div class="logo-area">
 <img src="CostiQ -logo.png" class="site-logo">
 <span>CostiQ Estimation</span>
 </div>
 
 <nav>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#faq">FAQ</a>
-<a href="#contact" class="btn">Get a Quote</a>
+<a href="#">Home</a>
+
+<div class="dropdown">
+<a href="#services">Services ▾</a>
+<div class="dropdown-menu">
+<a href="#arch">Architectural</a>
+<a href="#struct">Structural</a>
+<a href="#demo">Demolition / Renovation</a>
+<a href="#mech">Mechanical</a>
+<a href="#plumb">Plumbing</a>
+<a href="#elec">Electrical</a>
+<a href="#site">Site Work / Landscape</a>
+<a href="#util">Utilities</a>
+<a href="#solar">Solar Work</a>
+</div>
+</div>
+
+<a href="#portfolio">Projects</a>
+<a href="#tools">Tools</a>
+<a href="#contact" class="btn">Get Quote</a>
 </nav>
+
 </div>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
 <div class="overlay"></div>
+
 <div class="container" data-aos="fade-up">
 
-<h1>Accurate Construction Cost Estimation That Helps You Win More Bids</h1>
+<h1>USA-Based Construction Estimation Services That Help You Win More Bids</h1>
 
 <p>
-At CostiQ Estimation, we provide professional and highly accurate construction estimates
-that help contractors, subcontractors, and developers save time, reduce risk,
-and increase their chances of winning profitable projects.
+We deliver highly accurate material takeoffs and cost estimates for contractors,
+subcontractors, and developers across the United States.
+Reduce risk, save time, and increase your bid success rate.
 </p>
 
 <div class="hero-buttons">
@@ -66,106 +55,116 @@ and increase their chances of winning profitable projects.
 </div>
 </section>
 
-<!-- ================= TRUST BAR ================= -->
-<section class="trust-bar">
-<div class="container">
-<p>✔ 24–48 Hour Turnaround &nbsp;&nbsp; ✔ Accurate BOQs &nbsp;&nbsp; ✔ Increase Bid Success Rate</p>
-</div>
-</section>
-
-<!-- ================= ABOUT / PROBLEM ================= -->
-<section class="problem container" id="about">
-
-<h2 data-aos="fade-up">Are You Losing Projects Due to Poor Estimates?</h2>
-
-<div class="problem-grid">
-
-<div data-aos="fade-right">
-<ul>
-<li>Late submissions can cause you to miss valuable bidding opportunities.</li>
-<li>Inaccurate estimates often lead to financial losses and reduced profit margins.</li>
-<li>Handling site work and estimating together becomes overwhelming.</li>
-<li>Clients lose trust when estimates are unclear or inconsistent.</li>
-<li>Poor cost planning leads to delays and project mismanagement.</li>
-<li>Manual calculations increase chances of costly mistakes.</li>
-</ul>
-</div>
-
-<div data-aos="fade-left">
-<img src="LADY.jpg" class="problem-img">
-</div>
-
-</div>
-</section>
-
-<!-- ================= SOLUTION ================= -->
-<section class="solution" id="solution">
-<div class="container" data-aos="fade-up">
-
-<h2>Your Trusted Remote Estimating Partner</h2>
-
-<p>
-CostiQ Estimation is dedicated to delivering precise, reliable, and fast construction estimates.
-We help businesses streamline their bidding process and focus on project execution.
-</p>
-
-<p>
-Our team uses advanced estimating tools and updated pricing databases to ensure every estimate
-is accurate and competitive. Whether it’s residential, commercial, or industrial projects,
-we provide detailed breakdowns that improve your decision-making.
-</p>
-
-<ul>
-<li>Clear and detailed BOQs</li>
-<li>Fast turnaround (24–48 hours)</li>
-<li>Transparent communication</li>
-<li>Accurate material & labor costing</li>
-</ul>
-
-</div>
-</section>
-
-<!-- ================= SERVICES ================= -->
+<!-- ================= CSI SERVICES ================= -->
 <section class="services container" id="services">
-<h2 data-aos="fade-up">Our Services</h2>
+
+<h2 data-aos="fade-up">CSI Division Services</h2>
 
 <div class="services-grid">
 
-<div class="card" data-aos="zoom-in">
-<h3>Material Takeoff</h3>
-<p>Precise quantity takeoffs for all trades ensuring no material shortage or excess.</p>
+<div class="card" id="arch" data-aos="fade-up">
+<h3>Architectural</h3>
+<p>Detailed quantity takeoffs for finishes, drywall, flooring, doors, windows, and interior/exterior components based on US standards.</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
-<h3>Cost Estimation</h3>
-<p>Detailed cost analysis using current market rates to maximize your profit.</p>
+<div class="card" id="struct" data-aos="fade-up">
+<h3>Structural</h3>
+<p>Accurate estimation of concrete, steel, rebar, framing, and load-bearing elements for residential and commercial structures.</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
-<h3>Bid Preparation</h3>
-<p>Professional bid documents that help you win more contracts.</p>
+<div class="card" id="demo" data-aos="fade-up">
+<h3>Demolition / Renovation</h3>
+<p>Cost planning for demolition, remodeling, and renovation projects with proper waste and labor calculations.</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
-<h3>Residential & Commercial</h3>
-<p>Estimates for homes, buildings, and large construction projects.</p>
+<div class="card" id="mech" data-aos="fade-up">
+<h3>Mechanical</h3>
+<p>HVAC systems estimation including ductwork, equipment, and installation costs.</p>
+</div>
+
+<div class="card" id="plumb" data-aos="fade-up">
+<h3>Plumbing</h3>
+<p>Precise takeoffs for piping systems, fixtures, and installation costs following US plumbing codes.</p>
+</div>
+
+<div class="card" id="elec" data-aos="fade-up">
+<h3>Electrical</h3>
+<p>Detailed electrical estimation covering wiring, panels, lighting, and complete system costs.</p>
+</div>
+
+<div class="card" id="site" data-aos="fade-up">
+<h3>Site Work / Landscape</h3>
+<p>Site preparation, grading, landscaping, and external works cost estimation.</p>
+</div>
+
+<div class="card" id="util" data-aos="fade-up">
+<h3>Utilities</h3>
+<p>Estimation for water supply, sewer systems, and underground utilities.</p>
+</div>
+
+<div class="card" id="solar" data-aos="fade-up">
+<h3>Solar Work</h3>
+<p>Solar panel system estimation including installation, equipment, and energy optimization.</p>
 </div>
 
 </div>
 </section>
 
-<!-- ================= TOOLS (SLIDER) ================= -->
-<section class="software container">
+<!-- ================= TOOLS ================= -->
+<section class="software container" id="tools">
 <h2 data-aos="fade-up">Tools We Use</h2>
 
-<div class="tools-slider">
+<div class="tools-grid">
 
 <div class="tool">RS Means</div>
 <div class="tool">PlanSwift</div>
 <div class="tool">ScreenTakeoff</div>
-<div class="tool">AquaBid</div>
+<div class="tool">Accubid</div>
 <div class="tool">Bluebeam</div>
 <div class="tool">Excel</div>
+
+</div>
+</section>
+
+<!-- ================= PROJECT STATS ================= -->
+<section class="stats">
+<div class="container">
+
+<div class="stats-box" data-aos="zoom-in">
+<h2>500+</h2>
+<p>Projects Completed</p>
+<span>Starting from $200 per small project</span>
+</div>
+
+</div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="why container">
+
+<h2 data-aos="fade-up">Why Choose CostiQ?</h2>
+
+<div class="services-grid">
+
+<div class="card" data-aos="fade-up">
+<h3>Fast Turnaround</h3>
+<p>Receive estimates within 24–48 hours.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>USA Market Rates</h3>
+<p>We use updated US-based pricing databases.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Accurate BOQs</h3>
+<p>Detailed and error-free quantity takeoffs.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Increase Bid Wins</h3>
+<p>Improve your chances of winning profitable projects.</p>
+</div>
 
 </div>
 </section>
@@ -179,53 +178,30 @@ we provide detailed breakdowns that improve your decision-making.
 <div class="portfolio-card" data-aos="fade-up">
 <img src="project1.jpg">
 <h4>Residential Project</h4>
-<p>Complete BOQ with accurate cost breakdown.</p>
 </div>
 
 <div class="portfolio-card" data-aos="fade-up">
 <img src="project2.jpg">
 <h4>Commercial Building</h4>
-<p>Detailed estimation with fast delivery.</p>
 </div>
 
 <div class="portfolio-card" data-aos="fade-up">
 <img src="project3.jpg">
 <h4>Subcontract Work</h4>
-<p>Precise takeoff completed within deadline.</p>
 </div>
 
 </div>
 </section>
 
-<!-- ================= PROCESS ================= -->
-<section class="process">
-<div class="container">
+<!-- ================= CTA ================= -->
+<section class="cta">
+<div class="container" data-aos="zoom-in">
 
-<h2 data-aos="fade-up">How It Works</h2>
+<h2>Ready to Win More Bids?</h2>
+<p>Get accurate estimates and grow your construction business today.</p>
 
-<div class="process-grid">
+<a href="#contact" class="btn">Get Started</a>
 
-<div class="step" data-aos="fade-up">
-<span>1</span>
-<h3>Send Drawings</h3>
-</div>
-
-<div class="step" data-aos="fade-up">
-<span>2</span>
-<h3>We Estimate</h3>
-</div>
-
-<div class="step" data-aos="fade-up">
-<span>3</span>
-<h3>Review & Deliver</h3>
-</div>
-
-<div class="step" data-aos="fade-up">
-<span>4</span>
-<h3>Win More Bids</h3>
-</div>
-
-</div>
 </div>
 </section>
 
@@ -233,10 +209,6 @@ we provide detailed breakdowns that improve your decision-making.
 <section class="contact container" id="contact">
 
 <h2 data-aos="fade-up">Request a Free Estimate</h2>
-
-<p data-aos="fade-up">
-Fill out the form below and our team will respond quickly with a detailed estimate.
-</p>
 
 <form class="contact-form" data-aos="fade-up">
 <input type="text" placeholder="Full Name" required>
@@ -250,17 +222,36 @@ Fill out the form below and our team will respond quickly with a detailed estima
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer>
-<div class="container">
-<p>© 2026 CostiQ Estimation. All Rights Reserved.</p>
+<footer class="footer">
+<div class="container footer-grid">
+
+<div>
+<h3>CostiQ Estimation</h3>
+<p>Professional USA-based construction estimating services.</p>
 </div>
+
+<div>
+<h4>Quick Links</h4>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div>
+<h4>Services</h4>
+<p>CSI Division Estimation</p>
+<p>Material Takeoff</p>
+<p>BOQ Preparation</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>Email: info@costiq.com</p>
+<p>WhatsApp Available</p>
+</div>
+
+</div>
+
+<p class="copyright">© 2026 CostiQ Estimation</p>
 </footer>
-
-<!-- AOS Script -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init();
-</script>
-
-</body>
-</html>
