@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -29,10 +30,25 @@
 
 <nav>
 <a href="#about">About</a>
-<a href="#services">Services</a>
+
+<div class="dropdown">
+<a href="#" class="dropbtn">Services <i class="fa fa-chevron-down"></i></a>
+<div class="dropdown-menu">
+<a href="#arch">Architectural</a>
+<a href="#struct">Structural</a>
+<a href="#demo">Demolition / Renovation</a>
+<a href="#mech">Mechanical</a>
+<a href="#plumb">Plumbing</a>
+<a href="#elec">Electrical</a>
+<a href="#site">Site Work / Landscape</a>
+<a href="#solar">Solar Work</a>
+</div>
+</div>
+
 <a href="#tools">Tools</a>
 <a href="#portfolio">Projects</a>
 <a href="#contact" class="btn">Get a Quote</a>
+
 </nav>
 
 </div>
@@ -44,15 +60,17 @@
 
 <div class="container" data-aos="fade-up">
 
-<h1>Win More Construction Projects with Accurate Cost Estimation</h1>
+<h1>Win More Construction Bids with Accurate Cost Estimation</h1>
 
 <p>
-CostiQ Estimation helps contractors, builders, and developers across the USA to win more bids
-by delivering highly accurate, CSI-based construction cost estimates, material takeoffs,
-and detailed BOQs with fast turnaround time.
+We deliver precise, USA-standard construction cost estimating services for contractors,
+developers, and builders to increase profitability and reduce risk.
 </p>
 
+<div class="hero-buttons">
 <a href="#contact" class="btn">Get Free Estimate</a>
+<a href="#portfolio" class="btn-outline">View Projects</a>
+</div>
 
 </div>
 </section>
@@ -60,30 +78,25 @@ and detailed BOQs with fast turnaround time.
 <!-- ================= TRUST BAR ================= -->
 <section class="trust-bar">
 <div class="container">
-<p>✔ 24–48 Hour Delivery ✔ USA Market Pricing ✔ Accurate BOQs ✔ Expert Estimators Team</p>
+<p>✔ 24–48 Hour Delivery ✔ Accurate BOQs ✔ USA Market Standard Estimation</p>
 </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section id="about" class="container">
+<section class="problem container" id="about">
 
 <h2 data-aos="fade-up">Why Contractors Lose Projects</h2>
-
-<p style="text-align:center; max-width:850px; margin:auto; margin-bottom:40px;">
-Most contractors don’t lose work because of skill — they lose because of inaccurate estimation,
-poor planning, and missing cost details. We solve this problem with professional estimating systems.
-</p>
 
 <div class="problem-grid">
 
 <div>
 <ul>
-<li>Inaccurate BOQs reduce profit margins and bid success rate</li>
-<li>Manual takeoffs lead to costly calculation errors</li>
-<li>Late submissions cause missed project opportunities</li>
-<li>Poor cost breakdown reduces client trust</li>
-<li>Weak planning affects long-term business growth</li>
-<li>Lack of time prevents detailed estimating work</li>
+<li>Poor estimation leads to missed bidding opportunities.</li>
+<li>Incorrect BOQs reduce profit margins.</li>
+<li>Manual takeoffs increase errors.</li>
+<li>Lack of clarity delays approvals.</li>
+<li>Weak cost planning reduces business growth.</li>
+<li>Contractors waste time on manual calculations.</li>
 </ul>
 </div>
 
@@ -94,129 +107,109 @@ poor planning, and missing cost details. We solve this problem with professional
 </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services" class="container">
+<!-- ================= CSI ULTRA PREMIUM BUBBLES ================= -->
+<section class="csi-section container">
 
-<h2 data-aos="fade-up">
-Complete Construction Estimation Across All CSI Divisions
+<h2 data-aos="fade-up" class="section-title">
+We Handle Every Construction Trade with Precision & Detail
 </h2>
 
-<p style="text-align:center; max-width:900px; margin:auto; margin-bottom:50px;">
-We don’t just calculate numbers — we build a complete construction cost strategy.
-Every estimate includes material breakdown, labor cost analysis, and real-time USA pricing.
+<p class="section-subtitle">
+From architectural drawings to final finishing — we break down every single cost element so contractors can bid confidently and win more projects in the USA market.
 </p>
 
-<div class="services-grid">
+<div class="csi-grid">
 
-<div class="card">
+<div class="csi-bubble arch">
+<div class="icon">🏗️</div>
 <h3>Architectural Estimation</h3>
-<p>Drywall, ceilings, flooring, paint, doors, windows, openings, and finishing works with detailed BOQs and quantity takeoffs.</p>
+<p>Drywall, flooring, ceilings, paint, doors, windows, openings, trims, finishes and interior works with detailed BOQs.</p>
 </div>
 
-<div class="card">
-<h3>Structural Estimation</h3>
-<p>Concrete, steel reinforcement, beams, slabs, foundations, and full structural cost analysis with precision reporting.</p>
+<div class="csi-bubble struct">
+<div class="icon">🧱</div>
+<h3>Structural Works</h3>
+<p>Concrete, steel reinforcement, beams, slabs, columns, foundations and full structural quantity takeoffs.</p>
 </div>
 
-<div class="card">
+<div class="csi-bubble mech">
+<div class="icon">⚙️</div>
 <h3>Mechanical Systems</h3>
-<p>HVAC systems, ducting, ventilation, and mechanical equipment estimation with industry-standard pricing.</p>
+<p>HVAC systems, ductwork, ventilation, mechanical equipment and installation cost analysis.</p>
 </div>
 
-<div class="card">
-<h3>Electrical Systems</h3>
-<p>Lighting, wiring, panels, distribution boards, and complete electrical BOQ preparation.</p>
-</div>
-
-<div class="card">
+<div class="csi-bubble plumb">
+<div class="icon">🚰</div>
 <h3>Plumbing Works</h3>
-<p>Water supply systems, drainage networks, pipe fittings, and plumbing fixture cost estimation.</p>
+<p>Water supply, drainage systems, piping layout, fixtures and full plumbing BOQs.</p>
 </div>
 
-<div class="card">
+<div class="csi-bubble elec">
+<div class="icon">⚡</div>
+<h3>Electrical Systems</h3>
+<p>Wiring, lighting, panels, power distribution and complete electrical estimation.</p>
+</div>
+
+<div class="csi-bubble site">
+<div class="icon">🌿</div>
 <h3>Site & Landscape</h3>
-<p>Earthwork, grading, paving, exterior works, and landscaping estimation for full site development.</p>
+<p>Earthwork, grading, paving, landscaping and outdoor development works estimation.</p>
+</div>
+
+<div class="csi-bubble demo">
+<div class="icon">💥</div>
+<h3>Demolition / Renovation</h3>
+<p>Safe demolition, renovation upgrades, remodeling cost breakdown and structural changes.</p>
+</div>
+
+<div class="csi-bubble solar">
+<div class="icon">☀️</div>
+<h3>Solar Systems</h3>
+<p>Solar panels, inverter systems, batteries, mounting structures and renewable energy estimation.</p>
 </div>
 
 </div>
 </section>
 
 <!-- ================= TOOLS ================= -->
-<section id="tools" class="container">
+<section class="software container" id="tools">
 
 <h2 data-aos="fade-up">Tools We Use</h2>
 
 <div class="tools-slider">
 <div class="tool">RS Means</div>
 <div class="tool">PlanSwift</div>
-<div class="tool">Bluebeam</div>
-<div class="tool">Accubid</div>
 <div class="tool">On-Screen Takeoff</div>
-<div class="tool">Excel Automation</div>
+<div class="tool">Accubid</div>
+<div class="tool">Bluebeam</div>
+<div class="tool">Excel</div>
 <div class="tool">Sage Estimating</div>
 <div class="tool">ProEst</div>
 </div>
 
 </section>
 
-<!-- ================= EXPERIENCE ================= -->
-<section id="portfolio" class="container">
+<!-- ================= PORTFOLIO ================= -->
+<section class="portfolio container" id="portfolio">
+<h2>Our Experience</h2>
 
-<h2 data-aos="fade-up">Our Experience & Results</h2>
-
-<div class="card" style="text-align:center; padding:60px;">
+<div class="card" style="text-align:center; padding:50px;">
 <h1 style="font-size:60px; color:#ffb100;">500+</h1>
-<h3>Projects Successfully Estimated</h3>
-<p>From residential homes to large commercial developments across the USA.</p>
+<h3>Projects Completed Successfully</h3>
+<p>Starting from $200 per project</p>
 </div>
 
-</section>
-
-<!-- ================= WHY CHOOSE US ================= -->
-<section class="container">
-
-<h2 data-aos="fade-up">Why Choose CostiQ Estimation</h2>
-
-<div class="services-grid">
-
-<div class="card">
-<h3>Fast Turnaround</h3>
-<p>Receive detailed estimates within 24–48 hours without delay.</p>
-</div>
-
-<div class="card">
-<h3>USA Standard Pricing</h3>
-<p>We use updated construction cost databases for realistic pricing.</p>
-</div>
-
-<div class="card">
-<h3>High Accuracy System</h3>
-<p>Multi-step review process ensures error-free BOQs and takeoffs.</p>
-</div>
-
-<div class="card">
-<h3>Bid Winning Focus</h3>
-<p>Our estimates are optimized to increase your project win rate.</p>
-</div>
-
-</div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="container">
+<section class="contact container" id="contact">
 
-<h2 data-aos="fade-up">Request Your Free Estimate</h2>
+<h2>Request a Free Estimate</h2>
 
-<p style="text-align:center; max-width:800px; margin:auto;">
-Upload your drawings and get a professional construction estimate within 24–48 hours.
-We ensure accuracy, speed, and complete confidentiality.
-</p>
-
-<form class="contact-form" style="margin-top:30px;">
+<form class="contact-form">
 <input type="text" placeholder="Full Name" required>
 <input type="email" placeholder="Email Address" required>
 <input type="text" placeholder="Phone Number" required>
-<input type="text" placeholder="Project Type" required>
 <textarea placeholder="Project Details"></textarea>
 <button class="btn">Submit Request</button>
 </form>
@@ -231,9 +224,7 @@ We ensure accuracy, speed, and complete confidentiality.
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init();
-</script>
+<script>AOS.init();</script>
 
 </body>
 </html>
