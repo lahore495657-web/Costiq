@@ -7,21 +7,19 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f5f7fb;
+    background: #f4f7fb;
     color: #1f2937;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* ================= TYPOGRAPHY ================= */
 h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 0.5px;
-    color: #0d3d66;
 }
 
 p {
@@ -35,20 +33,15 @@ p {
     padding: 0 20px;
 }
 
-/* ================= SECTION SPACING ================= */
-section {
-    padding: 100px 0;
-}
-
-/* ================= HEADER ================= */
+/* ================= HEADER (PREMIUM GLASS EFFECT) ================= */
 .header {
-    background: rgba(13, 61, 102, 0.95);
+    background: rgba(13, 61, 102, 0.92);
     backdrop-filter: blur(10px);
     padding: 14px 0;
     position: sticky;
     top: 0;
     z-index: 999;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 .nav {
@@ -73,7 +66,7 @@ section {
 nav {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 14px;
 }
 
 nav a {
@@ -81,7 +74,6 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     font-size: 15px;
-    position: relative;
     transition: 0.3s;
 }
 
@@ -89,25 +81,9 @@ nav a:hover {
     color: #ffb100;
 }
 
-/* underline animation */
-nav a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: #ffb100;
-    transition: 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* ================= BUTTONS ================= */
+/* ================= BUTTON ================= */
 .btn {
-    background: linear-gradient(135deg, #ffb100, #ffc83d);
+    background: linear-gradient(135deg, #ffb100, #ff8c00);
     color: #0d3d66;
     padding: 11px 22px;
     border-radius: 10px;
@@ -119,8 +95,8 @@ nav a:hover::after {
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 177, 0, 0.25);
 }
 
 .btn-outline {
@@ -154,19 +130,15 @@ nav a:hover::after {
 .hero {
     position: relative;
     background: url("construction-bg.jpg") center/cover no-repeat;
-    text-align: center;
     padding: 130px 20px;
+    text-align: center;
     color: #fff;
 }
 
 .hero .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(13,61,102,0.92),
-        rgba(0,0,0,0.55)
-    );
+    background: rgba(13,61,102,0.85);
 }
 
 .hero .container {
@@ -177,11 +149,10 @@ nav a:hover::after {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    color: #fff;
 }
 
 .hero p {
-    max-width: 750px;
+    max-width: 700px;
     margin: auto;
     font-size: 18px;
     color: #e5e7eb;
@@ -196,22 +167,26 @@ nav a:hover::after {
     font-weight: 600;
 }
 
+/* ================= SECTIONS ================= */
+section {
+    padding: 90px 0;
+}
+
 /* ================= CARDS ================= */
 .card {
     background: #fff;
     padding: 28px;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: all 0.35s ease;
-    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
-/* ================= GRIDS ================= */
+/* ================= GRID ================= */
 .services-grid,
 .portfolio-grid {
     display: grid;
@@ -219,23 +194,10 @@ nav a:hover::after {
     gap: 22px;
 }
 
-/* ================= SOLUTION ================= */
-.solution {
-    background: #0d3d66;
-    color: #fff;
-    padding: 80px 20px;
-    border-radius: 16px;
-}
-
-.solution p,
-.solution li {
-    color: #e5e7eb;
-}
-
 /* ================= TOOLS ================= */
 .tools-slider {
     display: flex;
-    gap: 15px;
+    gap: 14px;
     overflow: hidden;
     margin-top: 30px;
 }
@@ -247,15 +209,10 @@ nav a:hover::after {
     text-align: center;
     border-radius: 12px;
     font-weight: 600;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.tool:hover {
-    transform: scale(1.05);
-}
-
-/* ================= CONTACT ================= */
+/* ================= FORM ================= */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -269,16 +226,7 @@ nav a:hover::after {
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #ffb100;
-    box-shadow: 0 0 0 3px rgba(255,177,0,0.15);
     outline: none;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background: #081f33;
-    color: #fff;
-    text-align: center;
-    padding: 25px;
 }
 
 /* ================= DROPDOWN ================= */
@@ -292,7 +240,7 @@ footer {
     top: 38px;
     left: 0;
     background: #fff;
-    min-width: 240px;
+    min-width: 230px;
     border-radius: 12px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     overflow: hidden;
@@ -302,7 +250,6 @@ footer {
     display: block;
     padding: 12px 14px;
     color: #111827;
-    text-decoration: none;
     border-bottom: 1px solid #eee;
 }
 
@@ -314,6 +261,14 @@ footer {
     display: block;
 }
 
+/* ================= FOOTER ================= */
+footer {
+    background: #081f33;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
@@ -322,7 +277,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .hero p {
@@ -331,9 +286,5 @@ footer {
 
     section {
         padding: 70px 0;
-    }
-
-    .card {
-        padding: 22px;
     }
 }
