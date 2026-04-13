@@ -1,303 +1,152 @@
-/* ================= BASE ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+/* ================= PROBLEM SECTION ================= */
+.problem {
+    padding: 80px 0;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f8fafc;
-    color: #1f2937;
-    line-height: 1.6;
-    transition: 0.3s;
-}
-
-h1, h2, h3 {
-    font-family: 'Oswald', sans-serif;
-}
-
-.container {
-    max-width: 1150px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-/* ================= HEADER ================= */
-.header {
-    background: #0d3d66;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-area {
+.problem-grid {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #fff;
-    font-weight: 600;
+    gap: 40px;
 }
 
-.site-logo {
-    height: 45px;
+.problem ul {
+    list-style: none;
 }
 
-/* NAV */
-nav {
-    display: flex;
-    align-items: center;
+.problem ul li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
 }
 
-nav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-nav a:hover {
+.problem ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
     color: #ffb100;
 }
 
-/* HAMBURGER */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
+.problem-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= SOLUTION ================= */
+.solution {
+    background: linear-gradient(135deg, #0d3d66, #1e5f99);
     color: #fff;
-    cursor: pointer;
+    padding: 80px 20px;
+    margin: 50px 0;
+    border-radius: 12px;
 }
 
-/* ================= DROPDOWN ================= */
-.dropdown {
-    position: relative;
+.solution ul {
+    margin-top: 20px;
 }
 
-.dropdown-content {
-    position: absolute;
-    top: 40px;
-    left: 0;
+.solution li {
+    margin-bottom: 10px;
+}
+
+/* ================= SERVICES CARDS ================= */
+.services {
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card {
     background: #fff;
-    border-radius: 8px;
-    display: none;
-    flex-direction: column;
-    min-width: 220px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.dropdown-content a {
-    color: #0d3d66;
-    padding: 12px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: flex;
-}
-
-/* ================= BUTTON ================= */
-.btn {
-    background: linear-gradient(135deg, #ffb100, #ff8800);
-    color: #0d3d66;
-    padding: 12px 26px;
-    border-radius: 6px;
-    font-weight: 600;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-.btn-outline {
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 12px 26px;
-}
-
-/* ================= HERO ================= */
-.hero {
-    position: relative;
-    background: url("construction-bg.jpg") center/cover no-repeat;
-    color: #fff;
-    text-align: center;
-    padding: 120px 20px;
-}
-
-.hero .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(13,61,102,0.85);
-}
-
-/* ================= SERVICES ================= */
-.service-block {
-    background: #fff;
-    margin: 20px 0;
-    padding: 25px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
-.service-block:hover {
-    transform: translateY(-8px);
+.card:hover {
+    transform: translateY(-10px);
 }
 
-/* ================= MARQUEE ================= */
-.tools-marquee {
-    overflow: hidden;
-    margin-top: 40px;
-}
-
-.marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee 20s linear infinite;
-}
-
-.marquee-track img {
-    height: 60px;
-    margin: 0 30px;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* ================= PROJECT BUBBLES ================= */
-.projects {
+/* ================= TEAM SECTION ================= */
+.team-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #0d3d66, #1e5f99);
-    color: #fff;
+    background: #f1f5f9;
     text-align: center;
 }
 
-.project-bubbles {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+    margin-top: 40px;
 }
 
-.bubble {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    backdrop-filter: blur(15px);
-    background: rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.team-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.bubble:hover {
-    transform: scale(1.1);
+.team-card:hover {
+    transform: translateY(-8px);
     background: #ffb100;
     color: #0d3d66;
 }
 
-/* ================= PROCESS ================= */
-.process {
+/* ================= WHY US ================= */
+.why-us {
     padding: 80px 0;
-}
-
-.step {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
     text-align: center;
 }
 
-/* ================= CONTACT ================= */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+    margin-top: 40px;
 }
 
-/* ================= FOOTER ================= */
-.footer {
-    background: #081f33;
+.why-grid div {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.why-grid div:hover {
+    transform: translateY(-8px);
+    background: #0d3d66;
     color: #fff;
-    padding: 50px;
 }
 
-/* ================= DARK MODE ================= */
-body.dark {
-    background: #0b1220;
-    color: #fff;
-}
-
-body.dark .header {
+/* ================= DARK MODE (NEW SECTIONS) ================= */
+body.dark .problem,
+body.dark .team-section,
+body.dark .why-us {
     background: #020617;
 }
 
-body.dark .service-block,
-body.dark .step {
+body.dark .card,
+body.dark .team-card,
+body.dark .why-grid div {
     background: #1e293b;
     color: #fff;
 }
 
-body.dark .footer {
-    background: #020617;
-}
-
-/* ================= WHATSAPP ================= */
-.whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: #fff;
-    padding: 14px;
-    border-radius: 50%;
-}
-
-/* ================= MOBILE ================= */
+/* ================= RESPONSIVE FIX ================= */
 @media (max-width: 768px) {
 
-.menu-toggle {
-    display: block;
-}
-
-nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background: #0d3d66;
+.problem-grid {
     flex-direction: column;
-    display: none;
-    padding: 20px;
-}
-
-nav.active {
-    display: flex;
-}
-
-nav a {
-    margin: 10px 0;
-}
-
-.dropdown-content {
-    position: static;
-}
-
-.hero h1 {
-    font-size: 32px;
-}
-
-.project-bubbles {
-    flex-direction: column;
-    align-items: center;
 }
 
 }
