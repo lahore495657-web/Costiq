@@ -13,14 +13,7 @@
 </head>
 
 <body>
-<script>
-const toggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav");
 
-toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-</script>
 <!-- WHATSAPP -->
 <a href="https://wa.me/923XXXXXXXXX" class="whatsapp-btn" target="_blank">
 <i class="fab fa-whatsapp"></i>
@@ -34,30 +27,36 @@ toggle.addEventListener("click", () => {
 <img src="CostiQ -logo.png" class="site-logo">
 <span>CostiQ Estimation</span>
 </div>
+
+<!-- HAMBURGER -->
 <div class="menu-toggle" id="menu-toggle">
 <i class="fas fa-bars"></i>
 </div>
+
 <nav>
+
 <div class="dropdown">
 <a href="#services">Services ▾</a>
 <div class="dropdown-content">
 <a href="#arch">Architectural</a>
 <a href="#struct">Structural</a>
-<a href="#demo">Demolition / Renovation</a>
+<a href="#demo">Demolition</a>
 <a href="#mech">Mechanical</a>
 <a href="#plumb">Plumbing</a>
 <a href="#elec">Electrical</a>
-<a href="#site">Site Work / Landscape</a>
+<a href="#site">Site Work</a>
 <a href="#util">Utilities</a>
-<a href="#solar">Solar Work</a>
+<a href="#solar">Solar</a>
 </div>
 </div>
 
-<a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#contact" class="btn">Get a Quote</a>
-</nav>
 
+<!-- DARK MODE -->
+<button id="darkModeToggle">🌙</button>
+
+</nav>
 </div>
 </header>
 
@@ -68,9 +67,7 @@ toggle.addEventListener("click", () => {
 
 <h1>Accurate Construction Cost Estimation That Helps You Win More Bids</h1>
 
-<p>
-We provide professional cost estimation services for contractors and developers across the USA.
-</p>
+<p>We provide professional cost estimation services across the USA.</p>
 
 <div class="hero-buttons">
 <a href="#contact" class="btn">Get Free Estimate</a>
@@ -80,145 +77,74 @@ We provide professional cost estimation services for contractors and developers 
 </div>
 </section>
 
-<!-- SERVICES DETAIL (CSI STYLE) -->
+<!-- SERVICES -->
 <section class="services-detail container" id="services">
 
 <h2 data-aos="fade-up">Our CSI Based Services</h2>
 
-<div class="service-block" id="arch" data-aos="fade-up">
-<h3>Architectural</h3>
-<p>Detailed quantity takeoffs for finishes, doors, windows, drywall, and interior components ensuring accurate planning.</p>
-</div>
-
-<div class="service-block" id="struct" data-aos="fade-up">
-<h3>Structural</h3>
-<p>Concrete, steel, rebar, and framing estimates prepared with precision for strong project foundations.</p>
-</div>
-
-<div class="service-block" id="demo" data-aos="fade-up">
-<h3>Demolition / Renovation</h3>
-<p>Accurate cost breakdowns for demolition, remodeling, and renovation projects.</p>
-</div>
-
-<div class="service-block" id="mech" data-aos="fade-up">
-<h3>Mechanical</h3>
-<p>HVAC systems estimation including ductwork, equipment, and installation costs.</p>
-</div>
-
-<div class="service-block" id="plumb" data-aos="fade-up">
-<h3>Plumbing</h3>
-<p>Complete plumbing takeoffs covering piping, fixtures, and drainage systems.</p>
-</div>
-
-<div class="service-block" id="elec" data-aos="fade-up">
-<h3>Electrical</h3>
-<p>Detailed electrical estimates including wiring, lighting, panels, and equipment.</p>
-</div>
-
-<div class="service-block" id="site" data-aos="fade-up">
-<h3>Site Work / Landscape</h3>
-<p>Earthwork, grading, paving, and landscaping cost estimation services.</p>
-</div>
-
-<div class="service-block" id="util" data-aos="fade-up">
-<h3>Utilities</h3>
-<p>Utility estimation including water, sewer, gas, and underground services.</p>
-</div>
-
-<div class="service-block" id="solar" data-aos="fade-up">
-<h3>Solar Work</h3>
-<p>Solar panel installation estimation including equipment and labor cost analysis.</p>
-</div>
+<div class="service-block" id="arch"><h3>Architectural</h3><p>Detailed finishes & interior takeoffs.</p></div>
+<div class="service-block" id="struct"><h3>Structural</h3><p>Concrete, steel & framing estimates.</p></div>
+<div class="service-block" id="demo"><h3>Demolition</h3><p>Renovation & demolition cost analysis.</p></div>
+<div class="service-block" id="mech"><h3>Mechanical</h3><p>HVAC & ductwork estimation.</p></div>
+<div class="service-block" id="plumb"><h3>Plumbing</h3><p>Piping & fixture takeoffs.</p></div>
+<div class="service-block" id="elec"><h3>Electrical</h3><p>Wiring & lighting estimates.</p></div>
+<div class="service-block" id="site"><h3>Site Work</h3><p>Earthwork & landscaping costs.</p></div>
+<div class="service-block" id="util"><h3>Utilities</h3><p>Underground services estimation.</p></div>
+<div class="service-block" id="solar"><h3>Solar</h3><p>Solar installation cost breakdown.</p></div>
 
 </section>
 
-<!-- TOOLS -->
+<!-- TOOLS (MARQUEE) -->
 <section class="software container">
 <h2 data-aos="fade-up">Tools We Use</h2>
 
-<div class="tools-slider">
+<div class="tools-marquee">
+<div class="marquee-track">
 
-<div class="tool">RS Means</div>
-<div class="tool">PlanSwift</div>
-<div class="tool">ScreenTakeoff</div>
-<div class="tool">Accubid</div>
-<div class="tool">Bluebeam</div>
-<div class="tool">Excel</div>
+<img src="https://raw.githubusercontent.com/yourname/repo/main/planswift.png">
+<img src="https://raw.githubusercontent.com/yourname/repo/main/bluebeam.png">
+<img src="https://raw.githubusercontent.com/yourname/repo/main/accubid.png">
+<img src="https://raw.githubusercontent.com/yourname/repo/main/excel.png">
+<img src="https://raw.githubusercontent.com/yourname/repo/main/rsmeans.png">
 
+<img src="https://raw.githubusercontent.com/yourname/repo/main/planswift.png">
+<img src="https://raw.githubusercontent.com/yourname/repo/main/bluebeam.png">
+<img src="https://raw.githubusercontent.com/yourname/repo/main/accubid.png">
+<img src="https://raw.githubusercontent.com/yourname/repo/main/excel.png">
+<img src="https://raw.githubusercontent.com/yourname/repo/main/rsmeans.png">
+
+</div>
 </div>
 </section>
 
-<!-- PROJECT BUBBLE SECTION -->
+<!-- PROJECTS -->
 <section class="projects" id="projects">
 <div class="container">
 
 <h2 data-aos="fade-up">Our Achievements</h2>
 
 <div class="project-bubbles">
-
-<div class="bubble" data-aos="zoom-in">
-<h3>500+</h3>
-<p>Projects Completed</p>
+<div class="bubble"><h3>500+</h3><p>Projects</p></div>
+<div class="bubble highlight"><h3>$200</h3><p>Start</p></div>
+<div class="bubble"><h3>98%</h3><p>Success</p></div>
 </div>
 
-<div class="bubble highlight" data-aos="zoom-in">
-<h3>$200</h3>
-<p>Starting Small Project</p>
-</div>
-
-<div class="bubble" data-aos="zoom-in">
-<h3>98%</h3>
-<p>Client Satisfaction</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- PROCESS -->
-<section class="process">
-<div class="container">
-
-<h2 data-aos="fade-up">How It Works</h2>
-
-<div class="process-grid">
-
-<div class="step" data-aos="fade-up">
-<span>1</span>
-<h3>Send Drawings</h3>
-</div>
-
-<div class="step" data-aos="fade-up">
-<span>2</span>
-<h3>We Estimate</h3>
-</div>
-
-<div class="step" data-aos="fade-up">
-<span>3</span>
-<h3>Review & Deliver</h3>
-</div>
-
-<div class="step" data-aos="fade-up">
-<span>4</span>
-<h3>Win More Bids</h3>
-</div>
-
-</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact container" id="contact">
 
-<h2 data-aos="fade-up">Request a Free Estimate</h2>
+<h2>Request a Free Estimate</h2>
 
-<form class="contact-form" data-aos="fade-up">
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="text" placeholder="Phone Number" required>
-<input type="text" placeholder="Project Type" required>
-<textarea placeholder="Project Details"></textarea>
+<form onsubmit="sendWhatsApp(); return false;" class="contact-form">
+
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="email" id="email" placeholder="Email Address" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+<input type="text" id="project" placeholder="Project Type" required>
+<textarea id="details" placeholder="Project Details"></textarea>
+
 <button class="btn">Submit Request</button>
 </form>
 
@@ -230,7 +156,7 @@ We provide professional cost estimation services for contractors and developers 
 
 <div>
 <h3>CostiQ Estimation</h3>
-<p>Professional USA-based construction estimating services.</p>
+<p>USA-based construction estimating services.</p>
 </div>
 
 <div>
@@ -239,29 +165,47 @@ We provide professional cost estimation services for contractors and developers 
 <li>Architectural</li>
 <li>Structural</li>
 <li>MEP</li>
-<li>Site Work</li>
 </ul>
 </div>
 
 <div>
 <h4>Contact</h4>
 <p>Email: info@costiq.com</p>
-<p>WhatsApp Available</p>
 </div>
 
 </div>
 
-<p class="copyright">
-© 2026 CostiQ Estimation. All Rights Reserved.
-</p>
+<p class="copyright">© 2026 CostiQ Estimation</p>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
-AOS.init({
-duration: 1000,
-once: true
-});
+AOS.init();
+
+/* MOBILE MENU */
+document.getElementById("menu-toggle").onclick = function(){
+document.querySelector("nav").classList.toggle("active");
+};
+
+/* DARK MODE */
+document.getElementById("darkModeToggle").onclick = function(){
+document.body.classList.toggle("dark");
+};
+
+/* WHATSAPP FORM */
+function sendWhatsApp() {
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+let project = document.getElementById("project").value;
+let details = document.getElementById("details").value;
+
+let msg = `New Estimate:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AProject: ${project}%0ADetails: ${details}`;
+
+window.open(`https://wa.me/923XXXXXXXXX?text=${msg}`, '_blank');
+}
 </script>
 
 </body>
