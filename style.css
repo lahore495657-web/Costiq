@@ -172,6 +172,58 @@ margin: 12px 0;
 border-radius: 8px;
 border: 1px solid #ccc;
 }
+/* ================= TOOLS SLIDER ================= */
+
+.tools-slider {
+overflow: hidden;
+position: relative;
+margin-top: 40px;
+}
+
+.tools-track {
+display: flex;
+width: max-content;
+gap: 40px;
+animation: scrollTools 18s linear infinite;
+align-items: center;
+}
+
+.tool-item {
+min-width: 160px;
+background: #fff;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+text-align: center;
+transition: 0.3s;
+}
+
+.tool-item:hover {
+transform: translateY(-8px);
+}
+
+.tool-item img {
+width: 70px;
+height: 70px;
+object-fit: contain;
+margin-bottom: 10px;
+}
+
+.tool-item p {
+font-weight: 600;
+color: #0d3d66;
+font-size: 14px;
+}
+
+/* smooth infinite scroll */
+@keyframes scrollTools {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(-50%);
+}
+}
 /* ================= RECENT PROJECTS ================= */
 
 .recent-projects {
