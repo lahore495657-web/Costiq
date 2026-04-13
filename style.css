@@ -48,7 +48,7 @@ color: #555;
 font-size: 16px;
 }
 
-/* ================= HEADER (🔥 PREMIUM UPGRADED ONLY) ================= */
+/* ================= HEADER (FINAL PREMIUM FIXED) ================= */
 
 .header {
 background: linear-gradient(135deg, #0d3d66, #0b2a45);
@@ -64,6 +64,7 @@ backdrop-filter: blur(10px);
 display: flex;
 justify-content: space-between;
 align-items: center;
+flex-wrap: wrap;
 }
 
 /* LOGO */
@@ -87,6 +88,7 @@ nav {
 display: flex;
 align-items: center;
 gap: 18px;
+flex-wrap: wrap;
 }
 
 nav a {
@@ -96,11 +98,12 @@ font-weight: 500;
 padding: 8px 10px;
 position: relative;
 transition: 0.3s;
+border-radius: 6px;
 }
 
-/* hover effect */
 nav a:hover {
 color: #ffb100;
+background: rgba(255,255,255,0.08);
 }
 
 /* underline animation */
@@ -131,6 +134,13 @@ gap: 6px;
 color: #fff;
 font-weight: 500;
 cursor: pointer;
+padding: 8px 10px;
+border-radius: 6px;
+transition: 0.3s;
+}
+
+.dropbtn:hover {
+background: rgba(255,255,255,0.08);
 }
 
 /* arrow rotate */
