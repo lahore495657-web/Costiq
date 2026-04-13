@@ -1,212 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>CostiQ Estimation | Construction Cost Estimators</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ================= PROBLEM ================= -->
+<section class="problem container" id="about">
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<h2 data-aos="fade-up">Are You Losing Projects Due to Poor Estimates?</h2>
 
-<link rel="stylesheet" href="style.css">
-</head>
+<div class="problem-grid">
 
-<body>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/923XXXXXXXXX" class="whatsapp-btn" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- HEADER -->
-<header class="header">
-<div class="container nav">
-
-<div class="logo-area">
-<img src="CostiQ -logo.png" class="site-logo">
-<span>CostiQ Estimation</span>
-</div>
-
-<!-- HAMBURGER -->
-<div class="menu-toggle" id="menu-toggle">
-<i class="fas fa-bars"></i>
-</div>
-
-<nav>
-
-<div class="dropdown">
-<a href="#services">Services ▾</a>
-<div class="dropdown-content">
-<a href="#arch">Architectural</a>
-<a href="#struct">Structural</a>
-<a href="#demo">Demolition</a>
-<a href="#mech">Mechanical</a>
-<a href="#plumb">Plumbing</a>
-<a href="#elec">Electrical</a>
-<a href="#site">Site Work</a>
-<a href="#util">Utilities</a>
-<a href="#solar">Solar</a>
-</div>
-</div>
-
-<a href="#projects">Projects</a>
-<a href="#contact" class="btn">Get a Quote</a>
-
-<!-- DARK MODE -->
-<button id="darkModeToggle">🌙</button>
-
-</nav>
-</div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-<div class="overlay"></div>
-<div class="container" data-aos="fade-up">
-
-<h1>Accurate Construction Cost Estimation That Helps You Win More Bids</h1>
-
-<p>We provide professional cost estimation services across the USA.</p>
-
-<div class="hero-buttons">
-<a href="#contact" class="btn">Get Free Estimate</a>
-<a href="#projects" class="btn-outline">View Projects</a>
-</div>
-
-</div>
-</section>
-
-<!-- SERVICES -->
-<section class="services-detail container" id="services">
-
-<h2 data-aos="fade-up">Our CSI Based Services</h2>
-
-<div class="service-block" id="arch"><h3>Architectural</h3><p>Detailed finishes & interior takeoffs.</p></div>
-<div class="service-block" id="struct"><h3>Structural</h3><p>Concrete, steel & framing estimates.</p></div>
-<div class="service-block" id="demo"><h3>Demolition</h3><p>Renovation & demolition cost analysis.</p></div>
-<div class="service-block" id="mech"><h3>Mechanical</h3><p>HVAC & ductwork estimation.</p></div>
-<div class="service-block" id="plumb"><h3>Plumbing</h3><p>Piping & fixture takeoffs.</p></div>
-<div class="service-block" id="elec"><h3>Electrical</h3><p>Wiring & lighting estimates.</p></div>
-<div class="service-block" id="site"><h3>Site Work</h3><p>Earthwork & landscaping costs.</p></div>
-<div class="service-block" id="util"><h3>Utilities</h3><p>Underground services estimation.</p></div>
-<div class="service-block" id="solar"><h3>Solar</h3><p>Solar installation cost breakdown.</p></div>
-
-</section>
-
-<!-- TOOLS (MARQUEE) -->
-<section class="software container">
-<h2 data-aos="fade-up">Tools We Use</h2>
-
-<div class="tools-marquee">
-<div class="marquee-track">
-
-<img src="https://raw.githubusercontent.com/yourname/repo/main/planswift.png">
-<img src="https://raw.githubusercontent.com/yourname/repo/main/bluebeam.png">
-<img src="https://raw.githubusercontent.com/yourname/repo/main/accubid.png">
-<img src="https://raw.githubusercontent.com/yourname/repo/main/excel.png">
-<img src="https://raw.githubusercontent.com/yourname/repo/main/rsmeans.png">
-
-<img src="https://raw.githubusercontent.com/yourname/repo/main/planswift.png">
-<img src="https://raw.githubusercontent.com/yourname/repo/main/bluebeam.png">
-<img src="https://raw.githubusercontent.com/yourname/repo/main/accubid.png">
-<img src="https://raw.githubusercontent.com/yourname/repo/main/excel.png">
-<img src="https://raw.githubusercontent.com/yourname/repo/main/rsmeans.png">
-
-</div>
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-<div class="container">
-
-<h2 data-aos="fade-up">Our Achievements</h2>
-
-<div class="project-bubbles">
-<div class="bubble"><h3>500+</h3><p>Projects</p></div>
-<div class="bubble highlight"><h3>$200</h3><p>Start</p></div>
-<div class="bubble"><h3>98%</h3><p>Success</p></div>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact container" id="contact">
-
-<h2>Request a Free Estimate</h2>
-
-<form onsubmit="sendWhatsApp(); return false;" class="contact-form">
-
-<input type="text" id="name" placeholder="Full Name" required>
-<input type="email" id="email" placeholder="Email Address" required>
-<input type="text" id="phone" placeholder="Phone Number" required>
-<input type="text" id="project" placeholder="Project Type" required>
-<textarea id="details" placeholder="Project Details"></textarea>
-
-<button class="btn">Submit Request</button>
-</form>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-<div class="container footer-grid">
-
-<div>
-<h3>CostiQ Estimation</h3>
-<p>USA-based construction estimating services.</p>
-</div>
-
-<div>
-<h4>Services</h4>
+<div data-aos="fade-right">
 <ul>
-<li>Architectural</li>
-<li>Structural</li>
-<li>MEP</li>
+<li>Late submissions often result in missed bidding opportunities, causing contractors to lose valuable projects to competitors who respond faster.</li>
+
+<li>Inaccurate estimates can lead to serious financial losses, where underestimation reduces profit and overestimation drives clients away.</li>
+
+<li>Managing site operations along with estimation tasks becomes overwhelming and reduces efficiency in both areas.</li>
+
+<li>Clients lose trust when estimates are unclear, inconsistent, or poorly presented, affecting long-term business relationships.</li>
+
+<li>Poor cost planning results in project delays, budget overruns, and operational stress.</li>
+
+<li>Manual calculations increase the risk of costly human errors that can damage your reputation in the market.</li>
 </ul>
 </div>
 
-<div>
-<h4>Contact</h4>
-<p>Email: info@costiq.com</p>
+<div data-aos="fade-left">
+<img src="LADY.jpg" class="problem-img">
+</div>
+
+</div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="solution" id="solution">
+<div class="container" data-aos="fade-up">
+
+<h2>Your Trusted Remote Estimating Partner</h2>
+
+<p>
+At CostiQ Estimation, we specialize in providing highly accurate, reliable, and fast construction cost estimation services tailored to contractors, subcontractors, and developers across the USA. Our goal is to help you win more bids, increase profitability, and eliminate the stress of complex calculations.
+</p>
+
+<p>
+Our expert team uses industry-leading software tools and updated pricing databases to ensure every estimate reflects real market conditions. Whether your project is residential, commercial, or industrial, we deliver detailed BOQs, material takeoffs, and cost breakdowns that help you make confident decisions.
+</p>
+
+<ul>
+<li>✔ Detailed and accurate BOQs with complete transparency</li>
+<li>✔ Fast turnaround time within 24–48 hours</li>
+<li>✔ Competitive pricing strategies to win more bids</li>
+<li>✔ Clear communication and dedicated support</li>
+<li>✔ Error-free estimation using advanced tools</li>
+</ul>
+
+</div>
+</section>
+
+<!-- ================= CORE SERVICES ================= -->
+<section class="services container">
+
+<h2 data-aos="fade-up">Our Core Estimation Services</h2>
+
+<div class="services-grid">
+
+<div class="card" data-aos="zoom-in">
+<h3>Material Takeoff</h3>
+<p>
+We provide precise and detailed quantity takeoffs for all construction trades. Our takeoffs ensure that you always have the right amount of material, avoiding both shortages and costly over-ordering. This helps improve project efficiency and cost control.
+</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<h3>Cost Estimation</h3>
+<p>
+Our cost estimation services are based on real-time market pricing, ensuring that your bids remain competitive and profitable. We analyze labor, material, and equipment costs to deliver highly accurate estimates.
+</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<h3>Bid Preparation</h3>
+<p>
+We prepare professional and well-structured bid documents that increase your chances of winning contracts. Our bids are clear, detailed, and aligned with industry standards.
+</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<h3>Residential & Commercial Projects</h3>
+<p>
+From small residential homes to large commercial developments, we handle estimation for all types of construction projects with accuracy and professionalism.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="team-section">
+<div class="container">
+
+<h2 data-aos="fade-up">Our Professional Team</h2>
+
+<p data-aos="fade-up">
+We have a strong team of 150–200 professionals dedicated to delivering high-quality estimation services. Our team structure ensures that every project is handled with expertise, accuracy, and efficiency.
+</p>
+
+<div class="team-grid">
+
+<div class="team-card" data-aos="fade-up">
+<h3>Estimation Engineers</h3>
+<p>Highly skilled engineers responsible for preparing accurate takeoffs and cost estimates.</p>
+</div>
+
+<div class="team-card" data-aos="fade-up">
+<h3>Pricing Team</h3>
+<p>Experts who ensure all estimates are aligned with current market rates and trends.</p>
+</div>
+
+<div class="team-card" data-aos="fade-up">
+<h3>QA & Review Team</h3>
+<p>Dedicated quality assurance team that reviews every estimate before final delivery.</p>
+</div>
+
+<div class="team-card" data-aos="fade-up">
+<h3>Marketing & Support</h3>
+<p>Our support team ensures smooth communication and quick responses to client queries.</p>
 </div>
 
 </div>
 
-<p class="copyright">© 2026 CostiQ Estimation</p>
-</footer>
+</div>
+</section>
 
-<!-- SCRIPTS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="why-us">
+<div class="container">
 
-<script>
-AOS.init();
+<h2 data-aos="fade-up">Why Choose CostiQ Estimation?</h2>
 
-/* MOBILE MENU */
-document.getElementById("menu-toggle").onclick = function(){
-document.querySelector("nav").classList.toggle("active");
-};
+<div class="why-grid">
 
-/* DARK MODE */
-document.getElementById("darkModeToggle").onclick = function(){
-document.body.classList.toggle("dark");
-};
+<div data-aos="fade-up">
+<h3>⚡ Fast Delivery</h3>
+<p>We deliver accurate estimates within 24–48 hours to meet tight deadlines.</p>
+</div>
 
-/* WHATSAPP FORM */
-function sendWhatsApp() {
-let name = document.getElementById("name").value;
-let email = document.getElementById("email").value;
-let phone = document.getElementById("phone").value;
-let project = document.getElementById("project").value;
-let details = document.getElementById("details").value;
+<div data-aos="fade-up">
+<h3>🎯 High Accuracy</h3>
+<p>Our estimates are prepared using advanced tools to ensure maximum accuracy.</p>
+</div>
 
-let msg = `New Estimate:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AProject: ${project}%0ADetails: ${details}`;
+<div data-aos="fade-up">
+<h3>💰 Cost Efficiency</h3>
+<p>We help you reduce costs and increase profit margins through smart estimation.</p>
+</div>
 
-window.open(`https://wa.me/923XXXXXXXXX?text=${msg}`, '_blank');
-}
-</script>
+<div data-aos="fade-up">
+<h3>🤝 Trusted Partner</h3>
+<p>We work as your remote estimation team, supporting your long-term success.</p>
+</div>
 
-</body>
-</html>
+</div>
+
+</div>
+</section>
