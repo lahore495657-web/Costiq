@@ -11,9 +11,10 @@ background: #f8fafc;
 color: #1f2937;
 line-height: 1.7;
 overflow-x: hidden;
+scroll-behavior: smooth;
 }
 
-/* ================= SECTIONS GAP FIX ================= */
+/* ================= SECTIONS ================= */
 section {
 padding: 100px 0;
 }
@@ -30,11 +31,12 @@ font-family: 'Oswald', sans-serif;
 }
 
 .section-title {
-font-size: 40px;
+font-size: 42px;
 text-align: center;
 margin-bottom: 50px;
 color: #0d3d66;
-font-weight: 700;
+font-weight: 800;
+letter-spacing: 1px;
 }
 
 .section-desc {
@@ -53,6 +55,7 @@ padding: 15px 0;
 position: sticky;
 top: 0;
 z-index: 1000;
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .nav {
@@ -69,16 +72,20 @@ color: #fff;
 font-weight: 600;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO (CINEMATIC FIX) ================= */
 .hero {
 position: relative;
-background: url("construction-bg.jpg") center/cover no-repeat;
-color: #fff;
+min-height: 90vh;
+display: flex;
+align-items: center;
+justify-content: center;
 text-align: center;
-padding: 150px 20px;
+color: #fff;
+background: url("construction-bg.jpg") center/cover no-repeat;
 }
 
-.hero .overlay {
+.hero::before {
+content: "";
 position: absolute;
 inset: 0;
 background: rgba(13,61,102,0.85);
@@ -87,10 +94,11 @@ background: rgba(13,61,102,0.85);
 .hero-content {
 position: relative;
 z-index: 2;
+animation: fadeUp 1s ease;
 }
 
 .hero h1 {
-font-size: 52px;
+font-size: 54px;
 margin-bottom: 20px;
 }
 
@@ -101,7 +109,12 @@ margin-bottom: 30px;
 font-size: 18px;
 }
 
-/* ================= PROBLEM SECTION ================= */
+@keyframes fadeUp {
+from {opacity:0; transform: translateY(30px);}
+to {opacity:1; transform: translateY(0);}
+}
+
+/* ================= PROBLEM ================= */
 .problem-grid {
 display: flex;
 gap: 50px;
@@ -125,7 +138,8 @@ object-fit: cover;
 background: #0d3d66;
 color: #fff;
 border-radius: 20px;
-padding: 80px;
+padding: 90px;
+box-shadow: 0 20px 50px rgba(0,0,0,0.2);
 }
 
 .solution p,
@@ -144,16 +158,17 @@ gap: 30px;
 .card {
 background: #fff;
 padding: 30px;
-border-radius: 12px;
+border-radius: 14px;
 box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-transition: 0.3s;
+transition: all 0.4s ease;
+transform-style: preserve-3d;
 }
 
 .card:hover {
-transform: translateY(-8px);
+transform: perspective(1000px) rotateX(6deg) rotateY(-6deg) scale(1.05);
 }
 
-/* ================= TOOLS (FIXED BIG IMAGES ISSUE) ================= */
+/* ================= TOOLS (FIXED IMAGE SIZE ISSUE) ================= */
 .tools-slider {
 overflow: hidden;
 margin-top: 40px;
@@ -161,25 +176,30 @@ margin-top: 40px;
 
 .tools-track {
 display: flex;
-gap: 50px;
+gap: 40px;
 width: max-content;
 animation: scrollTools 18s linear infinite;
 align-items: center;
 }
 
 .tool-item {
-min-width: 150px;
+min-width: 160px;
 background: #fff;
 padding: 18px;
 border-radius: 12px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 text-align: center;
 flex-shrink: 0;
+transition: 0.3s;
+}
+
+.tool-item:hover {
+transform: translateY(-8px);
 }
 
 .tool-item img {
-width: 55px;
-height: 55px;
+width: 60px;
+height: 60px;
 object-fit: contain;
 margin-bottom: 10px;
 }
@@ -190,7 +210,6 @@ font-weight: 600;
 color: #0d3d66;
 }
 
-/* animation */
 @keyframes scrollTools {
 0% { transform: translateX(0); }
 100% { transform: translateX(-50%); }
@@ -228,7 +247,7 @@ background: #ffb100;
 color: #0d3d66;
 }
 
-/* ================= RECENT PROJECTS FIX ================= */
+/* ================= RECENT PROJECTS ================= */
 .recent-projects {
 background: #f8fafc;
 }
@@ -253,7 +272,7 @@ transform: translateY(-8px);
 
 .project-card img {
 width: 100%;
-height: 230px;
+height: 240px;
 object-fit: cover;
 }
 
@@ -287,7 +306,7 @@ border-radius: 50%;
 z-index: 999;
 }
 
-/* ================= MOBILE FIX ================= */
+/* ================= MOBILE ================= */
 @media(max-width:768px){
 
 .hero h1 { font-size: 32px; }
@@ -300,12 +319,9 @@ flex-direction: column;
 padding: 40px;
 }
 
-.tools-track {
-gap: 20px;
-}
-
 .project-bubbles {
 flex-direction: column;
 align-items: center;
 }
+
 }
