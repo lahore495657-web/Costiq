@@ -434,3 +434,21 @@ color: #777;
 0% { transform: translateX(0); }
 100% { transform: translateX(-50%); }
 }
+.why-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+gap: 30px;
+}
+
+.why-card {
+background: #fff;
+padding: 30px;
+border-radius: 12px;
+text-align: center;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+transition: 0.3s;
+}
+
+.why-card:hover {
+transform: translateY(-8px);
+}
