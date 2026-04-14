@@ -459,3 +459,100 @@ margin-bottom: 15px;
 border-radius: 10px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
+/* ================= PROBLEM / SOLUTION LAYOUT UPGRADE ================= */
+
+.problem-grid,
+.solution-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+}
+
+/* TEXT BUBBLE */
+.problem-text,
+.solution-text {
+background: #ffffff;
+padding: 40px;
+border-radius: 20px;
+box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+font-size: 17px;
+line-height: 1.9;
+position: relative;
+}
+
+/* fancy bubble effect */
+.problem-text::before,
+.solution-text::before {
+content: "";
+position: absolute;
+top: -20px;
+left: 40px;
+width: 60px;
+height: 60px;
+background: #ffb100;
+border-radius: 50%;
+opacity: 0.2;
+}
+
+/* LIST STYLE */
+.problem-text ul,
+.solution-text ul {
+margin-top: 20px;
+}
+
+.problem-text li,
+.solution-text li {
+margin-bottom: 10px;
+}
+
+/* IMAGE BOX */
+.problem-img-box,
+.solution-img-box {
+text-align: center;
+}
+
+.problem-img {
+width: 100%;
+max-width: 450px;
+border-radius: 20px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ================= SERVICES IMPROVEMENT ================= */
+
+.services .section-desc {
+font-size: 18px;
+margin-bottom: 40px;
+}
+
+.card {
+padding: 35px;
+border-radius: 18px;
+}
+
+.card h3 {
+font-size: 22px;
+margin-bottom: 10px;
+}
+
+.card p {
+font-size: 15px;
+line-height: 1.8;
+}
+
+/* ================= MOBILE FIX ================= */
+
+@media(max-width:768px){
+
+.problem-grid,
+.solution-grid {
+grid-template-columns: 1fr;
+}
+
+.problem-text,
+.solution-text {
+padding: 25px;
+}
+
+}
