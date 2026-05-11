@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Architectural Estimation Services | CostIQ Estimation</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#f5f7fa;
+      color:#1e293b;
+      line-height:1.7;
+    }
+
+    .hero{
+      background:
+      linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600');
+
+      background-size:cover;
+      background-position:center;
+
+      height:500px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      text-align:center;
+      color:white;
+
+      padding:20px;
+    }
+
+    .hero-content{
+      max-width:900px;
+    }
+
+    .hero h1{
+      font-size:65px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      line-height:1.8;
+    }
+
+    .container{
+      width:90%;
+      max-width:1250px;
+      margin:auto;
+      padding:80px 0;
+    }
+
+    .section-title{
+      font-size:42px;
+      margin-bottom:25px;
+      color:#0f172a;
+      position:relative;
+    }
+
+    .section-title::after{
+      content:'';
+      width:80px;
+      height:5px;
+      background:#f59e0b;
+      position:absolute;
+      left:0;
+      bottom:-10px;
+      border-radius:10px;
+    }
+
+    .intro{
+      font-size:19px;
+      color:#475569;
+      margin-bottom:50px;
+    }
+
+    .division-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+      margin-top:50px;
+    }
+
+    .division-card{
+      background:white;
+      padding:35px;
+      border-radius:16px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .division-card:hover{
+      transform:translateY(-7px);
+    }
+
+    .division-card h3{
+      color:#f59e0b;
+      margin-bottom:20px;
+      font-size:28px;
+    }
+
+    .division-card ul{
+      padding-left:20px;
+    }
+
+    .division-card li{
+      margin-bottom:12px;
+      color:#334155;
+    }
+
+    .takeoff-section{
+      margin-top:90px;
+    }
+
+    .takeoff-box{
+      background:white;
+      padding:40px;
+      border-radius:18px;
+      margin-top:30px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .takeoff-box h3{
+      font-size:30px;
+      color:#0f172a;
+      margin-bottom:20px;
+    }
+
+    .takeoff-box p{
+      margin-bottom:20px;
+      color:#475569;
+      font-size:18px;
+    }
+
+    .takeoff-box ul{
+      padding-left:25px;
+    }
+
+    .takeoff-box li{
+      margin-bottom:15px;
+      color:#334155;
+      font-size:17px;
+    }
+
+    .workflow{
+      margin-top:90px;
+    }
+
+    .workflow-steps{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .step{
+      background:#0f172a;
+      color:white;
+      padding:35px;
+      border-radius:16px;
+    }
+
+    .step h3{
+      color:#fbbf24;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .cta{
+      margin-top:100px;
+      background:#0f172a;
+      padding:70px 30px;
+      border-radius:20px;
+      text-align:center;
+      color:white;
+    }
+
+    .cta h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:850px;
+      margin:auto;
+      font-size:20px;
+      line-height:1.8;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:16px 40px;
+      background:#f59e0b;
+      color:black;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#ffb703;
+    }
+
+    footer{
+      margin-top:100px;
+      background:#020617;
+      color:white;
+      text-align:center;
+      padding:30px;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Architectural Estimation Services</h1>
+
+      <p>
+        Detailed CSI Division based architectural quantity takeoffs,
+        BOQs, material estimation, and professional construction cost analysis
+        for residential, commercial, and industrial projects across the USA.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="container">
+
+    <h2 class="section-title">
+      Complete Architectural Estimation Services
+    </h2>
+
+    <p class="intro">
+
+      At CostIQ Estimation, our professional estimators prepare highly accurate
+      architectural quantity takeoffs and detailed construction estimates
+      based on CSI MasterFormat divisions.
+
+      We analyze construction drawings, specifications, elevations,
+      schedules, reflected ceiling plans, wall sections, finish schedules,
+      and architectural details to prepare precise BOQs and bidding estimates.
+
+    </p>
+
+
+    <!-- CSI DIVISIONS -->
+
+    <div class="division-grid">
+
+      <!-- Division 04 -->
+
+      <div class="division-card">
+
+        <h3>CSI Division 04 – Masonry</h3>
+
+        <ul>
+          <li>Brick Veneer Quantity Takeoff</li>
+          <li>CMU Block Walls</li>
+          <li>Stone Cladding</li>
+          <li>Mortar Calculation</li>
+          <li>Reinforced Masonry</li>
+          <li>Masonry Accessories</li>
+        </ul>
+
+      </div>
+
+
+      <!-- Division 06 -->
+
+      <div class="division-card">
+
+        <h3>CSI Division 06 – Wood & Plastics</h3>
+
+        <ul>
+          <li>Rough Carpentry</li>
+          <li>Millwork Estimation</li>
+          <li>Cabinet Takeoffs</li>
+          <li>Wood Framing</li>
+          <li>Blocking & Sheathing</li>
+          <li>Architectural Woodwork</li>
+        </ul>
+
+      </div>
+
+
+      <!-- Division 08 -->
+
+      <div class="division-card">
+
+        <h3>CSI Division 08 – Openings</h3>
+
+        <ul>
+          <li>Doors & Frames</li>
+          <li>Hardware Sets</li>
+          <li>Windows Estimation</li>
+          <li>Glass & Glazing</li>
+          <li>Curtain Walls</li>
+          <li>Louvers & Storefronts</li>
+        </ul>
+
+      </div>
+
+
+      <!-- Division 09 -->
+
+      <div class="division-card">
+
+        <h3>CSI Division 09 – Finishes</h3>
+
+        <ul>
+          <li>Drywall Takeoff</li>
+          <li>Metal Stud Framing</li>
+          <li>Acoustic Ceilings</li>
+          <li>Painting Estimation</li>
+          <li>Flooring Quantities</li>
+          <li>Tile & Wall Finishes</li>
+          <li>EIFS Systems</li>
+          <li>Plaster Estimation</li>
+        </ul>
+
+      </div>
+
+
+      <!-- Division 10 -->
+
+      <div class="division-card">
+
+        <h3>CSI Division 10 – Specialties</h3>
+
+        <ul>
+          <li>Toilet Accessories</li>
+          <li>Fire Protection Cabinets</li>
+          <li>Partitions</li>
+          <li>Signage Estimation</li>
+          <li>Lockers & Shelving</li>
+          <li>Corner Guards</li>
+        </ul>
+
+      </div>
+
+
+      <!-- Division 12 -->
+
+      <div class="division-card">
+
+        <h3>CSI Division 12 – Furnishings</h3>
+
+        <ul>
+          <li>Casework Estimation</li>
+          <li>Countertops</li>
+          <li>Blinds & Curtains</li>
+          <li>Furniture Quantities</li>
+          <li>Decorative Panels</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- OPENINGS DETAILS -->
+
+    <div class="takeoff-section">
+
+      <h2 class="section-title">
+        CSI Division 08 – Openings Detailed Takeoff
+      </h2>
+
+      <div class="takeoff-box">
+
+        <h3>How Our Estimators Perform Openings Takeoff</h3>
+
+        <p>
+
+          Division 08 includes all doors, frames, windows, glazing,
+          storefront systems, curtain walls, skylights, louvers,
+          and hardware systems.
+
+        </p>
+
+        <p>
+
+          Our estimators carefully review architectural plans,
+          elevations, schedules, door legends, window schedules,
+          and specifications to prepare accurate quantity takeoffs.
+
+        </p>
+
+        <ul>
+
+          <li>
+            Reading door schedules to identify door types,
+            sizes, ratings, and hardware requirements.
+          </li>
+
+          <li>
+            Counting all single doors, double doors,
+            overhead doors, access doors, and specialty openings.
+          </li>
+
+          <li>
+            Measuring window sizes directly from elevations
+            and window schedules.
+          </li>
+
+          <li>
+            Calculating curtain wall square footage
+            from building elevations.
+          </li>
+
+          <li>
+            Taking off glazing quantities including tempered,
+            laminated, insulated, and fire-rated glass.
+          </li>
+
+          <li>
+            Quantifying aluminum storefront framing systems
+            and associated accessories.
+          </li>
+
+          <li>
+            Reviewing hardware groups including hinges,
+            closers, locks, panic bars, and handles.
+          </li>
+
+          <li>
+            Identifying specialty openings such as skylights,
+            louvers, shutters, and smoke vents.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- DIVISION 09 DETAILS -->
+
+    <div class="takeoff-section">
+
+      <h2 class="section-title">
+        CSI Division 09 – Finishes Detailed Takeoff
+      </h2>
+
+      <div class="takeoff-box">
+
+        <h3>Detailed Drywall & Finishes Estimation Process</h3>
+
+        <p>
+
+          CSI Division 09 is one of the most critical architectural
+          estimation scopes and includes drywall systems,
+          ceilings, flooring, painting, plaster, and decorative finishes.
+
+        </p>
+
+        <ul>
+
+          <li>
+            Measuring drywall wall areas from floor plans
+            and reflected ceiling plans.
+          </li>
+
+          <li>
+            Calculating gypsum board quantities based on wall height,
+            layers, and board type.
+          </li>
+
+          <li>
+            Measuring metal stud framing linear footage.
+          </li>
+
+          <li>
+            Calculating ceiling grid systems and acoustic ceiling tiles.
+          </li>
+
+          <li>
+            Taking off flooring quantities including carpet,
+            vinyl, epoxy, wood flooring, and ceramic tiles.
+          </li>
+
+          <li>
+            Measuring painting areas for walls, ceilings,
+            doors, frames, and trims.
+          </li>
+
+          <li>
+            Identifying waterproofing and wall protection systems.
+          </li>
+
+          <li>
+            Calculating material wastage and production rates.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- WORKFLOW -->
+
+    <div class="workflow">
+
+      <h2 class="section-title">
+        Our Architectural Estimation Workflow
+      </h2>
+
+      <div class="workflow-steps">
+
+        <div class="step">
+
+          <h3>01. Drawing Review</h3>
+
+          <p>
+            Our estimators review architectural plans,
+            specifications, elevations, schedules,
+            and construction details.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <h3>02. Quantity Takeoff</h3>
+
+          <p>
+            Detailed quantity measurements are performed
+            using Planswift, Bluebeam, and On-Screen Takeoff software.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <h3>03. Cost Pricing</h3>
+
+          <p>
+            Material, labor, equipment, overhead,
+            and subcontractor pricing are applied.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <h3>04. BOQ Preparation</h3>
+
+          <p>
+            Final professional BOQs and bid-ready
+            estimation reports are delivered to clients.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CTA -->
+
+    <div class="cta">
+
+      <h2>
+        Need Professional Architectural Estimation Services?
+      </h2>
+
+      <p>
+
+        Get accurate CSI division based quantity takeoffs,
+        detailed BOQs, and bid-ready construction estimates
+        prepared by experienced professional estimators.
+
+      </p>
+
+      <a href="index.html#contact" class="btn">
+        Request Free Quote
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2025 CostIQ Estimation — Professional Construction Estimation Services
+    </p>
+
+  </footer>
+
+</body>
+</html>
